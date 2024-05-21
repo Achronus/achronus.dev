@@ -1,9 +1,9 @@
-export type DeveloperDetails = {
+type DeveloperDetails = {
   name: string;
   icon: string;
 };
 
-export type SocialIconType = {
+type SocialIconType = {
   name: string;
   url: URL;
   viewBox: string;
