@@ -1,11 +1,15 @@
 import "./App.css";
+import About from "@components/about";
+import { AboutDetails } from "@data/about";
 
 function App() {
   return (
     <>
-      <div className="avatar">
-        <div className="w-24 rounded">
-          <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+      <div className="flex flex-col gap-4 lg:flex-row">
+        <About {...AboutDetails} />
+        <div className="flex gap-4 justify-center align-middle content-center mt-5">
+          <div className="w-full">Col 1</div>
+          <div className="w-full">Col 2</div>
         </div>
       </div>
     </>

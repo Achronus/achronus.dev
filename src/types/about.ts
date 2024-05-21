@@ -1,12 +1,13 @@
-type DeveloperDetails = {
+export type DeveloperDetails = {
   name: string;
   icon: string;
 };
 
-type SocialIcons = {
-  github: URL;
-  linkedin: URL;
-  medium: URL;
+export type SocialIconType = {
+  name: string;
+  url: URL;
+  viewBox: string;
+  path: string;
 };
 
 export type AboutDetailsType = {
@@ -16,5 +17,5 @@ export type AboutDetailsType = {
   city: string;
   country: string;
   dev: DeveloperDetails;
-  socials: SocialIcons;
+  socials: SocialIconType[];
 };
