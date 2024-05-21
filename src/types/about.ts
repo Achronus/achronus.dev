@@ -1,7 +1,3 @@
-type DeveloperDetails = {
-  name: string;
-  icon: string;
-};
 
 type SocialIconType = {
   name: string;
@@ -16,6 +12,5 @@ export type AboutDetailsType = {
   description: string;
   city: string;
   country: string;
-  dev: DeveloperDetails;
   socials: SocialIconType[];
 };

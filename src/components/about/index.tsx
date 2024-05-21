@@ -6,12 +6,6 @@ type tagProps = {
   children: React.ReactNode;
 };
 
-type TitleProps = {
-  devIcon: string;
-  devName: string;
-  name: string;
-};
-
 type ProfileImgProps = {
   url: string;
   alt: string;
@@ -72,22 +66,10 @@ const Tag = ({ text, viewBox, children }: tagProps) => {
   );
 };
 
-const Title = ({ devIcon, devName, name }: TitleProps) => {
+const Title = ({ name }: {name: string}) => {
   return (
     <div className="title flex justify-center gap-2 md:justify-start md:mt-2">
       <h2 className="mt-3 font-medium text-2xl lg:text-4xl lg:mb-3">
-        <div className="flex items-center">
-          <img
-            className="w-5 h-5"
-            src={devIcon}
-            alt="Developer logo"
-          />
-        </div>
-        <h1 className="font-bold text-xl mb-1 lg:font-extrabold lg:text-4xl lg:mb-3">
-          {devName}
-        </h1>
-      </div>
-      <h2 className="font-medium text-md mb-1 ml-7 lg:font-bold lg:text-4xl lg:mb-3">
         {name}
       </h2>
     </div>
@@ -99,19 +81,14 @@ const Details = ({
   description,
   city,
   country,
-  dev,
   socials,
 }: AboutDetailsType) => {
   return (
     <>
       <div className="details">
         <div className="profile mb-3">
-          <Title
+          <Title name={name} />
           <div className="location flex justify-center gap-4 mt-2 md:justify-start">
-            devIcon={dev.icon}
-            name={name}
-          />
-          <div className="location flex gap-4">
             <Tag text={city} viewBox="0 0 384 512">
               <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
             </Tag>

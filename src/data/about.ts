@@ -1,6 +1,5 @@
 import { AboutDetailsType } from "@/types/about";
 
-import AchronusIcon from "@assets/imgs/icon.png";
 import ProfilePic from "@assets/imgs/me.jpg";
 
 export const AboutDetails: AboutDetailsType = {
@@ -10,10 +9,7 @@ export const AboutDetails: AboutDetailsType = {
     "A Software Developer building open-source tools on the web, one commit at a time 🚀",
   city: "Lincoln",
   country: "United Kingdom",
-  dev: {
-    name: "Achronus",
-    icon: AchronusIcon,
-  },
+
   socials: [
     {
       name: "github",
