@@ -30,13 +30,13 @@ const ProfileImg = ({ url, alt }: ProfileImgProps) => {
 
 const SocialIcon = ({ name, url, viewBox, path }: SocialIconProps) => {
   return (
-    <div className={`${name}`}>
+    <div className={`${name}-icon hover:bg-base-content/10 hover:opacity-85 p-2 transition-all rounded-md items-center`}>
       <a href={url.href}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox={viewBox}
           fill="currentColor"
-          className="w-4 h-4 lg:w-5 lg:h-5 text-base-content/80 mr-1"
+          className="w-4 h-4 lg:w-5 lg:h-5 text-base-content/80"
         >
           <path d={path} />
         </svg>
