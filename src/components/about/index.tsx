@@ -26,8 +26,8 @@ type SocialIconProps = {
 
 const ProfileImg = ({ url, alt }: ProfileImgProps) => {
   return (
-    <div className="avatar">
-      <div className="w-36 h-36 rounded-full lg:w-48 lg:h-48">
+    <div className="avatar m-auto sm:m-0">
+      <div className="w-36 h-36 rounded-full lg:w-48 lg:h-48 md:ml-4">
         <img src={url} alt={alt} />
       </div>
     </div>
@@ -74,8 +74,8 @@ const Tag = ({ text, viewBox, children }: tagProps) => {
 
 const Title = ({ devIcon, devName, name }: TitleProps) => {
   return (
-    <div className="title flex flex-col items-start">
-      <div className="dev flex gap-2">
+    <div className="title flex justify-center gap-2 md:justify-start md:mt-2">
+      <h2 className="mt-3 font-medium text-2xl lg:text-4xl lg:mb-3">
         <div className="flex items-center">
           <img
             className="w-5 h-5"
@@ -104,10 +104,10 @@ const Details = ({
 }: AboutDetailsType) => {
   return (
     <>
-      <div className="details flex flex-col w-full">
+      <div className="details">
         <div className="profile mb-3">
           <Title
-            devName={dev.name}
+          <div className="location flex justify-center gap-4 mt-2 md:justify-start">
             devIcon={dev.icon}
             name={name}
           />
@@ -120,10 +120,10 @@ const Details = ({
             </Tag>
           </div>
         </div>
-        <div className="desc text-start w-10/12">
+        <div className="desc">
           <p>{description}</p>
         </div>
-        <div className="socials flex gap-6 mt-4">
+        <div className="socials justify-center flex gap-6 mt-4 md:justify-start">
           {socials.map((social, idx) => (
             <SocialIcon
               key={idx}
@@ -142,10 +142,8 @@ const Details = ({
 const About = (details: AboutDetailsType) => {
   return (
     <>
-      <div className="flex gap-8 justify-center">
-        <ProfileImg url={details.profileImg} alt="Me" />
-        <Details {...details} />
-      </div>
+      <ProfileImg url={details.profileImg} alt="Me" />
+      <Details {...details} />
     </>
   );
 };
