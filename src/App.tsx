@@ -1,13 +1,25 @@
 import "./App.css";
-import About from "@components/about";
+import About from "@/components/About";
 import { AboutDetails } from "@data/about";
 
 function App() {
   return (
     <>
-      <div className="m-10 grid gap-4 sm:grid-cols-12">
-        <div className="grid sm:col-span-3 sm:px-10">
+      {/* About Section */}
+      <div className="grid gap-4 lg:grid-cols-12 mb-10 lg:h-[65vh]">
+        <div className="grid lg:col-span-4 xl:col-span-3 xl:px-10">
           <About {...AboutDetails} />
+        </div>
+        <div className="grid gap-4 grid-cols-2 lg:col-span-8 xl:col-span-9 overflow-y-scroll">
+          <div className="text-center bg-teal-500">Col 1</div>
+          <div className="text-center bg-red-500">Col 2</div>
+        </div>
+      </div>
+
+      {/* Skills Section */}
+      <div className="items-center">
+        <div className="text-center bg-purple-500 mb-5">
+          <h1>Title</h1>
         </div>
         <div className="grid gap-4 grid-cols-2 sm:col-span-9">
           <div className="text-center bg-teal-500">Col 1</div>
