@@ -1,26 +1,7 @@
-import AchronusIcon from "../assets/imgs/icon.png";
-import ProfilePic from "../assets/imgs/me.jpg";
+import { AboutDetailsType } from "@/types/about";
 
-type DeveloperDetails = {
-  name: string;
-  icon: string;
-};
-
-type SocialIcons = {
-  github: URL;
-  linkedin: URL;
-  medium: URL;
-};
-
-type AboutDetailsType = {
-  profileImg: string;
-  name: string;
-  description: string;
-  city: string;
-  country: string;
-  dev: DeveloperDetails;
-  socials: SocialIcons;
-};
+import AchronusIcon from "@assets/imgs/icon.png";
+import ProfilePic from "@assets/imgs/me.jpg";
 
 export const AboutDetails: AboutDetailsType = {
   name: "Ryan Partridge",
