@@ -1,6 +1,6 @@
 import "./App.css";
-import About from "@/components/About";
-import { AboutDetails } from "@data/about";
+import AboutDetails from "@/components/About";
+import { AboutDetailsData } from "@data/about";
 
 function App() {
   return (
@@ -8,11 +8,15 @@ function App() {
       {/* About Section */}
       <div className="grid gap-4 lg:grid-cols-12 mb-10 lg:h-[65vh]">
         <div className="grid lg:col-span-4 xl:col-span-3 xl:px-10">
-          <About {...AboutDetails} />
+          <AboutDetails {...AboutDetailsData} />
         </div>
         <div className="grid gap-4 grid-cols-2 lg:col-span-8 xl:col-span-9 overflow-y-scroll">
-          <div className="text-center bg-teal-500">Col 1</div>
-          <div className="text-center bg-red-500">Col 2</div>
+          <div className="text-center bg-teal-500">
+            Col 1
+          </div>
+          <div className="text-center bg-red-500">
+            Col 2
+          </div>
         </div>
       </div>
 
@@ -22,8 +26,12 @@ function App() {
           <h1>Title</h1>
         </div>
         <div className="grid gap-4 grid-cols-2 sm:col-span-9">
-          <div className="text-center bg-teal-500">Col 1</div>
-          <div className="text-center bg-red-500">Col 2</div>
+          <div className="text-center bg-teal-500">
+            Col 1
+          </div>
+          <div className="text-center bg-red-500">
+            Col 2
+          </div>
         </div>
       </div>
     </>
