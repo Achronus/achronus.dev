@@ -36,6 +36,7 @@ const Zentra: ProjectType = {
     { name: "React", svg: React },
     { name: "Shadcn/ui", svg: ShadcnUi },
   ],
+  status: "In Development",
 };
 
 export const ProjectData: ProjectType[] = [Zentra];

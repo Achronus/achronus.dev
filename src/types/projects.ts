@@ -6,4 +6,5 @@ export type ProjectType = {
   logo: string;
   links: IconType[];
   tools: IconType[];
+  status?: "In Development" | "Coming Soon";
 };

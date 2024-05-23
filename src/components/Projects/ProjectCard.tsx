@@ -94,6 +94,7 @@ const ProjectCard = ({
   logo,
   links,
   tools,
+  status,
 }: ProjectType) => {
   return (
     <div className="project items-center justify-center align-middle">
@@ -101,7 +102,7 @@ const ProjectCard = ({
         <Header name={name} logo={logo} links={links} />
         <Description>{description}</Description>
         <div className="divider my-2.5"></div>
-        <Tools tools={tools} badgeText="In Development" />
+        <Tools tools={tools} badgeText={status} />
       </div>
     </div>
   );
