@@ -8,18 +8,13 @@ import { ProjectData } from "@data/projects";
 function App() {
   return (
     <>
-      <div className="grid gap-4 lg:grid-cols-12 mb-10 lg:h-[65vh]">
-        <div className="grid lg:col-span-4 xl:col-span-3 xl:px-10">
+      <div className="grid gap-4 lg:grid-cols-12 mb-10">
+        <section className="grid lg:col-span-4 xl:col-span-3 xl:px-10">
           <AboutCard {...AboutDetailsData} />
-        </div>
-        <div className="grid gap-4 grid-cols-2 lg:col-span-8 xl:col-span-9">
-          <div className="text-center bg-teal-500">
-            Col 1
-          </div>
-          <div className="text-center bg-red-500">
-            Col 2
-          </div>
-        </div>
+        </section>
+        <section className="projects grid gap-4 grid-cols-2 lg:col-span-8 xl:col-span-9 m-4">
+          <Projects projects={ProjectData} />
+        </section>
       </div>
     </>
   );
