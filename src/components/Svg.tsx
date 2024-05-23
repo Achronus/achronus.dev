@@ -1,5 +1,9 @@
 import { cn } from "@/libs/utils";
 
+type SvgProps = React.SVGAttributes<SVGElement> & {
+  path: string;
+};
+
 const Svg = ({ path, ...props }: SvgProps) => {
   return (
     <svg

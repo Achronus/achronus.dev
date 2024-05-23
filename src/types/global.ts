@@ -5,12 +5,18 @@ export type SvgType = {
 
 export type IconType = {
   name: string;
-  url: URL;
+  url?: URL;
   svg: SvgType;
+  styles?: string;
 };
 
 export type TagType = {
   type: string;
   name: string;
   svg: SvgType;
+};
+
+export type ImgType = {
+  name: string;
+  path: string;
 };
