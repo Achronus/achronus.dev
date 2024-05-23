@@ -10,6 +10,11 @@ type HeaderProps = {
   links: IconType[];
 };
 
+type ToolsProps = {
+  tools: IconType[];
+  badgeText?: string;
+};
+
 const Links = ({ links }: { links: IconType[] }) => {
   return (
     <>
@@ -20,23 +25,47 @@ const Links = ({ links }: { links: IconType[] }) => {
   );
 };
 
-const Tools = ({ tools }: { tools: IconType[] }) => {
+const ToolsHeaderWithBadge = ({
+  text,
+}: {
+  text: string;
+}) => {
+  return (
+    <div className="header grid grid-cols-2 mb-3">
+      <h2 className="flex font-medium justify-start">
+        Tools
+      </h2>
+      <div className="flex justify-end">
+        <div className="badge badge-neutral">{text}</div>
+      </div>
+    </div>
+  );
+};
+
+const Tools = ({ tools, badgeText }: ToolsProps) => {
   return (
     <>
-      {tools.map((tool) => (
-        <div
-          key={tool.name}
-          className="tooltip"
-          data-tip={tool.name}
-        >
-          <Icon
+      {badgeText ? (
+        <ToolsHeaderWithBadge text={badgeText} />
+      ) : (
+        <h2 className="font-medium mb-3">Tools</h2>
+      )}
+      <div className="tools flex gap-4">
+        {tools.map((tool) => (
+          <div
             key={tool.name}
-            {...tool}
-            className={`${tool.name}-logo w-5 h-5 lg:w-6 lg:h-6`}
-            styles="hover:bg-inherit p-0"
-          />
-        </div>
-      ))}
+            className="tooltip"
+            data-tip={tool.name}
+          >
+            <Icon
+              key={tool.name}
+              {...tool}
+              className={`${tool.name}-logo w-5 h-5 lg:w-6 lg:h-6`}
+              styles="hover:bg-inherit p-0"
+            />
+          </div>
+        ))}
+      </div>
     </>
   );
 };
@@ -72,10 +101,7 @@ const ProjectCard = ({
         <Header name={name} logo={logo} links={links} />
         <Description>{description}</Description>
         <div className="divider my-2.5"></div>
-        <h2 className="font-medium mb-3">Tools</h2>
-        <div className="tools flex gap-4">
-          <Tools tools={tools} />
-        </div>
+        <Tools tools={tools} badgeText="In Development" />
       </div>
     </div>
   );
