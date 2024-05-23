@@ -1,15 +1,15 @@
-import { LocationTagType } from "@/types/about";
-import { SocialIconType } from "../Socials/Icon";
+import { TagType } from "@/types/global";
+import { IconProps } from "../Icon";
 
 import Description from "@components/Description";
-import Svg from "@/components/Svg";
 import Socials from "@components/Socials";
+import Tag from "@components/Tag";
 
 type ProfileDetailsProps = {
   name: string;
-  locationTags: LocationTagType[];
   description: string;
-  socials: SocialIconType[];
+  locationTags: TagType[];
+  socials: IconProps[];
 };
 
 const Name = ({ children }: { children: string }) => {
@@ -22,24 +22,11 @@ const Name = ({ children }: { children: string }) => {
   );
 };
 
-const Location = ({
-  tags,
-}: {
-  tags: LocationTagType[];
-}) => {
+const Location = ({ tags }: { tags: TagType[] }) => {
   return (
     <div className="location flex justify-center lg:justify-start gap-4 mt-2">
       {tags.map((tag) => (
-        <div
-          className={`${tag.type} flex items-center mb-1`}
-        >
-          <Svg
-            path={tag.path}
-            viewBox={tag.viewBox}
-            className="mr-1"
-          />
-          <p>{tag.name}</p>
-        </div>
+        <Tag key={tag.type} {...tag} />
       ))}
     </div>
   );
@@ -56,9 +43,9 @@ const Location = ({
  * 4. `Socials` - social links related to the author.
  *
  * @param {string} name - the name of the author.
- * @param {LocationTagType[]} locationTags - an array of objects containing the `location type`, `name`, `svg viewbox` and `svg path` for each location.
+ * @param {TagType[]} locationTags - an array of objects containing the `location type`, `name`, `svg viewbox` and `svg path` for each location.
  * @param {string} description - a description of the author.
- * @param {SocialIconType[]} socials - an array of objects containing the `svg path`, `name`, `url`, and `svg viewbox` for each social icon.
+ * @param {IconProps[]} socials - an array of objects containing the `svg path`, `name`, `url`, and `svg viewbox` for each social icon.
  **/
 const ProfileDetails = ({
   name,

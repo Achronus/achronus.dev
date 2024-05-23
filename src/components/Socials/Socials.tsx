@@ -1,7 +1,7 @@
-import Icon, { SocialIconType } from "./Icon";
+import Icon, { IconProps } from "../Icon";
 
 type SocialIconElement = React.ReactElement<
-  SocialIconType,
+  IconProps,
   typeof Icon
 >;
 

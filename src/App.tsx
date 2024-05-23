@@ -1,6 +1,9 @@
 import "./App.css";
-import AboutCard from "@/components/AboutCard";
+import AboutCard from "@components/AboutCard";
+import Projects from "@components/Projects";
+
 import { AboutDetailsData } from "@data/about";
+import { ProjectData } from "@data/projects";
 
 function App() {
   return (
