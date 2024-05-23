@@ -41,8 +41,7 @@ const AboutCard = (details: AboutDetailsType) => {
               <About.ProfileDetails.Location.Tag
                 key={tag.type}
                 text={tag.name}
-                viewBox={tag.viewBox}
-                path={tag.path}
+                {...tag}
                 className="mr-1"
               />
             ))}
@@ -53,13 +52,7 @@ const AboutCard = (details: AboutDetailsType) => {
         </About.Description>
         <About.Socials>
           {details.socials.map((icon) => (
-            <About.Socials.Icon
-              key={icon.name}
-              name={icon.name}
-              url={icon.url}
-              viewBox={icon.viewBox}
-              path={icon.path}
-            />
+            <About.Socials.Icon key={icon.name} {...icon} />
           ))}
         </About.Socials>
       </About>
