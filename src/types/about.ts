@@ -1,9 +1,4 @@
-export type SocialIconType = {
-  name: string;
-  url: URL;
-  viewBox: string;
-  path: string;
-};
+import { IconType } from "./global";
 
 export type LocationTagType = {
   type: string;
@@ -17,5 +12,5 @@ export type AboutDetailsType = {
   name: string;
   description: string;
   locationTags: LocationTagType[];
-  socials: SocialIconType[];
+  socials: IconType[];
 };

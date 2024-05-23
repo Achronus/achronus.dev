@@ -5,6 +5,13 @@ type ProfileImgProps =
     styles?: string;
   };
 
+/**
+ * @name ProfileImg
+ * @description Displays an image of the author.
+ *
+ * @param {string} styles - An optional string argument for adding additional styles to the img container.
+ * @param {React.ImgHTMLAttributes<HTMLImageElement>} props - any property available to the HTML `<img>` tag.
+ **/
 const ProfileImg = ({
   styles,
   ...props

@@ -2,60 +2,29 @@ import { AboutDetailsType } from "@/types/about";
 
 import ProfileImg from "./ProfileImg";
 import ProfileDetails from "./ProfileDetails";
-import Description from "./AboutDesc";
-import Socials from "@components/Socials";
 
-const About = ({
-  children,
-}: {
-  children: React.ReactNode;
-}) => {
-  return (
-    <>
-      <div className="about text-center justify-center lg:text-start lg:justify-start">
-        {children}
-      </div>
-    </>
-  );
-};
-
-About.ProfileImg = ProfileImg;
-About.ProfileDetails = ProfileDetails;
-About.Description = Description;
-About.Socials = Socials;
-
+/**
+ * @name AboutCard
+ * @description Represents a card to display the `Author` details.
+ *
+ * Divided into two components:
+ * 1. `ProfileImg` - displays the authors image
+ * 2. `ProfileDetails` - displays the information about the author
+ *
+ * @param {AboutDetailsType} details - An object of information for the card.
+ **/
 const AboutCard = (details: AboutDetailsType) => {
   return (
     <>
-      <About>
-        <About.ProfileImg
-          src={details.profileImg}
-          alt="me"
+      <div className="about text-center justify-center lg:text-start lg:justify-start">
+        <ProfileImg src={details.profileImg} alt="me" />
+        <ProfileDetails
+          name={details.name}
+          locationTags={details.locationTags}
+          description={details.description}
+          socials={details.socials}
         />
-        <About.ProfileDetails>
-          <About.ProfileDetails.Name>
-            {details.name}
-          </About.ProfileDetails.Name>
-          <About.ProfileDetails.Location>
-            {details.locationTags.map((tag) => (
-              <About.ProfileDetails.Location.Tag
-                key={tag.type}
-                text={tag.name}
-                {...tag}
-                className="mr-1"
-              />
-            ))}
-          </About.ProfileDetails.Location>
-        </About.ProfileDetails>
-        <About.Description>
-          {details.description}
-        </About.Description>
-        <About.Socials>
-          {details.socials.map((icon) => (
-            <About.Socials.Icon key={icon.name} {...icon} />
-          ))}
-        </About.Socials>
-      </About>
+      </div>
     </>
   );
 };

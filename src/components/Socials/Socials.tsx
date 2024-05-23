@@ -1,8 +1,8 @@
-import SocialIcon, { SocialIconProps } from "./SocialIcon";
+import Icon, { SocialIconType } from "./Icon";
 
 type SocialIconElement = React.ReactElement<
-  SocialIconProps,
-  typeof SocialIcon
+  SocialIconType,
+  typeof Icon
 >;
 
 const Socials = ({
@@ -17,6 +17,6 @@ const Socials = ({
   );
 };
 
-Socials.Icon = SocialIcon;
+Socials.Icon = Icon;
 
 export default Socials;

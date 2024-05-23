@@ -1,16 +1,16 @@
 import Svg from "@/components/Svg";
 
-export type SocialIconProps = SvgProps & {
+export type SocialIconType = SvgProps & {
   name: string;
   url: URL;
 };
 
-const SocialIcon = ({
+const Icon = ({
   name,
   url,
   path,
   ...props
-}: SocialIconProps) => {
+}: SocialIconType) => {
   return (
     <div
       className={`${name}-icon hover:bg-base-content/10 hover:opacity-85 p-2 transition-all rounded-md items-center`}
@@ -22,4 +22,4 @@ const SocialIcon = ({
   );
 };
 
-export default SocialIcon;
+export default Icon;
