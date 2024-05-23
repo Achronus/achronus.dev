@@ -25,19 +25,19 @@ const LocationTags: TagType[] = [
 
 const SocialIcons: IconType[] = [
   {
-    name: "github",
+    name: "GitHub",
     url: new URL("https://github.com/Achronus"),
     svg: GitHub,
   },
   {
-    name: "linkedin",
+    name: "LinkedIn",
     url: new URL(
       "https://www.linkedin.com/in/ryan-partridge-08b7118b/"
     ),
     svg: LinkedIn,
   },
   {
-    name: "medium",
+    name: "Medium",
     url: new URL("https://medium.com/@achronus"),
     svg: Medium,
   },

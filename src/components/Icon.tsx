@@ -7,7 +7,8 @@ export type IconProps = React.SVGAttributes<SVGElement> &
 const Icon = ({ name, url, svg, ...props }: IconProps) => {
   return (
     <div
-      className={`${name}-icon hover:bg-base-content/10 hover:opacity-85 p-2 transition-all rounded-md items-center`}
+      className={`${name}-icon hover:bg-base-content/10 hover:opacity-85 p-2 transition-all rounded-md items-center tooltip`}
+      data-tip={name}
     >
       <a href={url.href}>
         <Svg
