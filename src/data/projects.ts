@@ -1,5 +1,5 @@
 import { ProjectType } from "@/types/projects";
-import ProfilePic from "@assets/imgs/me.jpg";
+import ZentraIcon from "@assets/imgs/projects/zentra-icon.jpg";
 
 import {
   GitHub,
@@ -14,7 +14,7 @@ const Zentra: ProjectType = {
   name: "Zentra",
   description:
     "An open-source Python tool that uses Pydantic models to create React components.",
-  logo: ProfilePic,
+  logo: ZentraIcon,
   links: [
     {
       name: "Website",
