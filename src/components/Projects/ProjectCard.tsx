@@ -3,6 +3,7 @@ import { ProjectType } from "@/types/projects";
 
 import Description from "@components/Description";
 import Icon from "@components/Icon";
+import { useEffect, useState } from "react";
 
 type HeaderProps = {
   name: string;
@@ -30,13 +31,24 @@ const ToolsHeaderWithBadge = ({
 }: {
   text: string;
 }) => {
+  const [badgeColour, setBadgeColour] =
+    useState("badge-accent");
+
+  useEffect(() => {
+    if (text !== "In Development") {
+      setBadgeColour("badge-secondary");
+    }
+  }, []);
+
   return (
-    <div className="header grid grid-cols-2 mb-3">
-      <h2 className="flex font-medium justify-start">
-        Tools
-      </h2>
-      <div className="flex justify-end">
-        <div className="badge badge-neutral">{text}</div>
+    <div className="header flex gap-2 mb-3">
+      <h2 className="font-medium">Tools</h2>
+      <div className="ml-auto">
+        <div
+          className={`badge ${badgeColour} badge-outline`}
+        >
+          {text}
+        </div>
       </div>
     </div>
   );
@@ -100,7 +112,9 @@ const ProjectCard = ({
     <div className="project items-center justify-center align-middle">
       <div className="bg-base-200 rounded-lg p-6">
         <Header name={name} logo={logo} links={links} />
-        <Description>{description}</Description>
+        <Description styles="md:min-h-20 lg:min-h-14">
+          {description}
+        </Description>
         <div className="divider my-2.5"></div>
         <Tools tools={tools} badgeText={status} />
       </div>

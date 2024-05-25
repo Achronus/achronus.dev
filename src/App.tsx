@@ -12,7 +12,7 @@ function App() {
         <section className="grid lg:col-span-4 xl:col-span-3 xl:px-10">
           <AboutCard {...AboutDetailsData} />
         </section>
-        <section className="projects grid gap-4 grid-cols-2 lg:col-span-8 xl:col-span-9 m-4">
+        <section className="projects grid gap-4 md:grid-cols-2 lg:col-span-8 xl:col-span-9 m-4">
           <Projects projects={ProjectData} />
         </section>
       </div>
