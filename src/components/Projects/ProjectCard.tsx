@@ -1,10 +1,10 @@
-import { IconType } from "@/types/global";
+import { IconType, SvgType } from "@/types/global";
 import { ProjectType } from "@/types/projects";
 
 import Description from "@components/Description";
 import { Icon } from "@components/Icon";
 import { useEffect, useState } from "react";
-import { IconTools } from "@components/Tools";
+import { SvgTools } from "@components/Tools";
 
 type HeaderProps = {
   name: string;
@@ -13,7 +13,7 @@ type HeaderProps = {
 };
 
 type ToolsProps = {
-  tools: IconType[];
+  tools: SvgType[];
   badgeText?: string;
 };
 
@@ -34,7 +34,7 @@ const ToolsHeaderWithBadge = ({ text }: { text: string }) => {
     if (text !== "In Development") {
       setBadgeColour("badge-secondary");
     }
-  }, []);
+  }, [text]);
 
   return (
     <div className="header flex gap-2 mb-3">
@@ -54,7 +54,7 @@ const ProjectTools = ({ tools, badgeText }: ToolsProps) => {
       ) : (
         <h2 className="font-medium mb-3">Tools</h2>
       )}
-      <IconTools tools={tools} />
+      <SvgTools tools={tools} />
     </>
   );
 };

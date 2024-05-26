@@ -1,10 +1,10 @@
-import { IconType } from "./global";
+import { IconType, SvgType } from "./global";
 
 export type ProjectType = {
   name: string;
   description: string;
   logo: string;
   links: IconType[];
-  tools: IconType[];
+  tools: SvgType[];
   status?: "In Development" | "Coming Soon";
 };

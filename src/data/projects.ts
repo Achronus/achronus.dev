@@ -19,42 +19,25 @@ const Zentra: ProjectType = {
   logo: ZentraIcon,
   links: [
     {
-      name: "GitHub",
       url: new URL("https://github.com/Achronus/Zentra"),
       svg: GitHub,
     },
   ],
-  tools: [
-    {
-      name: "Python",
-      svg: Python,
-    },
-    { name: "Pydantic", svg: Pydantic },
-    { name: "React", svg: React },
-    { name: "Shadcn/ui", svg: ShadcnUi },
-  ],
+  tools: [Python, Pydantic, React, ShadcnUi],
   status: "In Development",
 };
 
 const Figma: ProjectType = {
   name: "Figma Clone",
-  description:
-    "A clone of one of the leading web design tools built in React.",
+  description: "A clone of one of the leading web design tools built in React.",
   logo: FigmaIcon,
   links: [
     {
-      name: "GitHub",
-      url: new URL(
-        "https://github.com/Achronus/figma-clone"
-      ),
+      url: new URL("https://github.com/Achronus/figma-clone"),
       svg: GitHub,
     },
   ],
-  tools: [
-    { name: "React", svg: React },
-    { name: "Tailwind CSS", svg: TailwindCSS },
-    { name: "Daisy UI", svg: DaisyUi },
-  ],
+  tools: [React, TailwindCSS, DaisyUi],
   status: "In Development",
 };
 
