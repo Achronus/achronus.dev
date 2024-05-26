@@ -1,4 +1,4 @@
-import Icon, { IconProps } from "../Icon";
+import { Icon, IconProps } from "@components/Icon";
 
 type SocialIconElement = React.ReactElement<
   IconProps,

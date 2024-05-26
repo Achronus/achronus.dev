@@ -1,10 +1,10 @@
 export type SvgType = {
+  name?: string;
   viewBox: string;
   path: string;
 };
 
 export type IconType = {
-  name: string;
   url?: URL;
   svg: SvgType;
   styles?: string;
@@ -19,4 +19,9 @@ export type TagType = {
 export type ImgType = {
   name: string;
   path: string;
+};
+
+export type SkillSetType = {
+  type: string;
+  skills: SvgType[];
 };

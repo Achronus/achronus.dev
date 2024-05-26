@@ -23,6 +23,7 @@ const AboutCard = (details: AboutDetailsType) => {
           locationTags={details.locationTags}
           description={details.description}
           socials={details.socials}
+          skills={details.skills}
         />
       </div>
     </>

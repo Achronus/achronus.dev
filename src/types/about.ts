@@ -1,4 +1,4 @@
-import { IconType, TagType } from "./global";
+import { IconType, SkillSetType, TagType } from "./global";
 
 export type AboutDetailsType = {
   profileImg: string;
@@ -6,4 +6,5 @@ export type AboutDetailsType = {
   description: string;
   locationTags: TagType[];
   socials: IconType[];
+  skills: SkillSetType[];
 };

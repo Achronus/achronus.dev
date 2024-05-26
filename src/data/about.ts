@@ -3,10 +3,21 @@ import { IconType, TagType } from "@/types/global";
 
 import ProfilePic from "@assets/imgs/me.jpg";
 import {
+  Axios,
+  Docker,
+  FastAPI,
   GitHub,
   LinkedIn,
   Medium,
+  MongoDB,
   Pin,
+  Pydantic,
+  Python,
+  React,
+  ReactQuery,
+  ShadcnUi,
+  TailwindCSS,
+  TypeScript,
   World,
 } from "@data/icons";
 
@@ -25,19 +36,14 @@ const LocationTags: TagType[] = [
 
 const SocialIcons: IconType[] = [
   {
-    name: "GitHub",
     url: new URL("https://github.com/Achronus"),
     svg: GitHub,
   },
   {
-    name: "LinkedIn",
-    url: new URL(
-      "https://www.linkedin.com/in/ryan-partridge-08b7118b/"
-    ),
+    url: new URL("https://www.linkedin.com/in/ryan-partridge-08b7118b/"),
     svg: LinkedIn,
   },
   {
-    name: "Medium",
     url: new URL("https://medium.com/@achronus"),
     svg: Medium,
   },
@@ -50,4 +56,14 @@ export const AboutDetailsData: AboutDetailsType = {
     "A Software Developer building open-source tools on the web, one commit at a time 🚀",
   locationTags: LocationTags,
   socials: SocialIcons,
+  skills: [
+    {
+      type: "backend",
+      skills: [Python, Pydantic, FastAPI, MongoDB, Docker],
+    },
+    {
+      type: "frontend",
+      skills: [React, ReactQuery, Axios, TypeScript, TailwindCSS, ShadcnUi],
+    },
+  ],
 };
