@@ -9,7 +9,7 @@ import {
   React,
   ShadcnUi,
   TailwindCSS,
-  DaisyUi,
+  LiveBlocks,
 } from "./icons";
 
 const Zentra: ProjectType = {
@@ -37,7 +37,7 @@ const Figma: ProjectType = {
       svg: GitHub,
     },
   ],
-  tools: [React, TailwindCSS, DaisyUi],
+  tools: [React, TailwindCSS, ShadcnUi, LiveBlocks],
   status: "In Development",
 };
 
