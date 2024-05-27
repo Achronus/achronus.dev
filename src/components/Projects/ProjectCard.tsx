@@ -61,12 +61,24 @@ const ProjectTools = ({ tools, badgeText }: ToolsProps) => {
 
 const Header = ({ name, logo, links }: HeaderProps) => {
   return (
-    <div className="header grid grid-cols-2 mb-3 items-center align-middle">
-      <div className="branding flex gap-2 justify-start">
-        <img className="w-6 h-6 rounded-full" src={logo} alt={`${name} logo`} />
+    <div className="header mb-3 flex items-center align-middle">
+      <div className="branding flex gap-2 mr-auto">
+        {!logo.startsWith("/") ? (
+          <div className="avatar placeholder">
+            <div className="bg-neutral text-neutral-content rounded-full w-6 h-6">
+              <span className="text-xs">{logo}</span>
+            </div>
+          </div>
+        ) : (
+          <img
+            className="w-6 h-6 rounded-full"
+            src={logo}
+            alt={`${name} logo`}
+          />
+        )}
         <h1 className="font-medium">{name}</h1>
       </div>
-      <div className="links flex gap-2 justify-end">
+      <div className="links flex ml-auto">
         <Links links={links} />
       </div>
     </div>
@@ -85,9 +97,7 @@ const ProjectCard = ({
     <div className="project items-center justify-center align-middle">
       <div className="bg-base-200 rounded-lg p-6">
         <Header name={name} logo={logo} links={links} />
-        <Description styles="md:min-h-20 lg:min-h-20 xl:min-h-12">
-          {description}
-        </Description>
+        <Description>{description}</Description>
         <div className="divider my-2.5"></div>
         <ProjectTools tools={tools} badgeText={status} />
       </div>

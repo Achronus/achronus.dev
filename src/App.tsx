@@ -27,7 +27,7 @@ function App() {
         <section className="grid lg:col-span-4 xl:col-span-3 xl:px-10">
           <AboutCard {...AboutDetailsData} />
         </section>
-        {windowWidth <= 768 ? (
+        {windowWidth <= 1023 ? (
           <div>
             <div className="divider"></div>
             <h1 className="text-center font-medium text-lg">Projects</h1>

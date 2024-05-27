@@ -21,7 +21,7 @@ export const ToolIcon = ({ svg, ...props }: ToolIconType) => {
 
 const IconTools = ({ tools }: { tools: IconType[] }) => {
   return (
-    <div className="tools flex gap-4">
+    <div className="tools flex gap-4 flex-wrap">
       {tools.map((tool) => (
         <ToolIcon key={tool.svg.name} {...tool} />
       ))}
@@ -31,7 +31,7 @@ const IconTools = ({ tools }: { tools: IconType[] }) => {
 
 const SvgTools = ({ tools }: { tools: SvgType[] }) => {
   return (
-    <div className="tools flex gap-4">
+    <div className="tools flex gap-4 flex-wrap">
       {tools.map((tool) => (
         <ToolIcon key={tool.name} svg={tool} {...tool} />
       ))}
