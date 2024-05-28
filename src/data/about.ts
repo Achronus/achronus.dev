@@ -10,11 +10,11 @@ import {
   LinkedIn,
   Medium,
   MongoDB,
+  NextJs,
   Pin,
   Pydantic,
   Python,
   React,
-  ReactQuery,
   ShadcnUi,
   TailwindCSS,
   TypeScript,
@@ -63,7 +63,7 @@ export const AboutDetailsData: AboutDetailsType = {
     },
     {
       type: "frontend",
-      skills: [React, ReactQuery, Axios, TypeScript, TailwindCSS, ShadcnUi],
+      skills: [React, NextJs, Axios, TypeScript, TailwindCSS, ShadcnUi],
     },
   ],
 };

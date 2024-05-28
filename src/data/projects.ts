@@ -18,7 +18,6 @@ import {
   NextJs,
   FastAPI,
   Axios,
-  ReactQuery,
   MongoDB,
 } from "./icons";
 
@@ -68,16 +67,7 @@ const AgencyFusion: ProjectType = {
     "An all in one agency creation tool. Design, build, deploy and manage your agency sites in one location.",
   logo: AgencyFusionIcon,
   links: [],
-  tools: [
-    NextJs,
-    TailwindCSS,
-    ShadcnUi,
-    Clerk,
-    Axios,
-    ReactQuery,
-    FastAPI,
-    MongoDB,
-  ],
+  tools: [NextJs, TailwindCSS, ShadcnUi, Clerk, Axios, FastAPI, MongoDB],
   status: "Coming Soon",
 };
 
@@ -97,16 +87,7 @@ const Ledger: ProjectType = {
     "An income and expenses tracker tool for managing and monitoring your daily, monthly and yearly spend.",
   logo: LedgerIcon,
   links: [],
-  tools: [
-    NextJs,
-    TailwindCSS,
-    ShadcnUi,
-    Clerk,
-    Axios,
-    ReactQuery,
-    FastAPI,
-    MongoDB,
-  ],
+  tools: [NextJs, TailwindCSS, ShadcnUi, Clerk, Axios, FastAPI, MongoDB],
   status: "Coming Soon",
 };
 
