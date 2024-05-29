@@ -1,8 +1,8 @@
 import { IconType, SkillSetType, TagType } from "./global";
 
 export type AboutDetailsType = {
-  profileImg: string;
   name: string;
+  profileImg: string;
   description: string;
   locationTags: TagType[];
   socials: IconType[];

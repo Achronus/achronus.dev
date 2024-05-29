@@ -1,7 +1,8 @@
 import { AboutDetailsType } from "@/types/about";
 import { IconType, TagType } from "@/types/global";
 
-import ProfilePic from "@assets/imgs/me.jpg";
+import ProfilePic from "@/assets/imgs/me.jpg";
+
 import {
   Axios,
   Docker,
@@ -19,7 +20,7 @@ import {
   TailwindCSS,
   TypeScript,
   World,
-} from "@data/icons";
+} from "./icons";
 
 const LocationTags: TagType[] = [
   {
@@ -51,7 +52,7 @@ const SocialIcons: IconType[] = [
 
 export const AboutDetailsData: AboutDetailsType = {
   name: "Ryan Partridge",
-  profileImg: ProfilePic,
+  profileImg: ProfilePic.src,
   description:
     "A Software Developer building open-source tools on the web, one commit at a time 🚀",
   locationTags: LocationTags,

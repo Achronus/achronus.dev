@@ -1,10 +1,10 @@
 import { TagType, SkillSetType } from "@/types/global";
 
-import { IconProps } from "@components/Icon";
-import Description from "@components/Description";
-import Socials from "@components/Socials";
-import Tag from "@components/Tag";
-import { SvgTools } from "@components/Tools";
+import { IconProps } from "@/components/Icon";
+import Description from "@/components/Description";
+import Socials from "@/components/Socials";
+import Tag from "@/components/Tag";
+import { SvgTools } from "@/components/Tools";
 
 import { toTitle } from "@/libs/utils";
 

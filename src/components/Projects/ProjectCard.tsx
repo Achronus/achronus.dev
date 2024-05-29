@@ -1,10 +1,13 @@
-import { IconType, SvgType } from "@/types/global";
-import { ProjectType } from "@/types/projects";
+"use client";
 
-import Description from "@components/Description";
-import { Icon } from "@components/Icon";
+import { IconType, SvgType } from "@/types/global";
+import { ProjectType, StatusOptions } from "@/types/projects";
+
+import Description from "@/components/Description";
+import { Icon } from "@/components/Icon";
 import { useEffect, useState } from "react";
-import { SvgTools } from "@components/Tools";
+import { SvgTools } from "@/components/Tools";
+import Image from "next/image";
 
 type HeaderProps = {
   name: string;
@@ -14,7 +17,7 @@ type HeaderProps = {
 
 type ToolsProps = {
   tools: SvgType[];
-  badgeText?: string;
+  badgeText: StatusOptions;
 };
 
 const Links = ({ links }: { links: IconType[] }) => {
@@ -49,7 +52,7 @@ const ToolsHeaderWithBadge = ({ text }: { text: string }) => {
 const ProjectTools = ({ tools, badgeText }: ToolsProps) => {
   return (
     <>
-      {badgeText ? (
+      {badgeText !== "Completed" ? (
         <ToolsHeaderWithBadge text={badgeText} />
       ) : (
         <h2 className="font-medium mb-3">Tools</h2>
@@ -70,10 +73,12 @@ const Header = ({ name, logo, links }: HeaderProps) => {
             </div>
           </div>
         ) : (
-          <img
-            className="w-6 h-6 rounded-full"
+          <Image
+            style={{ borderRadius: "9999px" }}
             src={logo}
             alt={`${name} logo`}
+            width={24}
+            height={24}
           />
         )}
         <h1 className="font-medium">{name}</h1>
