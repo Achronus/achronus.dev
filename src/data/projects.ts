@@ -19,6 +19,7 @@ import {
   FastAPI,
   Axios,
   MongoDB,
+  TypeScript,
 } from "./icons";
 
 const Zentra: ProjectType = {
@@ -47,7 +48,7 @@ const Figma: ProjectType = {
       svg: GitHub,
     },
   ],
-  tools: [React, TailwindCSS, ShadcnUi, LiveBlocks],
+  tools: [React, NextJs, TypeScript, TailwindCSS, ShadcnUi, LiveBlocks],
   status: "In Development",
 };
 
