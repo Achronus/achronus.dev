@@ -1,10 +1,17 @@
 import Svg from "@/components/Svg";
 import { cn } from "@/libs/utils";
 import { IconType } from "@/types/global";
+import Link from "next/link";
 
-export type IconProps = React.SVGAttributes<SVGElement> & IconType;
+export type IconProps = React.SVGAttributes<SVGElement> &
+  IconType;
 
-export const Icon = ({ url, svg, styles, ...props }: IconProps) => {
+export const Icon = ({
+  url,
+  svg,
+  styles,
+  ...props
+}: IconProps) => {
   return (
     <div
       className={cn(
@@ -14,11 +21,19 @@ export const Icon = ({ url, svg, styles, ...props }: IconProps) => {
       data-tip={svg.name}
     >
       {url ? (
-        <a href={url.href}>
-          <Svg path={svg.path} viewBox={svg.viewBox} {...props} />
-        </a>
+        <Link href={url}>
+          <Svg
+            path={svg.path}
+            viewBox={svg.viewBox}
+            {...props}
+          />
+        </Link>
       ) : (
-        <Svg path={svg.path} viewBox={svg.viewBox} {...props} />
+        <Svg
+          path={svg.path}
+          viewBox={svg.viewBox}
+          {...props}
+        />
       )}
     </div>
   );

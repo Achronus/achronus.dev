@@ -1,7 +1,10 @@
 "use client";
 
 import { IconType, SvgType } from "@/types/global";
-import { ProjectType, StatusOptions } from "@/types/projects";
+import {
+  ProjectType,
+  StatusOptions,
+} from "@/types/projects";
 
 import Description from "@/components/Description";
 import { Icon } from "@/components/Icon";
@@ -30,8 +33,13 @@ const Links = ({ links }: { links: IconType[] }) => {
   );
 };
 
-const ToolsHeaderWithBadge = ({ text }: { text: string }) => {
-  const [badgeColour, setBadgeColour] = useState("badge-accent");
+const ToolsHeaderWithBadge = ({
+  text,
+}: {
+  text: string;
+}) => {
+  const [badgeColour, setBadgeColour] =
+    useState("badge-accent");
 
   useEffect(() => {
     if (text !== "In Development") {
@@ -43,7 +51,11 @@ const ToolsHeaderWithBadge = ({ text }: { text: string }) => {
     <div className="header flex gap-2 mb-3">
       <h2 className="font-medium">Tools</h2>
       <div className="ml-auto">
-        <div className={`badge ${badgeColour} badge-outline`}>{text}</div>
+        <div
+          className={`badge ${badgeColour} badge-outline`}
+        >
+          {text}
+        </div>
       </div>
     </div>
   );
