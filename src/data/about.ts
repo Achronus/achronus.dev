@@ -4,6 +4,7 @@ import { IconType, TagType } from "@/types/global";
 import ProfilePic from "@/assets/imgs/me.jpg";
 
 import {
+  Aws,
   Axios,
   Docker,
   FastAPI,
@@ -41,7 +42,9 @@ const SocialIcons: IconType[] = [
     svg: GitHub,
   },
   {
-    url: new URL("https://www.linkedin.com/in/ryan-partridge-08b7118b/"),
+    url: new URL(
+      "https://www.linkedin.com/in/ryan-partridge-08b7118b/"
+    ),
     svg: LinkedIn,
   },
   {
@@ -60,11 +63,25 @@ export const AboutDetailsData: AboutDetailsType = {
   skills: [
     {
       type: "backend",
-      skills: [Python, Pydantic, FastAPI, MongoDB, Docker],
+      skills: [
+        Python,
+        Pydantic,
+        FastAPI,
+        MongoDB,
+        Docker,
+        Aws,
+      ],
     },
     {
       type: "frontend",
-      skills: [React, NextJs, Axios, TypeScript, TailwindCSS, ShadcnUi],
+      skills: [
+        React,
+        NextJs,
+        Axios,
+        TypeScript,
+        TailwindCSS,
+        ShadcnUi,
+      ],
     },
   ],
 };

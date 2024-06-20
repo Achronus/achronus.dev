@@ -1,5 +1,3 @@
-"use client";
-
 import { IconType, SvgType } from "@/types/global";
 import {
   ProjectType,
@@ -8,9 +6,9 @@ import {
 
 import Description from "@/components/Description";
 import { Icon } from "@/components/Icon";
-import { useEffect, useState } from "react";
 import { SvgTools } from "@/components/Tools";
 import Image from "next/image";
+import { colourMap } from "@/data/colours";
 
 type HeaderProps = {
   name: string;
@@ -26,8 +24,8 @@ type ToolsProps = {
 const Links = ({ links }: { links: IconType[] }) => {
   return (
     <>
-      {links.map((link) => (
-        <Icon key={link.svg.name} {...link} />
+      {links.map((link, idx) => (
+        <Icon key={link.svg.name ?? idx} {...link} />
       ))}
     </>
   );
@@ -38,21 +36,18 @@ const ToolsHeaderWithBadge = ({
 }: {
   text: string;
 }) => {
-  const [badgeColour, setBadgeColour] =
-    useState("badge-accent");
-
-  useEffect(() => {
-    if (text !== "In Development") {
-      setBadgeColour("badge-secondary");
-    }
-  }, [text]);
+  const colour = colourMap.find(
+    (item) => item.name === text
+  );
 
   return (
     <div className="header flex gap-2 mb-3">
       <h2 className="font-medium">Tools</h2>
       <div className="ml-auto">
         <div
-          className={`badge ${badgeColour} badge-outline`}
+          className={`badge ${
+            colour ? colour.value : ""
+          } badge-outline`}
         >
           {text}
         </div>
@@ -64,11 +59,7 @@ const ToolsHeaderWithBadge = ({
 const ProjectTools = ({ tools, badgeText }: ToolsProps) => {
   return (
     <>
-      {badgeText !== "Completed" ? (
-        <ToolsHeaderWithBadge text={badgeText} />
-      ) : (
-        <h2 className="font-medium mb-3">Tools</h2>
-      )}
+      <ToolsHeaderWithBadge text={badgeText} />
       <SvgTools tools={tools} />
     </>
   );

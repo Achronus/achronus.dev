@@ -21,7 +21,7 @@ export const Icon = ({
       data-tip={svg.name}
     >
       {url ? (
-        <Link href={url}>
+        <Link href={url.href}>
           <Svg
             path={svg.path}
             viewBox={svg.viewBox}

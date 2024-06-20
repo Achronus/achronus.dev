@@ -13,7 +13,6 @@ import {
   React,
   ShadcnUi,
   TailwindCSS,
-  LiveBlocks,
   Clerk,
   NextJs,
   FastAPI,
@@ -21,6 +20,9 @@ import {
   MongoDB,
   TypeScript,
   DaisyUi,
+  Globe,
+  Aws,
+  Docker,
 } from "./icons";
 
 const Zentra: ProjectType = {
@@ -45,14 +47,27 @@ const DndExplorer: ProjectType = {
   logo: DndIcon.src,
   links: [
     {
+      url: new URL("https://dnd.achronus.dev/"),
+      svg: Globe,
+    },
+    {
       url: new URL(
         "https://github.com/Achronus/dnd-explorer"
       ),
       svg: GitHub,
     },
   ],
-  tools: [NextJs, TailwindCSS, DaisyUi, FastAPI, MongoDB],
-  status: "In Development",
+  tools: [
+    NextJs,
+    TailwindCSS,
+    DaisyUi,
+    TypeScript,
+    FastAPI,
+    MongoDB,
+    Docker,
+    Aws,
+  ],
+  status: "Live",
 };
 
 const Lumino: ProjectType = {
@@ -109,8 +124,26 @@ const Clover: ProjectType = {
   status: "Coming Soon",
 };
 
+const CreateApiApp: ProjectType = {
+  name: "Create Api App",
+  description:
+    "A CLI tool for creating FastAPI and Next.js projects. Reduce setup time and start programming faster!",
+  logo: "C",
+  links: [
+    {
+      url: new URL(
+        "https://github.com/Achronus/create-api-app"
+      ),
+      svg: GitHub,
+    },
+  ],
+  tools: [Python],
+  status: "Updating",
+};
+
 export const ProjectData: ProjectType[] = [
   Zentra,
+  CreateApiApp,
   DndExplorer,
   Clover,
   FlowCode,
