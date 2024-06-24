@@ -5,6 +5,7 @@ import LuminoIcon from "@/assets/imgs/projects/lumino-icon.png";
 import CloverIcon from "@/assets/imgs/projects/clover-icon.png";
 import FlowCodeIcon from "@/assets/imgs/projects/flowcode-icon.png";
 import TriggoIcon from "@/assets/imgs/projects/triggo-icon.png";
+import Logo from "@/assets/imgs/logo.ico";
 
 import {
   GitHub,
@@ -128,7 +129,7 @@ const CreateApiApp: ProjectType = {
   name: "Create Api App",
   description:
     "A CLI tool for creating FastAPI and Next.js projects. Reduce setup time and start programming faster!",
-  logo: "C",
+  logo: Logo.src,
   links: [
     {
       url: new URL(
@@ -137,13 +138,31 @@ const CreateApiApp: ProjectType = {
       svg: GitHub,
     },
   ],
-  tools: [Python],
-  status: "Updating",
+  tools: [Python, Docker],
+  status: "Live",
+};
+
+const BuildNextjsApp: ProjectType = {
+  name: "Build NextJS App",
+  description:
+    "A simple tool for creating fresh Nextjs applications using a Docker container.",
+  logo: Logo.src,
+  links: [
+    {
+      url: new URL(
+        "https://github.com/Achronus/build-nextjs-app"
+      ),
+      svg: GitHub,
+    },
+  ],
+  tools: [Python, Docker],
+  status: "Live",
 };
 
 export const ProjectData: ProjectType[] = [
   Zentra,
   CreateApiApp,
+  BuildNextjsApp,
   DndExplorer,
   Clover,
   FlowCode,
