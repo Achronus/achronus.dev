@@ -1,5 +1,6 @@
 import { ProjectType } from "@/types/projects";
 import ZentraIcon from "@/assets/imgs/projects/zentra-icon.jpg";
+import CareIcon from "@/assets/imgs/projects/care-icon.png";
 import DndIcon from "@/assets/imgs/projects/dnd-icon.png";
 import LuminoIcon from "@/assets/imgs/projects/lumino-icon.png";
 import CloverIcon from "@/assets/imgs/projects/clover-icon.png";
@@ -38,6 +39,36 @@ const Zentra: ProjectType = {
     },
   ],
   tools: [Python, Pydantic, React, ShadcnUi],
+  status: "In Development",
+};
+
+const CareCoordinator: ProjectType = {
+  name: "Care Coordinator",
+  description:
+    "Appointment management software for Healthcare professionals.",
+  logo: CareIcon.src,
+  links: [
+    // {
+    //   url: new URL("https://dnd.achronus.dev/"),
+    //   svg: Globe,
+    // },
+    {
+      url: new URL(
+        "https://github.com/Achronus/care-coordinator"
+      ),
+      svg: GitHub,
+    },
+  ],
+  tools: [
+    NextJs,
+    TailwindCSS,
+    ShadcnUi,
+    TypeScript,
+    FastAPI,
+    // MongoDB,
+    // Docker,
+    // Aws,
+  ],
   status: "In Development",
 };
 
@@ -161,6 +192,7 @@ const BuildNextjsApp: ProjectType = {
 
 export const ProjectData: ProjectType[] = [
   Zentra,
+  CareCoordinator,
   CreateApiApp,
   BuildNextjsApp,
   DndExplorer,
