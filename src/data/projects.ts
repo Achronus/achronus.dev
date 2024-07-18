@@ -30,7 +30,7 @@ import {
 const Zentra: ProjectType = {
   name: "Zentra",
   description:
-    "An open-source Python tool that uses Pydantic models to create React components.",
+    "An open-source Python SDK that uses Pydantic models to create React components.",
   logo: ZentraIcon.src,
   links: [
     {
@@ -116,7 +116,7 @@ const FlowCode: ProjectType = {
   name: "FlowCode",
   description:
     "A codebase visualisation tool. Identify which functions connect to each other using an interactive flowchart.",
-  logo: FlowCodeIcon.src,
+  logo: Logo.src,
   links: [],
   tools: [
     NextJs,
@@ -190,11 +190,30 @@ const BuildNextjsApp: ProjectType = {
   status: "Live",
 };
 
-export const ProjectData: ProjectType[] = [
+const Turbo: ProjectType = {
+  name: "Turbo",
+  description:
+    "An open-source CLI tool for building full-stack FastAPI and Next.js apps faster.",
+  logo: FlowCodeIcon.src,
+  links: [
+    {
+      url: new URL("https://github.com/Achronus/turbo"),
+      svg: GitHub,
+    },
+  ],
+  tools: [Python],
+  status: "Coming Soon",
+};
+
+export const DevTools: ProjectType[] = [
   Zentra,
-  CareCoordinator,
+  Turbo,
   CreateApiApp,
   BuildNextjsApp,
+];
+
+export const WebProjects: ProjectType[] = [
+  CareCoordinator,
   DndExplorer,
   Clover,
   FlowCode,

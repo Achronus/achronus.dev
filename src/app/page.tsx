@@ -2,7 +2,7 @@ import AboutCard from "@/components/AboutCard";
 import Projects from "@/components/Projects";
 
 import { AboutDetailsData } from "@/data/about";
-import { ProjectData } from "@/data/projects";
+import { WebProjects, DevTools } from "@/data/projects";
 
 export default function Home() {
   return (
@@ -14,11 +14,25 @@ export default function Home() {
 
         <section className="lg:hidden">
           <div className="divider"></div>
-          <h1 className="text-center font-medium text-lg">Projects</h1>
+          <h1 className="text-center font-medium text-2xl">
+            Projects
+          </h1>
         </section>
 
         <section className="projects grid gap-4 md:grid-cols-2 lg:col-span-8 xl:col-span-9 xl:m-8">
-          <Projects projects={ProjectData} />
+          <div className="col-span-full">
+            <h1 className="font-semibold mb-4 text-lg text-center lg:text-3xl lg:text-left">
+              Development Tools
+            </h1>
+          </div>
+          <Projects projects={DevTools} />
+
+          <div className="col-span-full">
+            <h1 className="font-semibold mt-8 mb-4 text-lg text-center lg:text-3xl lg:text-left">
+              Full-stack Projects
+            </h1>
+          </div>
+          <Projects projects={WebProjects} />
         </section>
       </div>
     </>
