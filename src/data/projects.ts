@@ -30,15 +30,19 @@ import {
 const Zentra: ProjectType = {
   name: "Zentra",
   description:
-    "An open-source Python SDK that uses Pydantic models to create React components.",
+    "An open-source Python SDK for building FastAPI and Next.js apps faster.",
   logo: ZentraIcon.src,
   links: [
+    // {
+    //   url: new URL("https://zentra.achronus.dev/"),
+    //   svg: Globe,
+    // },
     {
       url: new URL("https://github.com/Achronus/Zentra"),
       svg: GitHub,
     },
   ],
-  tools: [Python, Pydantic, React, ShadcnUi],
+  tools: [Python, Pydantic, React, FastAPI, ShadcnUi],
   status: "In Development",
 };
 
@@ -49,7 +53,7 @@ const CareCoordinator: ProjectType = {
   logo: CareIcon.src,
   links: [
     // {
-    //   url: new URL("https://dnd.achronus.dev/"),
+    //   url: new URL("https://care.achronus.dev/"),
     //   svg: Globe,
     // },
     {
@@ -116,7 +120,7 @@ const FlowCode: ProjectType = {
   name: "FlowCode",
   description:
     "A codebase visualisation tool. Identify which functions connect to each other using an interactive flowchart.",
-  logo: Logo.src,
+  logo: FlowCodeIcon.src,
   links: [],
   tools: [
     NextJs,
@@ -190,24 +194,8 @@ const BuildNextjsApp: ProjectType = {
   status: "Live",
 };
 
-const Turbo: ProjectType = {
-  name: "Turbo",
-  description:
-    "An open-source CLI tool for building full-stack FastAPI and Next.js apps faster.",
-  logo: FlowCodeIcon.src,
-  links: [
-    {
-      url: new URL("https://github.com/Achronus/turbo"),
-      svg: GitHub,
-    },
-  ],
-  tools: [Python],
-  status: "Coming Soon",
-};
-
 export const DevTools: ProjectType[] = [
   Zentra,
-  Turbo,
   CreateApiApp,
   BuildNextjsApp,
 ];
