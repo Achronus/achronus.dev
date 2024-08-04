@@ -52,10 +52,10 @@ const CareCoordinator: ProjectType = {
     "Appointment management software for Healthcare professionals.",
   logo: CareIcon.src,
   links: [
-    // {
-    //   url: new URL("https://care.achronus.dev/"),
-    //   svg: Globe,
-    // },
+    {
+      url: new URL("https://care.achronus.dev/"),
+      svg: Globe,
+    },
     {
       url: new URL(
         "https://github.com/Achronus/care-coordinator"
@@ -69,11 +69,9 @@ const CareCoordinator: ProjectType = {
     ShadcnUi,
     TypeScript,
     FastAPI,
-    // MongoDB,
-    // Docker,
-    // Aws,
+    Docker,
   ],
-  status: "In Development",
+  status: "Live",
 };
 
 const DndExplorer: ProjectType = {
