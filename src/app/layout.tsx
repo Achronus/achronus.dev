@@ -7,7 +7,7 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Ryan Partridge | Portfolio",
+  title: "Ryan Partridge Portfolio | achronus.dev",
   description: "Ryan Partridge's portfolio website.",
 };
 
