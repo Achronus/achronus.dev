@@ -1,14 +1,11 @@
-import { cn } from "@/libs/utils";
+import { cn } from "@/lib/utils";
 
 type DescriptionProps = {
   children: React.ReactNode;
   styles?: string;
 };
 
-const Description = ({
-  children,
-  styles,
-}: DescriptionProps) => {
+const Description = ({ children, styles }: DescriptionProps) => {
   return (
     <div className={cn("desc", styles)}>
       <p>{children}</p>

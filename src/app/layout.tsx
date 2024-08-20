@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
-import { Rubik } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
-const rubik = Rubik({ subsets: ["latin"] });
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Ryan Partridge | Portfolio",
@@ -16,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${rubik.className} m-5 lg:m-10`}>{children}</body>
+      <body className={`${jakarta.className}`}>{children}</body>
     </html>
   );
 }

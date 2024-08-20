@@ -1,5 +1,5 @@
 import Svg from "@/components/Svg";
-import { cn } from "@/libs/utils";
+import { cn } from "@/lib/utils";
 import { IconType } from "@/types/global";
 import Link from "next/link";
 
