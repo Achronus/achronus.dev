@@ -5,8 +5,8 @@ import "./globals.css";
 const rubik = Rubik({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Achronus.dev | Portfolio",
-  description: "A simple website listing all of Achronus's portfolio projects.",
+  title: "Ryan Partridge | Portfolio",
+  description: "Ryan Partridge's portfolio website.",
 };
 
 export default function RootLayout({
