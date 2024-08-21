@@ -1,3 +1,5 @@
+import { DevTools, FullStackProjects } from "@/constants/projectSections";
+
 type HeaderProps = {
   caption: string;
   title: string;
@@ -21,17 +23,28 @@ const ProjectsSection = () => {
     <div id="projects" className="flex flex-col">
       <section id="dev-tools" className="mb-40">
         <Header
-          caption="Build Faster"
-          title="Simple, Consistent, Development Tools."
-          desc="Empowering development with intuitive tools."
+          caption={DevTools.header.caption}
+          title={DevTools.header.title}
+          desc={DevTools.header.desc}
         />
+        {DevTools.projects.map((project) => (
+          <div key={project.name} className="wrapper">
+            {project.name}
+          </div>
+        ))}
       </section>
+
       <section id="full-stack" className="mb-40">
         <Header
-          caption="Complete Builds"
-          title="End-to-End Solutions with Elegant Execution."
-          desc="Complete, cohesive applications with a refined touch."
+          caption={FullStackProjects.header.caption}
+          title={FullStackProjects.header.title}
+          desc={FullStackProjects.header.desc}
         />
+        {FullStackProjects.projects.map((project) => (
+          <div key={project.name} className="wrapper">
+            {project.name}
+          </div>
+        ))}
       </section>
     </div>
   );
