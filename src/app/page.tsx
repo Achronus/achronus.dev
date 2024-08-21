@@ -1,7 +1,9 @@
-import FeaturedCardSection from "@/components/Homepage/FeaturedCardSection";
-import Hero from "@/components/Homepage/Hero";
-import ProjectsSection from "@/components/Homepage/ProjectsSection";
-import Navbar from "@/components/Navbar";
+import { Navbar } from "@/components/layouts";
+import {
+  FeaturedCardSection,
+  Hero,
+  ProjectsSection,
+} from "@/components/sections";
 
 export default function Home() {
   return (

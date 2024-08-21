@@ -3,11 +3,12 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+import { Icon } from "@/components/Icon";
+
 import { NavLinks, SocialIcons } from "@/constants/menu";
 import useOnScroll from "@/hooks/useOnScroll";
 import { cn } from "@/lib/utils";
 import { NavLink } from "@/types/core";
-import { Icon } from "./Icon";
 
 type NavMenuProps = {
   navLinks: NavLink[];

@@ -1,10 +1,10 @@
+import TechStack from "@/components/TechStack";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 
+import { cn } from "@/lib/utils";
 import { FileText } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import TechStack from "./TechStack";
 
 type HeroProps = {
   hideCTAs?: boolean;
