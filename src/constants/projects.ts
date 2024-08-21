@@ -2,7 +2,7 @@ import { ProjectItem } from "@/types/core";
 import { GitHub } from "@/constants/icons/social";
 import { Globe } from "@/constants/icons/misc";
 
-import ZentraIcon from "@/assets/zentra.jpg";
+import ZentraIcon from "@/assets/zentra.png";
 import CareIcon from "@/assets/care.png";
 import DndIcon from "@/assets/dnd.png";
 // import LuminoIcon from "@/assets/lumino.png";
