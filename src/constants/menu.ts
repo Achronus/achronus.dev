@@ -15,12 +15,8 @@ import { SvgType } from "@/types/global";
 
 export const NavLinks: NavLink[] = [
   {
-    name: "About",
-    url: "/about",
-  },
-  {
     name: "Projects",
-    url: "/projects",
+    url: "/#projects",
   },
 ];
 

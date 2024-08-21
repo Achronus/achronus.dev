@@ -32,8 +32,8 @@ const FeaturedCardSection = () => {
   return (
     <section
       className={cn(
-        "flex flex-col mx-auto justify-center items-center mt-12 gap-8 px-6",
-        "md:flex-row lg:w-[75rem]"
+        "wrapper flex flex-col justify-center items-center mt-12 gap-8",
+        "md:flex-row"
       )}
     >
       <FeaturedCard
