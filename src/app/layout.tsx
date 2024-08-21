@@ -1,12 +1,15 @@
+import { Navbar } from "@/components/layouts";
 import type { Metadata } from "next";
-import { Rubik } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
-const rubik = Rubik({ subsets: ["latin"] });
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
-  title: "Achronus.dev | Portfolio",
-  description: "A simple website listing all of Achronus's portfolio projects.",
+  title: "Ryan Partridge Portfolio | achronus.dev",
+  description: "Ryan Partridge's portfolio website.",
 };
 
 export default function RootLayout({
@@ -16,7 +19,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${rubik.className} m-5 lg:m-10`}>{children}</body>
+      <body className={`${jakarta.className}`}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
