@@ -1,8 +1,12 @@
 import {
   BuildNextjsApp,
   CareCoordinator,
+  Clover,
   CreateApiApp,
   DnDSpellExplorer,
+  FlowCode,
+  Lumino,
+  Triggo,
   Zentra,
 } from "./projects";
 

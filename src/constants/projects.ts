@@ -5,10 +5,10 @@ import { Globe } from "@/constants/icons/misc";
 import ZentraIcon from "@/assets/zentra.png";
 import CareIcon from "@/assets/care.png";
 import DndIcon from "@/assets/dnd.png";
-// import LuminoIcon from "@/assets/lumino.png";
-// import CloverIcon from "@/assets/clover.png";
-// import FlowCodeIcon from "@/assets/flowcode.png";
-// import TriggoIcon from "@/assets/triggo.png";
+import LuminoIcon from "@/assets/lumino.png";
+import CloverIcon from "@/assets/clover.png";
+import FlowCodeIcon from "@/assets/flowcode.png";
+import TriggoIcon from "@/assets/triggo.png";
 import Logo from "@/assets/logo.ico";
 
 // Dev Tools
@@ -96,4 +96,42 @@ export const DnDSpellExplorer: ProjectItem = {
     },
   ],
   status: "Live",
+};
+
+export const Lumino: ProjectItem = {
+  name: "Lumino",
+  desc: "A versatile productivity software tool that helps individuals manage tasks, projects, and notes in one location.",
+  logo: LuminoIcon.src,
+  links: [
+    // {
+    //   name: "GitHub",
+    //   svg: GitHub,
+    //   url: "https://github.com/Achronus/lumino",
+    // },
+  ],
+  status: "Coming Soon",
+};
+
+export const FlowCode: ProjectItem = {
+  name: "FlowCode",
+  desc: "A codebase visualisation tool. Identify which functions connect to each other using an interactive flowchart.",
+  logo: FlowCodeIcon.src,
+  links: [],
+  status: "Coming Soon",
+};
+
+export const Triggo: ProjectItem = {
+  name: "Triggo",
+  desc: "An automation workflow tool. Effortlessly enhance your productivity and efficiency with everyday tasks.",
+  logo: TriggoIcon.src,
+  links: [],
+  status: "Coming Soon",
+};
+
+export const Clover: ProjectItem = {
+  name: "Clover",
+  desc: "An income and expenses tracker tool for managing and monitoring your daily, monthly and yearly spend.",
+  logo: CloverIcon.src,
+  links: [],
+  status: "Coming Soon",
 };

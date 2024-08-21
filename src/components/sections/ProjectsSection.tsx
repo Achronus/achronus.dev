@@ -50,9 +50,12 @@ const ProjectCards = ({ projects }: ProjectCardsProps) => {
   };
 
   return (
-    <div className="wrapper flex flex-col lg:flex-row gap-4 mt-8">
+    <div className="wrapper flex gap-4 mt-8 flex-wrap">
       {projects.map((project) => (
-        <Card key={project.name} className="relative z-10 flex-1 bg-background">
+        <Card
+          key={project.name}
+          className="min-w-[300px] relative z-10 flex-1 bg-background"
+        >
           <div className="absolute inset-x-0 inset-y-8 z-[-1] border-t border-slate-800" />
           <div className="absolute inset-y-0 inset-x-8 z-[-1] border-l border-slate-800" />
           <CardHeader className="p-4">
