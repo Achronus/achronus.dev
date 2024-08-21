@@ -1,5 +1,16 @@
 import { NavLink } from "@/types/core";
-import { GitHub, LinkedIn } from "./icons";
+import {
+  FastAPI,
+  GitHub,
+  LinkedIn,
+  NextJs,
+  Python,
+  React,
+  TailwindCSS,
+  TypeScript,
+  VSCode,
+} from "./icons";
+import { SvgType } from "@/types/global";
 
 export const NavLinks: NavLink[] = [
   {
@@ -24,3 +35,14 @@ export const SocialIcons: NavLink[] = [
     svg: LinkedIn,
   },
 ];
+
+export const TechStackIcons: SvgType[] = [
+  Python,
+  FastAPI,
+  React,
+  TailwindCSS,
+  NextJs,
+  TypeScript,
+];
+
+export const TechToolIcons: SvgType[] = [VSCode];

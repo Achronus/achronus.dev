@@ -12,10 +12,10 @@ const Hero = () => {
       <div
         className={cn(
           "before:absolute before:inset-0 before:w-full before:h-full before:bg-grid-top before:z-[-1]",
-          "flex flex-col mx-auto w-full justify-center items-center"
+          "flex flex-col w-full justify-center items-center"
         )}
       >
-        <div className={cn("flex pt-36 z-10", "lg:pt-40 lg:w-[75rem]")}>
+        <div className={cn("flex pt-36 z-10", "lg:pt-40 lg:mx-auto")}>
           <section className="flex flex-col gap-6 justify-center px-6 lg:mr-14">
             <h6 className="text-slate-500 text-2xl sm:text-4xl">Hi! 👋</h6>
             <h1 className="font-bold text-4xl sm:text-6xl text-slate-300">
@@ -48,6 +48,7 @@ const Hero = () => {
                 </Button>
               </Link>
             </div>
+            <TechStack />
           </section>
           <section className="hidden lg:flex">
             <Image
@@ -59,7 +60,6 @@ const Hero = () => {
             />
           </section>
         </div>
-        <TechStack />
       </div>
     </>
   );

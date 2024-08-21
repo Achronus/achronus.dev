@@ -5,3 +5,9 @@ export type NavLink = {
   url: string;
   svg?: SvgType;
 };
+
+export type Icon = {
+  name: string;
+  svg: SvgType;
+  styles?: string;
+};

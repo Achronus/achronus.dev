@@ -25,6 +25,15 @@ const config = {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
+        icon: {
+          python: "#FFDC52",
+          fastapi: "#009486",
+          react: "#61DAFB",
+          typescript: "#3178C6",
+          tailwindcss: "#06B6D4",
+          nextjs: "#fff",
+          vscode: "#007ACC",
+        },
         background: {
           DEFAULT: "hsl(var(--background))",
           gradient: "var(--gradient)",
@@ -81,6 +90,7 @@ const config = {
       },
     },
   },
+  safelist: [{ pattern: /icon-[a-z]+$/, variants: ["text", "hover"] }],
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;
 
