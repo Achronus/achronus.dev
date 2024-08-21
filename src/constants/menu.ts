@@ -2,6 +2,7 @@ import { NavLink } from "@/types/core";
 import {
   FastAPI,
   GitHub,
+  GitKraken,
   LinkedIn,
   NextJs,
   Python,
@@ -45,4 +46,4 @@ export const TechStackIcons: SvgType[] = [
   TypeScript,
 ];
 
-export const TechToolIcons: SvgType[] = [VSCode];
+export const TechToolIcons: SvgType[] = [VSCode, GitKraken];

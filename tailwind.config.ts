@@ -33,6 +33,7 @@ const config = {
           tailwindcss: "#06B6D4",
           nextjs: "#fff",
           vscode: "#007ACC",
+          gitkraken: "#1B958B",
         },
         background: {
           DEFAULT: "hsl(var(--background))",
