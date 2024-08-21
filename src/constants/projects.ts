@@ -47,7 +47,7 @@ export const CreateApiApp: ProjectItem = {
 
 export const BuildNextjsApp: ProjectItem = {
   name: "Build NextJS App",
-  desc: "A simple tool for creating fresh Nextjs applications using a Docker container.",
+  desc: "A CLI tool for creating fresh Nextjs applications using a Docker container.",
   logo: Logo.src,
   links: [
     {

@@ -1,5 +1,3 @@
-import { SvgType } from "@/types/global";
-
 export type StatusOptions =
   | "Live"
   | "Alpha"
@@ -7,15 +5,26 @@ export type StatusOptions =
   | "Updating"
   | "Coming Soon";
 
+export type StatusMap = {
+  name: StatusOptions;
+  bgColour: string;
+};
+
+export type SvgItem = {
+  name?: string;
+  viewBox: string;
+  path: string;
+};
+
 export type NavLink = {
   name: string;
   url: string;
-  svg?: SvgType;
+  svg?: SvgItem;
 };
 
 export type Icon = {
   name: string;
-  svg: SvgType;
+  svg: SvgItem;
   url?: string;
   styles?: string;
 };

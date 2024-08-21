@@ -20,7 +20,7 @@ export const DevTools: ProjectSection = {
 export const FullStackProjects: ProjectSection = {
   header: {
     caption: "Complete Builds",
-    title: "End-to-End Solutions with Elegant Execution.",
+    title: "Elegant End-to-End Solutions.",
     desc: "Complete, cohesive applications with a refined touch.",
   },
   projects: [CareCoordinator, DnDSpellExplorer],
