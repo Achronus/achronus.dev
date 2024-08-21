@@ -15,7 +15,10 @@ type NavMenuProps = {
 
 const Logo = () => {
   return (
-    <Link href="/" className="flex h-9 items-center gap-2 rounded-xl px-2">
+    <Link
+      href="/"
+      className="flex h-9 items-center gap-2 rounded-xl px-2 hover:bg-muted transition-colors"
+    >
       <section
         id="logo-icon"
         className="flex items-center gap-1.5 leading-none"
