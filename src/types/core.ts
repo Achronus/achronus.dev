@@ -23,7 +23,7 @@ export type NavLink = {
 };
 
 export type Icon = {
-  name: string;
+  name?: string;
   svg: SvgItem;
   url?: string;
   styles?: string;

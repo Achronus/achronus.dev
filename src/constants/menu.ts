@@ -10,7 +10,7 @@ import {
 import { GitHub, LinkedIn } from "./icons/social";
 
 import { NavLink } from "@/types/core";
-import { SvgType } from "@/types/global";
+import { SvgItem } from "@/types/core";
 
 export const NavLinks: NavLink[] = [
   {
@@ -32,7 +32,7 @@ export const SocialIcons: NavLink[] = [
   },
 ];
 
-export const TechStackIcons: SvgType[] = [
+export const TechStackIcons: SvgItem[] = [
   Python,
   FastAPI,
   React,
@@ -41,4 +41,4 @@ export const TechStackIcons: SvgType[] = [
   TypeScript,
 ];
 
-export const TechToolIcons: SvgType[] = [VSCode, GitKraken];
+export const TechToolIcons: SvgItem[] = [VSCode, GitKraken];
