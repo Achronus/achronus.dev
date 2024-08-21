@@ -8,9 +8,9 @@ import {
 
 import { TechStackIcons, TechToolIcons } from "@/constants/menu";
 import { cn } from "@/lib/utils";
-import { SvgType } from "@/types/global";
+import { SvgItem } from "@/types/core";
 
-const IconStack = ({ icons }: { icons: SvgType[] }) => {
+const IconStack = ({ icons }: { icons: SvgItem[] }) => {
   return (
     <section className="flex gap-3">
       {icons.map((icon) => (
