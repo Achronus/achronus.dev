@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <Hero />
+      <Hero hideCTAs />
       <FeaturedCardSection />
       <main>
         {/* <div className="grid gap-4 lg:grid-cols-12 mb-10">

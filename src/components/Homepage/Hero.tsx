@@ -6,7 +6,11 @@ import Image from "next/image";
 import Link from "next/link";
 import TechStack from "./TechStack";
 
-const Hero = () => {
+type HeroProps = {
+  hideCTAs?: boolean;
+};
+
+const Hero = ({ hideCTAs }: HeroProps) => {
   return (
     <>
       <div
@@ -32,7 +36,7 @@ const Hero = () => {
               </span>
             </p>
 
-            <div className="flex">
+            <div className={cn(hideCTAs ? "hidden" : "flex")}>
               <Link href="/work/contact">
                 <Button className="bg-blue-800 text-slate-300 font-bold rounded-lg cursor-pointer hover:bg-secondary transition-colors">
                   Get In Touch
