@@ -5,7 +5,7 @@ export type SvgType = {
 };
 
 export type IconType = {
-  url?: URL;
+  url?: string;
   svg: SvgType;
   styles?: string;
 };

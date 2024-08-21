@@ -56,11 +56,11 @@
 }
 
 @layer utilities {
-  .bg-grid {
+  .bg-grid-top {
     background-image: var(--grid-overlay);
     background-size: 32px 32px;
     mask-image: radial-gradient(
-      ellipse 60% 50% at 50% 0%,
+      ellipse 85% 75% at 50% 0%,
       #0c1222 70%,
       transparent 100%
     );
