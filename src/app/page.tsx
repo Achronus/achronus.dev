@@ -1,5 +1,6 @@
 import FeaturedCardSection from "@/components/Homepage/FeaturedCardSection";
 import Hero from "@/components/Homepage/Hero";
+import ProjectsSection from "@/components/Homepage/ProjectsSection";
 import Navbar from "@/components/Navbar";
 
 export default function Home() {
@@ -8,7 +9,8 @@ export default function Home() {
       <Navbar />
       <Hero hideCTAs />
       <FeaturedCardSection />
-      <main>
+      <main className="bg-card border-t border-t-border flex items-center justify-center my-20 lg:my-40 py-20">
+        <ProjectsSection />
         {/* <div className="grid gap-4 lg:grid-cols-12 mb-10">
         <section className="grid lg:col-span-4 xl:col-span-3 xl:px-10">
           <AboutCard {...AboutDetailsData} />
