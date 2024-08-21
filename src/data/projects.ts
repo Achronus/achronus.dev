@@ -34,11 +34,11 @@ const Zentra: ProjectType = {
   logo: ZentraIcon.src,
   links: [
     // {
-    //   url: new URL("https://zentra.achronus.dev/"),
+    //   url: "https://zentra.achronus.dev/",
     //   svg: Globe,
     // },
     {
-      url: new URL("https://github.com/Achronus/Zentra"),
+      url: "https://github.com/Achronus/Zentra",
       svg: GitHub,
     },
   ],
@@ -48,29 +48,19 @@ const Zentra: ProjectType = {
 
 const CareCoordinator: ProjectType = {
   name: "Care Coordinator",
-  description:
-    "Appointment management software for Healthcare professionals.",
+  description: "Appointment management software for Healthcare professionals.",
   logo: CareIcon.src,
   links: [
     {
-      url: new URL("https://care.achronus.dev/"),
+      url: "https://care.achronus.dev/",
       svg: Globe,
     },
     {
-      url: new URL(
-        "https://github.com/Achronus/care-coordinator"
-      ),
+      url: "https://github.com/Achronus/care-coordinator",
       svg: GitHub,
     },
   ],
-  tools: [
-    NextJs,
-    TailwindCSS,
-    ShadcnUi,
-    TypeScript,
-    FastAPI,
-    Docker,
-  ],
+  tools: [NextJs, TailwindCSS, ShadcnUi, TypeScript, FastAPI, Docker],
   status: "Live",
 };
 
@@ -81,13 +71,11 @@ const DndExplorer: ProjectType = {
   logo: DndIcon.src,
   links: [
     {
-      url: new URL("https://dnd.achronus.dev/"),
+      url: "https://dnd.achronus.dev/",
       svg: Globe,
     },
     {
-      url: new URL(
-        "https://github.com/Achronus/dnd-explorer"
-      ),
+      url: "https://github.com/Achronus/dnd-explorer",
       svg: GitHub,
     },
   ],
@@ -120,14 +108,7 @@ const FlowCode: ProjectType = {
     "A codebase visualisation tool. Identify which functions connect to each other using an interactive flowchart.",
   logo: FlowCodeIcon.src,
   links: [],
-  tools: [
-    NextJs,
-    TailwindCSS,
-    Clerk,
-    Axios,
-    FastAPI,
-    MongoDB,
-  ],
+  tools: [NextJs, TailwindCSS, Clerk, Axios, FastAPI, MongoDB],
   status: "Coming Soon",
 };
 
@@ -147,14 +128,7 @@ const Clover: ProjectType = {
     "An income and expenses tracker tool for managing and monitoring your daily, monthly and yearly spend.",
   logo: CloverIcon.src,
   links: [],
-  tools: [
-    NextJs,
-    TailwindCSS,
-    Clerk,
-    Axios,
-    FastAPI,
-    MongoDB,
-  ],
+  tools: [NextJs, TailwindCSS, Clerk, Axios, FastAPI, MongoDB],
   status: "Coming Soon",
 };
 
@@ -165,9 +139,7 @@ const CreateApiApp: ProjectType = {
   logo: Logo.src,
   links: [
     {
-      url: new URL(
-        "https://github.com/Achronus/create-api-app"
-      ),
+      url: "https://github.com/Achronus/create-api-app",
       svg: GitHub,
     },
   ],
@@ -182,9 +154,7 @@ const BuildNextjsApp: ProjectType = {
   logo: Logo.src,
   links: [
     {
-      url: new URL(
-        "https://github.com/Achronus/build-nextjs-app"
-      ),
+      url: "https://github.com/Achronus/build-nextjs-app",
       svg: GitHub,
     },
   ],
@@ -192,11 +162,7 @@ const BuildNextjsApp: ProjectType = {
   status: "Live",
 };
 
-export const DevTools: ProjectType[] = [
-  Zentra,
-  CreateApiApp,
-  BuildNextjsApp,
-];
+export const DevTools: ProjectType[] = [Zentra, CreateApiApp, BuildNextjsApp];
 
 export const WebProjects: ProjectType[] = [
   CareCoordinator,

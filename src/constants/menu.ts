@@ -1,16 +1,15 @@
-import { NavLink } from "@/types/core";
+import { GitKraken, VSCode } from "./icons/tools";
 import {
   FastAPI,
-  GitHub,
-  GitKraken,
-  LinkedIn,
   NextJs,
   Python,
   React,
   TailwindCSS,
   TypeScript,
-  VSCode,
-} from "./icons";
+} from "./icons/stack";
+import { GitHub, LinkedIn } from "./icons/social";
+
+import { NavLink } from "@/types/core";
 import { SvgType } from "@/types/global";
 
 export const NavLinks: NavLink[] = [
