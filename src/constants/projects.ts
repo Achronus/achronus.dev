@@ -1,7 +1,15 @@
 import { ProjectItem } from "@/types/core";
-import { CareIcon, DndIcon, Logo, ZentraIcon } from "@/constants/logos";
 import { GitHub } from "@/constants/icons/social";
 import { Globe } from "@/constants/icons/misc";
+
+import ZentraIcon from "@/assets/zentra.jpg";
+import CareIcon from "@/assets/care.png";
+import DndIcon from "@/assets/dnd.png";
+// import LuminoIcon from "@/assets/lumino.png";
+// import CloverIcon from "@/assets/clover.png";
+// import FlowCodeIcon from "@/assets/flowcode.png";
+// import TriggoIcon from "@/assets/triggo.png";
+import Logo from "@/assets/logo.ico";
 
 // Dev Tools
 export const Zentra: ProjectItem = {
@@ -25,7 +33,7 @@ export const Zentra: ProjectItem = {
 
 export const CreateApiApp: ProjectItem = {
   name: "Create Api App",
-  desc: "A CLI tool for creating FastAPI and Next.js projects. Reduce setup time and start programming faster!",
+  desc: "A CLI tool for creating FastAPI and Next.js projects.",
   logo: Logo.src,
   links: [
     {

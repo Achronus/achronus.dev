@@ -38,7 +38,7 @@ const Hero = ({ hideCTAs }: HeroProps) => {
 
             <div className={cn(hideCTAs ? "hidden" : "flex")}>
               <Link href="/work/contact">
-                <Button className="bg-blue-800 text-slate-300 font-bold rounded-lg cursor-pointer hover:bg-secondary transition-colors">
+                <Button className="bg-blue-800 text-slate-300 font-bold rounded-lg cursor-pointer hover:bg-blue-700 transition-colors">
                   Get In Touch
                 </Button>
               </Link>
