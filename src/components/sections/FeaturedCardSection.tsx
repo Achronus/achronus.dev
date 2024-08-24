@@ -1,14 +1,11 @@
 import { cn } from "@/lib/utils";
-import { ChartColumn, Heart, Link } from "lucide-react";
+import { FeaturedCardType } from "@/types/details";
 
-type FeaturedCardProps = {
-  icon: React.ReactElement;
-  title: string;
-  desc: string;
-  iconStyles?: string;
+type FeaturedCardSectionProps = {
+  cardDetailsList: FeaturedCardType[];
 };
 
-const FeaturedCard = ({ icon, title, desc, iconStyles }: FeaturedCardProps) => {
+const FeaturedCard = ({ icon, title, desc, iconStyles }: FeaturedCardType) => {
   return (
     <div className="relative z-10 rounded-2xl border bg-background border-slate-800 md:min-h-36 lg:min-h-min w-96">
       <div className="absolute inset-x-0 inset-y-8 z-[-1] border-t border-slate-800" />
@@ -28,7 +25,7 @@ const FeaturedCard = ({ icon, title, desc, iconStyles }: FeaturedCardProps) => {
   );
 };
 
-const FeaturedCardSection = () => {
+const FeaturedCardSection = ({ cardDetailsList }: FeaturedCardSectionProps) => {
   return (
     <section
       className={cn(
@@ -36,24 +33,9 @@ const FeaturedCardSection = () => {
         "md:flex-row"
       )}
     >
-      <FeaturedCard
-        icon={<Link size={24} strokeWidth={1.5} />}
-        title="API Craftsman"
-        desc="Keeping API's clean, efficient, scalable, and maintainable."
-        iconStyles="bg-amber-900"
-      />
-      <FeaturedCard
-        icon={<Heart size={24} strokeWidth={1.5} fill="white" />}
-        title="Detail Oriented"
-        desc="Awareness to ease of access, accessibility, and a seamless UX."
-        iconStyles="bg-pink-900"
-      />
-      <FeaturedCard
-        icon={<ChartColumn size={24} strokeWidth={1.5} />}
-        title="Intuitive Visuals"
-        desc="Turning complex data into clear, actionable insights."
-        iconStyles="bg-sky-900"
-      />
+      {cardDetailsList.map((card) => (
+        <FeaturedCard key={card.title} {...card} />
+      ))}
     </section>
   );
 };
