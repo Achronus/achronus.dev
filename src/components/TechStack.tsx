@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 import Svg from "@/components/Svg";
 import {
   Tooltip,
@@ -6,6 +10,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 
+import { genericAnimation } from "@/constants/motion";
 import { cn } from "@/lib/utils";
 import { SvgItem } from "@/types/core";
 
@@ -44,7 +49,12 @@ const IconStack = ({ icons }: IconStackProps) => {
 
 const TechStack = ({ leftStack, rightStack }: TechStackProps) => {
   return (
-    <section className="flex flex-col mt-16">
+    <motion.section
+      className="flex flex-col mt-16"
+      initial={genericAnimation.hide}
+      animate={genericAnimation.show}
+      transition={{ delay: 0.4 }}
+    >
       <p className="text-slate-500 text-sm">Current tech stack/tools:</p>
       <TooltipProvider>
         <div className="flex gap-3 items-center mt-3">
@@ -53,7 +63,7 @@ const TechStack = ({ leftStack, rightStack }: TechStackProps) => {
           <IconStack icons={rightStack} />
         </div>
       </TooltipProvider>
-    </section>
+    </motion.section>
   );
 };
 

@@ -1,3 +1,8 @@
+"use client";
+
+import { genericAnimation } from "@/constants/motion";
+import { motion } from "framer-motion";
+
 import IconCard from "@/components/IconCard";
 import { cn } from "@/lib/utils";
 import { IconCardType } from "@/types/card";
@@ -9,11 +14,16 @@ type IconCardSectionProps = {
 
 const IconCardSection = ({ cards, className }: IconCardSectionProps) => {
   return (
-    <section className={cn("wrapper flex gap-8 mt-12 flex-wrap", className)}>
+    <motion.section
+      className={cn("wrapper flex gap-8 mt-12 flex-wrap", className)}
+      initial={genericAnimation.hide}
+      animate={genericAnimation.show}
+      transition={{ delay: 0.5 }}
+    >
       {cards.map((card) => (
         <IconCard key={card.title} {...card} />
       ))}
-    </section>
+    </motion.section>
   );
 };
 
