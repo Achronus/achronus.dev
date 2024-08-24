@@ -22,10 +22,16 @@ export type NavLink = {
   svg?: SvgItem;
 };
 
-export type IconType = {
-  name?: string;
+export type SvgIconType = {
   svg: SvgItem;
   url?: string;
+  styles?: string;
+};
+
+export type IconType = {
+  name: string;
+  svg: SvgItem;
+  url: string;
   styles?: string;
 };
 

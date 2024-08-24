@@ -1,4 +1,5 @@
-import { AboutDetailsType, FeaturedCardType } from "@/types/details";
+import { IconCardType } from "@/types/card";
+import { AboutDetailsType } from "@/types/details";
 import { Heart, Link, PanelsTopLeft } from "lucide-react";
 
 export const AboutDetails: AboutDetailsType = {
@@ -10,23 +11,29 @@ export const AboutDetails: AboutDetailsType = {
   image: "/me-vector.svg",
 };
 
-export const FeaturedCards: FeaturedCardType[] = [
+export const FeaturedCards: IconCardType[] = [
   {
     title: "API Craftsman",
     desc: "Keeping API's clean, efficient, scalable, and maintainable.",
-    iconStyles: "bg-amber-900",
     icon: <Link size={24} strokeWidth={1.5} />,
+    styles: {
+      iconContainer: "bg-amber-900",
+    },
   },
   {
     title: "Detail Oriented",
     desc: "Awareness to ease of access, accessibility, and a seamless UX.",
-    iconStyles: "bg-pink-900",
     icon: <Heart size={24} strokeWidth={1.5} fill="white" />,
+    styles: {
+      iconContainer: "bg-pink-900",
+    },
   },
   {
     icon: <PanelsTopLeft size={24} strokeWidth={1.5} />,
     title: "Intuitive Interfaces",
     desc: "Turning JSON data into clear, interactive interfaces.",
-    iconStyles: "bg-sky-900",
+    styles: {
+      iconContainer: "bg-sky-900",
+    },
   },
 ];

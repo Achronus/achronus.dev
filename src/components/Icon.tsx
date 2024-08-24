@@ -1,9 +1,9 @@
 import Svg from "@/components/Svg";
 import { cn } from "@/lib/utils";
-import { IconType } from "@/types/core";
+import { SvgIconType } from "@/types/core";
 import Link from "next/link";
 
-export type IconProps = React.SVGAttributes<SVGElement> & IconType;
+export type IconProps = React.SVGAttributes<SVGElement> & SvgIconType;
 
 export const Icon = ({ url, svg, styles, ...props }: IconProps) => {
   return (
@@ -12,7 +12,6 @@ export const Icon = ({ url, svg, styles, ...props }: IconProps) => {
         `${svg.name?.toLowerCase()}-icon hover:bg-muted transition-colors rounded-md p-2 items-center`,
         styles
       )}
-      data-tip={svg.name}
     >
       {url ? (
         <Link href={url}>

@@ -1,6 +1,6 @@
 import {
   AboutHero,
-  FeaturedCardSection,
+  IconCardSection,
   ProjectsSection,
 } from "@/components/sections";
 import TechStack from "@/components/TechStack";
@@ -14,7 +14,7 @@ export default function Home() {
       <AboutHero details={AboutDetails}>
         <TechStack leftStack={TechStackIcons} rightStack={TechToolIcons} />
       </AboutHero>
-      <FeaturedCardSection cardDetailsList={FeaturedCards} />
+      <IconCardSection cards={FeaturedCards} />
       <main className="bg-card border-y border-y-border flex items-center justify-center my-20 lg:my-40 py-20">
         <ProjectsSection sectionDetails={[DevTools, FullStackProjects]} />
       </main>

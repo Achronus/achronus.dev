@@ -6,10 +6,3 @@ export type AboutDetailsType = {
   desc: string;
   image: string;
 };
-
-export type FeaturedCardType = {
-  title: string;
-  desc: string;
-  iconStyles: string;
-  icon: React.ReactElement;
-};

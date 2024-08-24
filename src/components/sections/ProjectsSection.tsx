@@ -1,24 +1,8 @@
 import Image from "next/image";
-import Link from "next/link";
 
-import { Icon } from "@/components/Icon";
-import { Badge } from "@/components/ui/badge";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-} from "@/components/ui/card";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
+import IconCard from "@/components/IconCard";
 
 import { statusMap } from "@/constants/status";
-import { cn } from "@/lib/utils";
 import { ProjectHeader, ProjectItem, ProjectSection } from "@/types/core";
 
 type HeaderProps = ProjectHeader;
@@ -55,61 +39,22 @@ const ProjectCards = ({ projects }: ProjectCardsProps) => {
   return (
     <div className="wrapper flex gap-4 mt-8 flex-wrap">
       {projects.map((project) => (
-        <Card
+        <IconCard
           key={project.name}
-          className="min-w-[300px] relative z-10 flex-1 bg-background"
-        >
-          <div className="absolute inset-x-0 inset-y-8 z-[-1] border-t border-slate-800" />
-          <div className="absolute inset-y-0 inset-x-8 z-[-1] border-l border-slate-800" />
-          <CardHeader className="p-4">
-            <div className="flex items-center rounded-full bg-slate-900 py-0.5 pr-1">
-              <section className="flex gap-2 items-center">
-                <div className="rounded-full p-2.5 -m-1 bg-sky-900">
-                  <Image
-                    src={project.logo}
-                    alt={project.name}
-                    width={24}
-                    height={24}
-                  />
-                </div>
-                <h3 className="ml-1 font-medium">{project.name}</h3>
-              </section>
-              <TooltipProvider>
-                <section className="flex ml-auto gap-1">
-                  {project.links.map((link) => (
-                    <Tooltip key={link.name}>
-                      <TooltipTrigger asChild>
-                        <Link href={link.url!}>
-                          <Icon svg={link.svg} styles="rounded-full" />
-                        </Link>
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>{link.name}</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  ))}
-                </section>
-              </TooltipProvider>
-            </div>
-          </CardHeader>
-          <CardContent className="flex flex-col gap-2 ml-6 items-start">
-            <Badge
-              className={cn(
-                "ml-auto text-slate-300",
-                setColour(project.status)
-              )}
-            >
-              {project.status}
-            </Badge>
-            <CardDescription>{project.desc}</CardDescription>
-          </CardContent>
-          <CardFooter className="ml-6">
-            {/* <Button className="bg-blue-800 text-slate-300 font-bold rounded-lg cursor-pointer hover:bg-blue-700 transition-colors">
-              Learn More
-              <ArrowRight size={20} className="ml-2" />
-            </Button> */}
-          </CardFooter>
-        </Card>
+          title={project.name}
+          desc={project.desc}
+          icon={
+            <Image
+              src={project.logo}
+              alt={project.name}
+              width={24}
+              height={24}
+            />
+          }
+          headerIcons={project.links}
+          styles={{ badge: setColour(project.status) }}
+          status={project.status}
+        />
       ))}
     </div>
   );
