@@ -76,7 +76,7 @@ const AboutHero = ({ details, children }: AboutHeroProps) => {
               width={500}
               height={500}
               className="rounded-full bg-slate-900 border-none"
-              onLoadingComplete={() => {
+              onLoad={() => {
                 controls.start({
                   opacity: 1,
                   y: 0,
