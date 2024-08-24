@@ -6,7 +6,7 @@ export const AboutDetails: AboutDetailsType = {
   firstName: "Ryan",
   lastName: "Partridge",
   title: "Software Engineer",
-  desc: "Passionate about API development and creating tools with intuitive interfaces.",
+  desc: "passionate about API development and creating tools with intuitive interfaces.",
   image: "/me-vector.svg",
 };
 

@@ -6,11 +6,19 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 
-import { TechStackIcons, TechToolIcons } from "@/constants/menu";
 import { cn } from "@/lib/utils";
 import { SvgItem } from "@/types/core";
 
-const IconStack = ({ icons }: { icons: SvgItem[] }) => {
+type IconStackProps = {
+  icons: SvgItem[];
+};
+
+type TechStackProps = {
+  leftStack: SvgItem[];
+  rightStack: SvgItem[];
+};
+
+const IconStack = ({ icons }: IconStackProps) => {
   return (
     <section className="flex gap-3">
       {icons.map((icon) => (
@@ -34,15 +42,15 @@ const IconStack = ({ icons }: { icons: SvgItem[] }) => {
   );
 };
 
-const TechStack = () => {
+const TechStack = ({ leftStack, rightStack }: TechStackProps) => {
   return (
     <section className="flex flex-col mt-16">
       <p className="text-slate-500 text-sm">Current tech stack/tools:</p>
       <TooltipProvider>
         <div className="flex gap-3 items-center mt-3">
-          <IconStack icons={TechStackIcons} />
+          <IconStack icons={leftStack} />
           <div className="h-3 w-[1px] bg-slate-500" />
-          <IconStack icons={TechToolIcons} />
+          <IconStack icons={rightStack} />
         </div>
       </TooltipProvider>
     </section>

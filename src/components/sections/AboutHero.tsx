@@ -1,14 +1,13 @@
-import TechStack from "@/components/TechStack";
-
 import { cn } from "@/lib/utils";
 import { AboutDetailsType } from "@/types/details";
 import Image from "next/image";
 
 type AboutHeroProps = {
   details: AboutDetailsType;
+  children: React.ReactNode;
 };
 
-const AboutHero = ({ details }: AboutHeroProps) => {
+const AboutHero = ({ details, children }: AboutHeroProps) => {
   return (
     <>
       <div
@@ -31,8 +30,7 @@ const AboutHero = ({ details }: AboutHeroProps) => {
               <span className="text-slate-300 font-bold">{details.title}</span>{" "}
               {details.desc}
             </p>
-
-            <TechStack />
+            {children}
           </section>
           <section className="hidden lg:flex">
             <Image
