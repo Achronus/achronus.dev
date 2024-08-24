@@ -1,13 +1,14 @@
 import {
+  AboutHero,
   FeaturedCardSection,
-  Hero,
   ProjectsSection,
 } from "@/components/sections";
+import { AboutDetails, FeaturedCards } from "@/constants/about";
 
 export default function Home() {
   return (
     <>
-      <Hero hideCTAs />
+      <AboutHero details={AboutDetails} />
       <FeaturedCardSection />
       <main className="bg-card border-y border-y-border flex items-center justify-center my-20 lg:my-40 py-20">
         <ProjectsSection />
