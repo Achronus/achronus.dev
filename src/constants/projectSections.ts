@@ -9,6 +9,7 @@ import {
 import { ProjectSection } from "@/types/core";
 
 export const DevTools: ProjectSection = {
+  tag: "dev-tools",
   header: {
     caption: "Build Faster",
     title: "Simple, Consistent, Development Tools.",
@@ -18,6 +19,7 @@ export const DevTools: ProjectSection = {
 };
 
 export const FullStackProjects: ProjectSection = {
+  tag: "full-stack",
   header: {
     caption: "Complete Builds",
     title: "Elegant End-to-End Solutions.",

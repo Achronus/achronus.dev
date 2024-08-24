@@ -4,6 +4,7 @@ import {
   ProjectsSection,
 } from "@/components/sections";
 import { AboutDetails, FeaturedCards } from "@/constants/about";
+import { DevTools, FullStackProjects } from "@/constants/projectSections";
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
       <AboutHero details={AboutDetails} />
       <FeaturedCardSection cardDetailsList={FeaturedCards} />
       <main className="bg-card border-y border-y-border flex items-center justify-center my-20 lg:my-40 py-20">
-        <ProjectsSection />
+        <ProjectsSection sectionDetails={[DevTools, FullStackProjects]} />
       </main>
     </>
   );

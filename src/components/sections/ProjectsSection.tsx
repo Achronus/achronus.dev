@@ -17,15 +17,18 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 
-import { DevTools, FullStackProjects } from "@/constants/projectSections";
 import { statusMap } from "@/constants/status";
 import { cn } from "@/lib/utils";
-import { ProjectHeader, ProjectItem } from "@/types/core";
+import { ProjectHeader, ProjectItem, ProjectSection } from "@/types/core";
 
 type HeaderProps = ProjectHeader;
 
 type ProjectCardsProps = {
   projects: ProjectItem[];
+};
+
+type ProjectsSectionProps = {
+  sectionDetails: ProjectSection[];
 };
 
 const Header = ({ caption, title, desc }: HeaderProps) => {
@@ -112,18 +115,15 @@ const ProjectCards = ({ projects }: ProjectCardsProps) => {
   );
 };
 
-const ProjectsSection = () => {
+const ProjectsSection = ({ sectionDetails }: ProjectsSectionProps) => {
   return (
     <div id="projects" className="flex flex-col">
-      <section id="dev-tools" className="mb-28">
-        <Header {...DevTools.header} />
-        <ProjectCards projects={DevTools.projects} />
-      </section>
-
-      <section id="full-stack" className="mb-28">
-        <Header {...FullStackProjects.header} />
-        <ProjectCards projects={FullStackProjects.projects} />
-      </section>
+      {sectionDetails.map((section) => (
+        <section key={section.tag} id={section.tag} className="mb-28">
+          <Header {...section.header} />
+          <ProjectCards projects={section.projects} />
+        </section>
+      ))}
     </div>
   );
 };

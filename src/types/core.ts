@@ -44,6 +44,7 @@ export type ProjectItem = {
 };
 
 export type ProjectSection = {
+  tag: string;
   header: ProjectHeader;
   projects: ProjectItem[];
 };
