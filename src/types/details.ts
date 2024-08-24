@@ -6,3 +6,10 @@ export type AboutDetailsType = {
   desc: string;
   image: string;
 };
+
+export type FooterAboutDetailsType = {
+  title: string;
+  name: string;
+  position: string;
+  desc: string;
+};

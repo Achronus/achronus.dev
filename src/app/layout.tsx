@@ -3,8 +3,10 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
 import IconArray from "@/components/IconArray";
+import Footer from "@/components/layouts/Footer";
 import { Logo, Navbar, NavigationLinks } from "@/components/layouts/Navbar";
 import LogoWithIcon from "@/components/LogoWithIcon";
+import { FooterAboutDetails } from "@/constants/about";
 import { NavLinks, SocialIcons } from "@/constants/menu";
 
 const jakarta = Plus_Jakarta_Sans({
@@ -36,6 +38,7 @@ export default function RootLayout({
           </nav>
         </Navbar>
         {children}
+        <Footer details={FooterAboutDetails} />
       </body>
     </html>
   );

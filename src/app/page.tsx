@@ -15,7 +15,7 @@ export default function Home() {
         <TechStack leftStack={TechStackIcons} rightStack={TechToolIcons} />
       </AboutHero>
       <IconCardSection cards={FeaturedCards} />
-      <main className="bg-card border-y border-y-border flex items-center justify-center my-20 lg:my-40 py-20">
+      <main className="bg-card border-y border-y-border flex items-center justify-center mt-20 lg:mt-40 pt-20">
         <ProjectsSection sectionDetails={[DevTools, FullStackProjects]} />
       </main>
     </>

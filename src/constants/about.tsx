@@ -1,5 +1,5 @@
 import { IconCardType } from "@/types/card";
-import { AboutDetailsType } from "@/types/details";
+import { AboutDetailsType, FooterAboutDetailsType } from "@/types/details";
 import { Heart, Link, PanelsTopLeft } from "lucide-react";
 
 export const AboutDetails: AboutDetailsType = {
@@ -37,3 +37,10 @@ export const FeaturedCards: IconCardType[] = [
     },
   },
 ];
+
+export const FooterAboutDetails: FooterAboutDetailsType = {
+  title: "About Me",
+  name: AboutDetails.firstName,
+  position: AboutDetails.title,
+  desc: AboutDetails.desc,
+};
