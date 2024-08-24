@@ -1,6 +1,6 @@
 import Svg from "@/components/Svg";
 import { cn } from "@/lib/utils";
-import { Icon as IconType } from "@/types/core";
+import { IconType } from "@/types/core";
 import Link from "next/link";
 
 export type IconProps = React.SVGAttributes<SVGElement> & IconType;

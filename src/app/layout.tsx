@@ -1,7 +1,11 @@
-import { Navbar } from "@/components/layouts";
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+
+import IconArray from "@/components/IconArray";
+import { Logo, Navbar, NavigationLinks } from "@/components/layouts/Navbar";
+import LogoWithIcon from "@/components/LogoWithIcon";
+import { NavLinks, SocialIcons } from "@/constants/menu";
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -20,7 +24,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${jakarta.className}`}>
-        <Navbar />
+        <Navbar>
+          <nav className="flex gap-4 items-center">
+            <Logo>
+              <LogoWithIcon />
+            </Logo>
+            <NavigationLinks navLinks={NavLinks} />
+          </nav>
+          <nav className="flex items-center ml-auto gap-2">
+            <IconArray icons={SocialIcons} />
+          </nav>
+        </Navbar>
         {children}
       </body>
     </html>

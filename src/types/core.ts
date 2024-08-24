@@ -22,7 +22,7 @@ export type NavLink = {
   svg?: SvgItem;
 };
 
-export type Icon = {
+export type IconType = {
   name?: string;
   svg: SvgItem;
   url?: string;
@@ -39,7 +39,7 @@ export type ProjectItem = {
   name: string;
   desc: string;
   logo: string;
-  links: Icon[];
+  links: IconType[];
   status: StatusOptions;
 };
 
