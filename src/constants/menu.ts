@@ -9,7 +9,7 @@ import {
 } from "./icons/stack";
 import { GitHub, LinkedIn } from "./icons/social";
 
-import { NavLink } from "@/types/core";
+import { IconType, NavLink } from "@/types/core";
 import { SvgItem } from "@/types/core";
 
 export const NavLinks: NavLink[] = [
@@ -19,7 +19,7 @@ export const NavLinks: NavLink[] = [
   },
 ];
 
-export const SocialIcons: NavLink[] = [
+export const SocialIcons: IconType[] = [
   {
     name: "GitHub",
     url: "https://github.com/Achronus",

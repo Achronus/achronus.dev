@@ -3,9 +3,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { Icon } from "@/components/Icon";
-
-import { NavLinks, SocialIcons } from "@/constants/menu";
 import useOnScroll from "@/hooks/useOnScroll";
 import { cn } from "@/lib/utils";
 import { NavLink } from "@/types/core";
@@ -14,43 +11,18 @@ type NavMenuProps = {
   navLinks: NavLink[];
 };
 
-const Logo = () => {
+export const Logo = ({ children }: { children: React.ReactNode }) => {
   return (
     <Link
       href="/"
       className="flex h-9 items-center gap-2 rounded-xl px-2 hover:bg-muted transition-colors"
     >
-      <section
-        id="logo-icon"
-        className="flex items-center gap-1.5 leading-none"
-      >
-        <div
-          className={cn(
-            "border-box flex h-8 w-8 items-center justify-center rounded-xl border-2",
-            "sm:h-6 sm:w-6 sm:rounded-lg",
-            "bg-blue-500 border-blue-500"
-          )}
-        >
-          <div
-            className={cn(
-              "h-3.5 w-0.5 rotate-12 rounded-full bg-white",
-              "sm:h-3 sm:w-0.5"
-            )}
-          />
-        </div>
-      </section>
-      <section
-        id="logo-text"
-        className="-mt-1 text-xl font-medium flex gap-1 sm:gap-0.5"
-      >
-        <span className="text-slate-200">achronus</span>
-        <span className="text-blue-500">dev</span>
-      </section>
+      {children}
     </Link>
   );
 };
 
-const NavigationLinks = ({ navLinks }: NavMenuProps) => {
+export const NavigationLinks = ({ navLinks }: NavMenuProps) => {
   const pathname = usePathname();
 
   return (
@@ -71,7 +43,7 @@ const NavigationLinks = ({ navLinks }: NavMenuProps) => {
   );
 };
 
-const Navbar = () => {
+export const Navbar = ({ children }: { children: React.ReactNode }) => {
   const isScrolled = useOnScroll(0);
 
   return (
@@ -88,19 +60,9 @@ const Navbar = () => {
             "relative z-50 flex h-16 items-center justify-between px-2 text-sm md:px-4"
           )}
         >
-          <nav className="flex gap-4 items-center">
-            <Logo />
-            <NavigationLinks navLinks={NavLinks} />
-          </nav>
-          <nav className="flex items-center ml-auto gap-2">
-            {SocialIcons.map((icon) => (
-              <Icon key={icon.name} url={icon.url} svg={icon.svg!} />
-            ))}
-          </nav>
+          {children}
         </section>
       </div>
     </header>
   );
 };
-
-export default Navbar;

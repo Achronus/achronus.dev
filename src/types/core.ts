@@ -22,10 +22,16 @@ export type NavLink = {
   svg?: SvgItem;
 };
 
-export type Icon = {
-  name?: string;
+export type SvgIconType = {
   svg: SvgItem;
   url?: string;
+  styles?: string;
+};
+
+export type IconType = {
+  name: string;
+  svg: SvgItem;
+  url: string;
   styles?: string;
 };
 
@@ -39,11 +45,12 @@ export type ProjectItem = {
   name: string;
   desc: string;
   logo: string;
-  links: Icon[];
+  links: IconType[];
   status: StatusOptions;
 };
 
 export type ProjectSection = {
+  tag: string;
   header: ProjectHeader;
   projects: ProjectItem[];
 };

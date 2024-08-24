@@ -1,5 +1,5 @@
-import FeaturedCardSection from "@/components/sections/FeaturedCardSection";
-import Hero from "@/components/sections/Hero";
-import ProjectsSection from "@/components/sections/ProjectsSection";
+import AboutHero from "./AboutHero";
+import IconCardSection from "./IconCardSection";
+import ProjectsSection from "./ProjectsSection";
 
-export { FeaturedCardSection, Hero, ProjectsSection };
+export { AboutHero, IconCardSection, ProjectsSection };
