@@ -10,7 +10,9 @@ const PageLayout = ({ details, children }: PageLayoutProps) => {
   return (
     <>
       <BasicHero title={details.title} desc={details.desc} />
-      <main className="wrapper mt-20 py-20">{children}</main>
+      <main className="flex flex-col gap-8 wrapper py-20">
+        <div className="xl:border-l xl:pl-10">{children}</div>
+      </main>
     </>
   );
 };
