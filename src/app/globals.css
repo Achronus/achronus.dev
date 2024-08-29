@@ -74,6 +74,16 @@
     );
   }
 
+  .bg-grid-top-small {
+    background-image: var(--grid-overlay);
+    background-size: var(--grid-size);
+    mask-image: radial-gradient(
+      ellipse 85% 35% at 50% 0%,
+      #0c1222 70%,
+      transparent 100%
+    );
+  }
+
   .bg-grid-bottom {
     background-image: var(--grid-overlay);
     background-size: var(--grid-size);

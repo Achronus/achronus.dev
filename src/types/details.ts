@@ -13,3 +13,8 @@ export type FooterAboutDetailsType = {
   position: string;
   desc: string;
 };
+
+export type BasicHeroDetails = {
+  title: string;
+  desc: string;
+};

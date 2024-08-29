@@ -1,4 +1,4 @@
-import { GitKraken, VSCode } from "./icons/tools";
+import { GitKraken, Postman, VSCode } from "./icons/tools";
 import {
   FastAPI,
   NextJs,
@@ -11,11 +11,16 @@ import { GitHub, LinkedIn } from "./icons/social";
 
 import { IconType, NavLink } from "@/types/core";
 import { SvgItem } from "@/types/core";
+import { Email } from "./icons/misc";
 
 export const NavLinks: NavLink[] = [
   {
     name: "Projects",
     url: "/#projects",
+  },
+  {
+    name: "About",
+    url: "/about",
   },
 ];
 
@@ -32,6 +37,15 @@ export const SocialIcons: IconType[] = [
   },
 ];
 
+export const ContactIcons: IconType[] = [
+  ...SocialIcons,
+  {
+    name: "Email",
+    url: "mailto:rpartridge101@gmail.com",
+    svg: Email,
+  },
+];
+
 export const TechStackIcons: SvgItem[] = [
   Python,
   FastAPI,
@@ -41,4 +55,4 @@ export const TechStackIcons: SvgItem[] = [
   TypeScript,
 ];
 
-export const TechToolIcons: SvgItem[] = [VSCode, GitKraken];
+export const TechToolIcons: SvgItem[] = [VSCode, GitKraken, Postman];
