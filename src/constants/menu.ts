@@ -1,4 +1,4 @@
-import { GitKraken, VSCode } from "./icons/tools";
+import { GitKraken, Postman, VSCode } from "./icons/tools";
 import {
   FastAPI,
   NextJs,
@@ -45,4 +45,4 @@ export const TechStackIcons: SvgItem[] = [
   TypeScript,
 ];
 
-export const TechToolIcons: SvgItem[] = [VSCode, GitKraken];
+export const TechToolIcons: SvgItem[] = [VSCode, GitKraken, Postman];

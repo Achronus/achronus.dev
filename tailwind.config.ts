@@ -34,6 +34,7 @@ const config = {
           nextjs: "#fff",
           vscode: "#007ACC",
           gitkraken: "#1B958B",
+          postman: "#FD713B",
         },
         background: {
           DEFAULT: "hsl(var(--background))",
