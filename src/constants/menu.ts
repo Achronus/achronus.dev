@@ -11,6 +11,7 @@ import { GitHub, LinkedIn } from "./icons/social";
 
 import { IconType, NavLink } from "@/types/core";
 import { SvgItem } from "@/types/core";
+import { Email } from "./icons/misc";
 
 export const NavLinks: NavLink[] = [
   {
@@ -33,6 +34,15 @@ export const SocialIcons: IconType[] = [
     name: "LinkedIn",
     url: "https://www.linkedin.com/in/ryan-partridge-08b7118b/",
     svg: LinkedIn,
+  },
+];
+
+export const ContactIcons: IconType[] = [
+  ...SocialIcons,
+  {
+    name: "Email",
+    url: "mailto:rpartridge101@gmail.com",
+    svg: Email,
   },
 ];
 
