@@ -17,6 +17,10 @@ export const NavLinks: NavLink[] = [
     name: "Projects",
     url: "/#projects",
   },
+  {
+    name: "About",
+    url: "/about",
+  },
 ];
 
 export const SocialIcons: IconType[] = [
