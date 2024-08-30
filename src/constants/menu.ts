@@ -22,6 +22,10 @@ export const NavLinks: NavLink[] = [
     name: "About",
     url: "/about",
   },
+  {
+    name: "Focus",
+    url: "/focus",
+  },
 ];
 
 export const SocialIcons: IconType[] = [
@@ -35,16 +39,14 @@ export const SocialIcons: IconType[] = [
     url: "https://www.linkedin.com/in/ryan-partridge-08b7118b/",
     svg: LinkedIn,
   },
-];
-
-export const ContactIcons: IconType[] = [
-  ...SocialIcons,
   {
     name: "Email",
     url: "mailto:rpartridge101@gmail.com",
     svg: Email,
   },
 ];
+
+export const ContactIcons: IconType[] = [...SocialIcons];
 
 export const TechStackIcons: SvgItem[] = [
   Python,
