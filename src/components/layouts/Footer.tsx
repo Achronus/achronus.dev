@@ -1,6 +1,8 @@
 import { SocialIcons } from "@/constants/menu";
 import { FooterAboutDetailsType } from "@/types/details";
-import IconArray from "../IconArray";
+
+import IconArray from "@/components/IconArray";
+import { ShimmerBadge } from "@/components/ShimmerBadge";
 
 type FooterProps = {
   details: FooterAboutDetailsType;
@@ -31,10 +33,13 @@ const Footer = ({ details }: FooterProps) => {
       <div className="absolute bottom-0 left-0 w-full h-[400px] bg-grid-bottom z-[-1]" />
       <div className="wrapper flex flex-col">
         <FooterDescription {...details} />
-        <div className="border-muted flex justify-between border-t pt-6 text-xs">
+        <div className="border-muted flex justify-between border-t pt-6 text-xs items-center">
           <section className="font-semibold">
             &copy; {new Date().getFullYear()}, Ryan Partridge
           </section>
+          <ShimmerBadge delay={0} className="sm:hidden">
+            Open For Work
+          </ShimmerBadge>
         </div>
       </div>
     </footer>

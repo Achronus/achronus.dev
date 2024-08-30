@@ -35,7 +35,7 @@ export default function RootLayout({
             </Logo>
             <NavigationLinks navLinks={NavLinks} />
           </nav>
-          <nav className="flex items-center ml-auto gap-2">
+          <nav className="hidden sm:flex items-center md:ml-auto gap-2">
             <ShimmerBadge delay={0}>Open For Work</ShimmerBadge>
             <IconArray icons={SocialIcons} />
           </nav>

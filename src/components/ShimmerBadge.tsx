@@ -1,6 +1,7 @@
 "use client";
 
 import { genericAnimation } from "@/constants/motion";
+import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
@@ -8,11 +9,16 @@ import Link from "next/link";
 type ShimmerBadgeProps = {
   children: React.ReactNode;
   delay?: number;
+  className?: string;
 };
 
 type BorderMagicProps = ShimmerBadgeProps;
 
-export const ShimmerBadge = ({ children, delay }: ShimmerBadgeProps) => {
+export const ShimmerBadge = ({
+  children,
+  delay,
+  className,
+}: ShimmerBadgeProps) => {
   return (
     <motion.div
       initial={genericAnimation.hide}
@@ -20,7 +26,12 @@ export const ShimmerBadge = ({ children, delay }: ShimmerBadgeProps) => {
       transition={{ delay: delay ?? 0.1 }}
       className="mr-3"
     >
-      <button className="inline-flex animate-shimmer items-center justify-center rounded-lg border border-blue-900 bg-[linear-gradient(110deg,#1e40af,45%,#3b82f6,55%,#1e40af)] bg-[length:200%_100%] py-2 px-3 font-medium text-slate-300 transition-colors text-sm cursor-default tracking-wide">
+      <button
+        className={cn(
+          "inline-flex animate-shimmer items-center justify-center rounded-lg border border-blue-900 bg-[linear-gradient(110deg,#1e40af,45%,#3b82f6,55%,#1e40af)] bg-[length:200%_100%] py-2 px-3 font-medium text-slate-300 transition-colors text-sm cursor-default tracking-wide",
+          className
+        )}
+      >
         {children}
       </button>
     </motion.div>
