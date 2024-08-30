@@ -1,24 +1,11 @@
 import IconArray from "@/components/IconArray";
 import PageLayout from "@/components/layouts/PageLayout";
+import { ContentSection } from "@/components/sections";
 
 import { ContactIcons } from "@/constants/menu";
 import { AboutHeroDetails } from "@/constants/pages";
 
 import Image from "next/image";
-
-type ContentSectionProps = {
-  title: string;
-  children: React.ReactNode;
-};
-
-const ContentSection = ({ title, children }: ContentSectionProps) => {
-  return (
-    <section className="flex flex-col gap-6 xl:mt-2 mb-8">
-      <h1 className="text-slate-300 text-4xl font-extrabold">{title}</h1>
-      {children}
-    </section>
-  );
-};
 
 const About = () => {
   return (
