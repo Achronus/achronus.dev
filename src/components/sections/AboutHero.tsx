@@ -2,6 +2,8 @@
 
 import { motion, useAnimationControls } from "framer-motion";
 
+import { BorderMagicBadge } from "@/components/ShimmerBadge";
+
 import { genericAnimation } from "@/constants/motion";
 import { cn } from "@/lib/utils";
 import { AboutDetailsType } from "@/types/details";
@@ -53,6 +55,7 @@ const AboutHero = ({ details, children }: AboutHeroProps) => {
               {details.desc}
             </motion.p>
             {children}
+            <BorderMagicBadge delay={0.5}>My Current Focus</BorderMagicBadge>
           </section>
           <motion.section
             className="hidden lg:flex"

@@ -6,6 +6,8 @@ import IconArray from "@/components/IconArray";
 import Footer from "@/components/layouts/Footer";
 import { Logo, Navbar, NavigationLinks } from "@/components/layouts/Navbar";
 import LogoWithIcon from "@/components/LogoWithIcon";
+import { ShimmerBadge } from "@/components/ShimmerBadge";
+
 import { FooterAboutDetails } from "@/constants/about";
 import { NavLinks, SocialIcons } from "@/constants/menu";
 
@@ -34,6 +36,7 @@ export default function RootLayout({
             <NavigationLinks navLinks={NavLinks} />
           </nav>
           <nav className="flex items-center ml-auto gap-2">
+            <ShimmerBadge delay={0}>Open For Work</ShimmerBadge>
             <IconArray icons={SocialIcons} />
           </nav>
         </Navbar>
