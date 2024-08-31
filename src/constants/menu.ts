@@ -22,10 +22,6 @@ export const NavLinks: NavLink[] = [
     name: "About",
     url: "/about",
   },
-  {
-    name: "Focus",
-    url: "/focus",
-  },
 ];
 
 export const SocialIcons: IconType[] = [
