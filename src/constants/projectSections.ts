@@ -15,7 +15,7 @@ export const Interests: ProjectSection = {
     title: "At A Glance.",
     desc: "Topics I'm interested in and currently exploring.",
   },
-  badges: ["Computer Vision", "Small Language Models (SLMs)"],
+  badges: ["Computer Vision", "Small Language Models (SLMs)", "With APIs"],
 };
 
 export const DevTools: ProjectSection = {
