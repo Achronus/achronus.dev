@@ -8,6 +8,16 @@ import {
 
 import { ProjectSection } from "@/types/core";
 
+export const Interests: ProjectSection = {
+  tag: "interest",
+  header: {
+    caption: "Interests",
+    title: "At A Glance.",
+    desc: "Topics I'm interested in and currently exploring.",
+  },
+  badges: ["Computer Vision", "Small Language Models (SLMs)"],
+};
+
 export const DevTools: ProjectSection = {
   tag: "dev-tools",
   header: {

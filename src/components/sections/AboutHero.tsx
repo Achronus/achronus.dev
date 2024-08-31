@@ -2,8 +2,6 @@
 
 import { motion, useAnimationControls } from "framer-motion";
 
-import { BorderMagicBadge } from "@/components/ShimmerBadge";
-
 import { genericAnimation } from "@/constants/motion";
 import { cn } from "@/lib/utils";
 import { AboutDetailsType } from "@/types/details";
@@ -45,7 +43,7 @@ const AboutHero = ({ details, children }: AboutHeroProps) => {
               {details.lastName},
             </motion.h1>
             <motion.p
-              className="text-slate-500 text-xl max-w-[35rem]"
+              className="text-slate-500 text-xl max-w-[35rem] mb-6"
               initial={genericAnimation.hide}
               animate={genericAnimation.show}
               transition={{ delay: 0.3 }}
@@ -55,7 +53,6 @@ const AboutHero = ({ details, children }: AboutHeroProps) => {
               {details.desc}
             </motion.p>
             {children}
-            <BorderMagicBadge delay={0.5}>My Current Focus</BorderMagicBadge>
           </section>
           <motion.section
             className="hidden lg:flex"
