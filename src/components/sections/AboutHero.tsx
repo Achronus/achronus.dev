@@ -43,7 +43,7 @@ const AboutHero = ({ details, children }: AboutHeroProps) => {
               {details.lastName},
             </motion.h1>
             <motion.p
-              className="text-slate-500 text-xl max-w-[35rem]"
+              className="text-slate-500 text-xl max-w-[35rem] mb-6"
               initial={genericAnimation.hide}
               animate={genericAnimation.show}
               transition={{ delay: 0.3 }}

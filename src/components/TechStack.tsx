@@ -66,7 +66,7 @@ const IconStack = ({ icons }: IconStackProps) => {
 const TechStack = ({ leftStack, rightStack }: TechStackProps) => {
   return (
     <motion.section
-      className="flex flex-col mt-16"
+      className="flex flex-col mt-6"
       initial={genericAnimation.hide}
       animate={genericAnimation.show}
       transition={{ delay: 0.4 }}

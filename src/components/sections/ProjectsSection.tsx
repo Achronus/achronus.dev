@@ -1,6 +1,8 @@
 import Image from "next/image";
 
 import IconCard from "@/components/IconCard";
+import { BorderMagicBadge } from "@/components/ShimmerBadge";
+import { Badge } from "@/components/ui/badge";
 
 import { statusMap } from "@/constants/status";
 import { ProjectHeader, ProjectItem, ProjectSection } from "@/types/core";
@@ -9,6 +11,11 @@ type HeaderProps = ProjectHeader;
 
 type ProjectCardsProps = {
   projects: ProjectItem[];
+};
+
+type ProjectBadgesProps = {
+  badges: string[];
+  text?: string;
 };
 
 type ProjectsSectionProps = {
@@ -60,13 +67,36 @@ const ProjectCards = ({ projects }: ProjectCardsProps) => {
   );
 };
 
+const ProjectBadges = ({ badges, text }: ProjectBadgesProps) => {
+  return (
+    <div className="wrapper flex gap-4 mt-6 flex-wrap">
+      {badges.map((badge) => (
+        <Badge
+          key={badge}
+          variant="secondary"
+          className="cursor-default px-3 py-1 bg-[linear-gradient(110deg,#3b82f6,45%,#1e40af,55%,#3b82f6)] animate-shimmer transition-all bg-[length:200%_100%]"
+        >
+          {badge}
+        </Badge>
+      ))}
+      {text && <BorderMagicBadge delay={0}>{text}</BorderMagicBadge>}
+    </div>
+  );
+};
+
 const ProjectsSection = ({ sectionDetails }: ProjectsSectionProps) => {
   return (
     <div id="projects" className="flex flex-col">
       {sectionDetails.map((section) => (
         <section key={section.tag} id={section.tag} className="mb-28">
           <Header {...section.header} />
-          <ProjectCards projects={section.projects} />
+          {section.badges && (
+            <ProjectBadges
+              badges={section.badges}
+              text="Projects Coming Soon"
+            />
+          )}
+          {section.projects && <ProjectCards projects={section.projects} />}
         </section>
       ))}
     </div>
