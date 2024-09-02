@@ -3,10 +3,10 @@ import { GitHub } from "./icons/social";
 
 import {
   KMeansClustering,
-  LinearRegression,
   MiningRovers,
   PlantClassifier,
   PolynomialRegression,
+  RegressionAnalysis,
 } from "@/pages/projects";
 
 import BathUni from "@/assets/uob.png";
@@ -157,7 +157,7 @@ export const PolyRegressionProject: ProjectPageDetails = {
     },
   ],
   status: "Complete",
-  pageName: "polynomial-regression",
+  // pageName: "polynomial-regression",
   page: <PolynomialRegression />,
 };
 
@@ -192,7 +192,7 @@ export const LinearRegressionProject: ProjectPageDetails = {
   ],
   status: "Complete",
   pageName: "regression-analysis",
-  page: <LinearRegression />,
+  page: <RegressionAnalysis />,
 };
 
 export const KMeansClusteringProject: ProjectPageDetails = {
@@ -225,7 +225,7 @@ export const KMeansClusteringProject: ProjectPageDetails = {
     },
   ],
   status: "Complete",
-  pageName: "k-means-clustering",
+  // pageName: "k-means-clustering",
   page: <KMeansClustering />,
 };
 

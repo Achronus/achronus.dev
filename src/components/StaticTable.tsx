@@ -11,10 +11,10 @@ import {
 type StaticTableProps = {
   columns: string[];
   values: Record<string, any>[];
-  figure?: string;
+  caption?: string;
 };
 
-const StaticTable = ({ columns, values, figure }: StaticTableProps) => {
+const StaticTable = ({ columns, values, caption }: StaticTableProps) => {
   return (
     <Table className="my-4">
       <TableHeader>
@@ -33,7 +33,7 @@ const StaticTable = ({ columns, values, figure }: StaticTableProps) => {
           </TableRow>
         ))}
       </TableBody>
-      {figure && <TableCaption>{figure}</TableCaption>}
+      {caption && <TableCaption>{caption}</TableCaption>}
     </Table>
   );
 };
