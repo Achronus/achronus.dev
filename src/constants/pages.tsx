@@ -7,7 +7,7 @@ import {
   PlantClassifier,
   PolynomialRegression,
   RegressionAnalysis,
-} from "@/pages/projects";
+} from "@/components/projects";
 
 import BathUni from "@/assets/uob.png";
 import LincolnUni from "@/assets/uol.png";
