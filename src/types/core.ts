@@ -48,6 +48,7 @@ export type ProjectItem = {
   logo: string;
   links: IconType[];
   status: StatusOptions;
+  pageName?: string;
 };
 
 export type ProjectSection = {

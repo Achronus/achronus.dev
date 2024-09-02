@@ -151,6 +151,7 @@ export const RLAtariGames: ProjectItem = {
     },
   ],
   status: "Complete",
+  pageName: "rl-atari-games",
 };
 
 export const MiningRovers: ProjectItem = {
@@ -165,6 +166,7 @@ export const MiningRovers: ProjectItem = {
     },
   ],
   status: "Complete",
+  pageName: "planetary-mining-rovers",
 };
 
 export const PlantClassifier: ProjectItem = {
@@ -179,6 +181,7 @@ export const PlantClassifier: ProjectItem = {
     },
   ],
   status: "Complete",
+  pageName: "wep-classifier",
 };
 
 export const PolyRegression: ProjectItem = {
@@ -193,6 +196,7 @@ export const PolyRegression: ProjectItem = {
     },
   ],
   status: "Complete",
+  pageName: "polynomial-regression",
 };
 
 export const LinearRegression: ProjectItem = {
@@ -207,6 +211,7 @@ export const LinearRegression: ProjectItem = {
     },
   ],
   status: "Complete",
+  pageName: "regression-analysis",
 };
 
 export const KMeansClustering: ProjectItem = {
@@ -221,4 +226,5 @@ export const KMeansClustering: ProjectItem = {
     },
   ],
   status: "Complete",
+  pageName: "k-means-clustering",
 };
