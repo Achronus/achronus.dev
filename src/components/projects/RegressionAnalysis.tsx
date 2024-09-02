@@ -179,7 +179,7 @@ const RegressionAnalysis = () => {
           correlations are visualised in the regression graphs in figures 3.4.
         </p>
 
-        <div className="flex flex-wrap justify-center items-center gap-6">
+        <div className="multi-imgs">
           <Image
             src="/project/regression/linear/lr_acc_vs_mpg.png"
             alt="Accuracy vs MPG"
@@ -202,7 +202,7 @@ const RegressionAnalysis = () => {
             className="rounded-md"
           />
         </div>
-        <p className="text-center text-sm text-gray-500 mt-2">
+        <p className="caption">
           Figure 3.4. Linear regressions that show comparisons between the core
           variables.
         </p>

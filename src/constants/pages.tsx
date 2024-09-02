@@ -7,7 +7,7 @@ import {
   PlantClassifier,
   PolynomialRegression,
   RegressionAnalysis,
-} from "@/pages/projects";
+} from "@/components/projects";
 
 import BathUni from "@/assets/uob.png";
 import LincolnUni from "@/assets/uol.png";
@@ -157,7 +157,7 @@ export const PolyRegressionProject: ProjectPageDetails = {
     },
   ],
   status: "Complete",
-  // pageName: "polynomial-regression",
+  pageName: "polynomial-regression",
   page: <PolynomialRegression />,
 };
 
@@ -225,7 +225,7 @@ export const KMeansClusteringProject: ProjectPageDetails = {
     },
   ],
   status: "Complete",
-  // pageName: "k-means-clustering",
+  pageName: "k-means-clustering",
   page: <KMeansClustering />,
 };
 
