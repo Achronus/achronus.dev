@@ -168,11 +168,11 @@ const KMeansClustering = () => {
         </p>
         <p className="paragraph">
           Notice how some of the data points look like they are incorrectly
-          classified. However, this isn't the case. We trained the dataset on
-          four features, and the graphs can only display two of them at once.
-          Unfortunately, it's difficult to visualise data in higher dimensions
-          and can make diagrams hard to read, so instead, we focus on a smaller
-          portion of variables.
+          classified. However, this {"isn't"} the case. We trained the dataset
+          on four features, and the graphs can only display two of them at once.
+          Unfortunately, {"it's"} difficult to visualise data in higher
+          dimensions and can make diagrams hard to read, so instead, we focus on
+          a smaller portion of variables.
         </p>
 
         <h2 className="subheading">Three Clusters</h2>
@@ -200,15 +200,15 @@ const KMeansClustering = () => {
           separation of dog breeds when compared to the two cluster examples.
           The first image (left) states medium-sized dogs are more likely to
           have longer tails (red). It continues with a second cluster (green),
-          indicating that as the length of a dog's tail grows, so does its
+          indicating that as the length of a {"dog's"} tail grows, so does its
           height. Interestingly, the blue clump contradicts the green one,
           identifying that large dogs will only have medium tail sizes.
         </p>
         <p className="paragraph">
-          In the second image (right), as the dog's height increases, so does
-          the dog's leg length. The graph reveals a positive correlation between
-          the two variables, best reflected through the three clusters: small
-          (red), medium (green), and large (blue).
+          In the second image (right), as the {"dog's"} height increases, so
+          does the {"dog's"} leg length. The graph reveals a positive
+          correlation between the two variables, best reflected through the
+          three clusters: small (red), medium (green), and large (blue).
         </p>
 
         <h2 className="subheading">Error Trends</h2>
