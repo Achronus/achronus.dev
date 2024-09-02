@@ -225,7 +225,7 @@ export const KMeansClusteringProject: ProjectPageDetails = {
     },
   ],
   status: "Complete",
-  // pageName: "k-means-clustering",
+  pageName: "k-means-clustering",
   page: <KMeansClustering />,
 };
 
