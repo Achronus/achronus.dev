@@ -28,4 +28,5 @@ export type ProjectBadge = {
 
 export type ProjectPageDetails = ProjectItem & {
   badges?: ProjectBadge[];
+  page?: React.ReactNode;
 };

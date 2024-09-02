@@ -1,8 +1,17 @@
 import { BasicHeroDetails, ProjectPageDetails } from "@/types/details";
 import { GitHub } from "./icons/social";
 
+import {
+  KMeansClustering,
+  LinearRegression,
+  MiningRovers,
+  PlantClassifier,
+  PolynomialRegression,
+} from "@/pages/projects";
+
 import BathUni from "@/assets/uob.png";
 import LincolnUni from "@/assets/uol.png";
+
 import { GraduationCap } from "lucide-react";
 import Image from "next/image";
 
@@ -81,6 +90,7 @@ export const MiningRoversProject: ProjectPageDetails = {
   ],
   status: "Complete",
   pageName: "planetary-mining-rovers",
+  page: <MiningRovers />,
 };
 
 export const PlantClassifierProject: ProjectPageDetails = {
@@ -114,6 +124,7 @@ export const PlantClassifierProject: ProjectPageDetails = {
   ],
   status: "Complete",
   pageName: "wep-classifier",
+  page: <PlantClassifier />,
 };
 
 export const PolyRegressionProject: ProjectPageDetails = {
@@ -147,6 +158,7 @@ export const PolyRegressionProject: ProjectPageDetails = {
   ],
   status: "Complete",
   pageName: "polynomial-regression",
+  page: <PolynomialRegression />,
 };
 
 export const LinearRegressionProject: ProjectPageDetails = {
@@ -180,6 +192,7 @@ export const LinearRegressionProject: ProjectPageDetails = {
   ],
   status: "Complete",
   pageName: "regression-analysis",
+  page: <LinearRegression />,
 };
 
 export const KMeansClusteringProject: ProjectPageDetails = {
@@ -213,6 +226,7 @@ export const KMeansClusteringProject: ProjectPageDetails = {
   ],
   status: "Complete",
   pageName: "k-means-clustering",
+  page: <KMeansClustering />,
 };
 
 export const ProjectsMapping = [
