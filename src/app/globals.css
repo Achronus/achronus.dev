@@ -61,6 +61,14 @@
   .wrapper {
     @apply mx-auto max-w-[75rem] px-8;
   }
+
+  .code-snippet {
+    @apply text-base bg-gray-800 text-blue-400 px-1 py-0.5 rounded-sm shadow-sm;
+  }
+
+  .paragraph {
+    @apply text-slate-400 text-lg;
+  }
 }
 
 @layer utilities {
