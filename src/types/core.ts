@@ -3,7 +3,8 @@ export type StatusOptions =
   | "Alpha"
   | "In Development"
   | "Updating"
-  | "Coming Soon";
+  | "Coming Soon"
+  | "Complete";
 
 export type StatusMap = {
   name: StatusOptions;

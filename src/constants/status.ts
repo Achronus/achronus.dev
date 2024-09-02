@@ -21,4 +21,8 @@ export const statusMap: StatusMap[] = [
     name: "Updating",
     bgColour: "bg-violet-900",
   },
+  {
+    name: "Complete",
+    bgColour: "bg-pink-900",
+  },
 ];

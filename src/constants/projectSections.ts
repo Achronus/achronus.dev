@@ -3,8 +3,14 @@ import {
   CareCoordinator,
   CreateApiApp,
   DnDSpellExplorer,
+  KMeansClustering,
+  LinearRegression,
+  MiningRovers,
+  PlantClassifier,
+  PolyRegression,
+  RLAtariGames,
   Zentra,
-} from "./projects";
+} from "@/constants/projects";
 
 import { ProjectSection } from "@/types/core";
 
@@ -15,11 +21,7 @@ export const Interests: ProjectSection = {
     title: "At A Glance.",
     desc: "Topics I'm interested in and currently exploring.",
   },
-  badges: [
-    "Computer Vision",
-    "Small Language Models (SLMs)",
-    "With APIs",
-  ],
+  badges: ["Computer Vision", "Small Language Models (SLMs)", "With APIs"],
 };
 
 export const DevTools: ProjectSection = {
@@ -49,5 +51,12 @@ export const UniProjects: ProjectSection = {
     title: "University Projects.",
     desc: "Specialised projects designed to develop a thorough understanding.",
   },
-  projects: [],
+  projects: [
+    RLAtariGames,
+    MiningRovers,
+    PlantClassifier,
+    PolyRegression,
+    LinearRegression,
+    KMeansClustering,
+  ],
 };

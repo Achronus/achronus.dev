@@ -139,16 +139,86 @@ export const Clover: ProjectItem = {
 };
 
 // Uni Projects
-export const Test: ProjectItem = {
-  name: "Clover",
-  desc: "An income and expenses tracker tool for managing and monitoring your daily, monthly and yearly spend.",
+export const RLAtariGames: ProjectItem = {
+  name: "RL Atari Games",
+  desc: "Exploring the effects of Intrinsic Motivation methods on Reinforcement Learning algorithms using Atari games.",
+  logo: BathUni.src,
+  links: [
+    {
+      name: "GitHub",
+      svg: GitHub,
+      url: "https://github.com/Achronus/rl_atari_games",
+    },
+  ],
+  status: "Complete",
+};
+
+export const MiningRovers: ProjectItem = {
+  name: "Planetary Mining Rovers",
+  desc: "Using logic programming to solve a multi-agent system problem focusing on planetary mining with agent collaboration.",
+  logo: BathUni.src,
+  links: [
+    {
+      name: "GitHub",
+      svg: GitHub,
+      url: "https://github.com/Achronus/planetary-mining-rovers",
+    },
+  ],
+  status: "Complete",
+};
+
+export const PlantClassifier: ProjectItem = {
+  name: "Wild Edible Plants Classifier",
+  desc: "Classifying 35 classes of wild edible plants with Convolutional Neural Network architectures and PyTorch.",
   logo: LincolnUni.src,
   links: [
     {
       name: "GitHub",
       svg: GitHub,
-      url: "https://github.com/Achronus/care-coordinator",
+      url: "https://github.com/Achronus/wep-classifier",
     },
   ],
-  status: "Live",
+  status: "Complete",
+};
+
+export const PolyRegression: ProjectItem = {
+  name: "Polynomial Regression",
+  desc: "Building a Polynomial Regression from scratch to identify the relationship between non-linear variables.",
+  logo: LincolnUni.src,
+  links: [
+    {
+      name: "GitHub",
+      svg: GitHub,
+      url: "https://github.com/Achronus/Portfolio/tree/master/ml/polynomial_regression",
+    },
+  ],
+  status: "Complete",
+};
+
+export const LinearRegression: ProjectItem = {
+  name: "Regression Analysis",
+  desc: "Exploring the relationship between 4 variables in a city-cycle fuel consumption dataset using MATLAB.",
+  logo: LincolnUni.src,
+  links: [
+    {
+      name: "GitHub",
+      svg: GitHub,
+      url: "https://github.com/Achronus/Portfolio/tree/master/ml/regression_analysis",
+    },
+  ],
+  status: "Complete",
+};
+
+export const KMeansClustering: ProjectItem = {
+  name: "K-Means Clustering",
+  desc: "Finding patterns in a dog breeds dataset using clustering techniques. Built from scratch without the help of Python libraries.",
+  logo: LincolnUni.src,
+  links: [
+    {
+      name: "GitHub",
+      svg: GitHub,
+      url: "https://github.com/Achronus/Portfolio/tree/master/ml/k_means_clustering",
+    },
+  ],
+  status: "Complete",
 };
