@@ -51,8 +51,8 @@ const RegressionAnalysis = () => {
           horsepower.
         </p>
         <p className="paragraph">
-          Handling missing data isn't always easy. Swalin (2018) explains that
-          there are three common reasons for missing data entries:
+          Handling missing data {"isn't"} always easy. Swalin (2018) explains
+          that there are three common reasons for missing data entries:
         </p>
         <ListItems
           className="paragraph"
@@ -68,9 +68,9 @@ const RegressionAnalysis = () => {
           observations can lead to bias in the model. The 14 entries that are
           missing fall into the first two categories, allowing for modification.
           Due to the small size of the dataset, I implemented the imputation
-          method using the respective columns' mean value. With only 406 data
-          points, there is a limit to the amount of training data available and
-          losing 14 entries could negatively impact the model's results.
+          method using the respective {"columns'"} mean value. With only 406
+          data points, there is a limit to the amount of training data available
+          and losing 14 entries could negatively impact the {"model's"} results.
         </p>
       </ContentSection>
 
@@ -166,7 +166,7 @@ const RegressionAnalysis = () => {
         />
         <p className="paragraph">
           Reviewing the correlation table, it is clear that{" "}
-          <code className="code-snippet">acceleration</code> isn't as highly
+          <code className="code-snippet">acceleration</code> {"isn't"} as highly
           correlated (positive or negatively) as the other three variables.{" "}
           <code className="code-snippet">Weight</code> has the highest negative
           correlation with <code className="code-snippet">MPG</code> and the

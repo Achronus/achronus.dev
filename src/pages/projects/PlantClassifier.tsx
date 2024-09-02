@@ -152,7 +152,7 @@ const PlantClassifier = () => {
         The three architectures, GoogLe-Net, MobileNet v2, and ResNet-34, were
         built using the open-source deep learning framework PyTorch, where 36
         variants of these models were created and tested using 12 different
-        parameters. The model's performance was evaluated based on six
+        parameters. The {"model's"} performance was evaluated based on six
         performance metrics to classify 35 classes of wild edible plants, each
         trained and tested on a dataset containing 16,535 images. Overall,
         achieving classification accuracies of 74.29%, 82.85%, and 80.35%, for
