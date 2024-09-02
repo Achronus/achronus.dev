@@ -19,7 +19,7 @@ const BasicHero = ({ title, desc }: BasicHeroProps) => {
       )}
     >
       <motion.h1
-        className="text-7xl font-extrabold leading-tight text-slate-300"
+        className="text-6xl md:text-7xl font-extrabold leading-tight text-slate-300"
         initial={genericAnimation.hide}
         animate={genericAnimation.show}
         transition={{ delay: 0 }}

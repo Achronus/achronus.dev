@@ -11,7 +11,7 @@ import { useEffect, useState } from "react";
 const SingleProject = () => {
   const pathname = usePathname();
 
-  const [projectName, setProjectName] = useState(pathname.split("/").at(-1));
+  const [projectName, setProjectName] = useState(pathname!.split("/").at(-1));
   const [projectDetails, setProjectDetails] =
     useState<ProjectPageDetails | null>(null);
 

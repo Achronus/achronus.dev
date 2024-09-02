@@ -110,7 +110,7 @@ export const PlantClassifierProject: ProjectPageDetails = {
       text: "University Of Lincoln",
     },
     {
-      icon: <GraduationCap className="mr-2 h-5 w-5" />,
+      icon: <GraduationCap className="mr-2 h-4 w-4" />,
       text: "BSc Computer Science",
     },
   ],
@@ -144,7 +144,7 @@ export const PolyRegressionProject: ProjectPageDetails = {
       text: "University Of Lincoln",
     },
     {
-      icon: <GraduationCap className="mr-2 h-5 w-5" />,
+      icon: <GraduationCap className="mr-2 h-4 w-4" />,
       text: "BSc Computer Science",
     },
   ],
@@ -178,7 +178,7 @@ export const LinearRegressionProject: ProjectPageDetails = {
       text: "University Of Lincoln",
     },
     {
-      icon: <GraduationCap className="mr-2 h-5 w-5" />,
+      icon: <GraduationCap className="mr-2 h-4 w-4" />,
       text: "BSc Computer Science",
     },
   ],
@@ -212,7 +212,7 @@ export const KMeansClusteringProject: ProjectPageDetails = {
       text: "University Of Lincoln",
     },
     {
-      icon: <GraduationCap className="mr-2 h-5 w-5" />,
+      icon: <GraduationCap className="mr-2 h-4 w-4" />,
       text: "BSc Computer Science",
     },
   ],
