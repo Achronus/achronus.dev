@@ -148,10 +148,11 @@ const PolynomialRegression = () => {
           There are many loss functions available, and each one has a different
           purpose. For example, Mean Absolute Error (MAE) and Mean Squared Error
           (MSE) provide scores that range from 0 to infinity, which determines
-          the model's effectiveness at prediction values. The lower the score,
-          the better the model. MAE puts all input values on the same scale and
-          can be heavily affected by outliers. Comparatively, MSE penalises
-          outliers, helping the model ignore them when making predictions.
+          the {"model's"} effectiveness at prediction values. The lower the
+          score, the better the model. MAE puts all input values on the same
+          scale and can be heavily affected by outliers. Comparatively, MSE
+          penalises outliers, helping the model ignore them when making
+          predictions.
         </p>
         <p className="paragraph">
           We use the Root Mean Squared Error (RMSE) in this project, the square
