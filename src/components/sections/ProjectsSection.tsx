@@ -5,7 +5,11 @@ import { BorderMagicBadge } from "@/components/ShimmerBadge";
 import { Badge } from "@/components/ui/badge";
 
 import { statusMap } from "@/constants/status";
-import { ProjectHeader, ProjectItem, ProjectSection } from "@/types/core";
+import {
+  ProjectHeader,
+  ProjectItem,
+  ProjectSection,
+} from "@/types/core";
 
 type HeaderProps = ProjectHeader;
 
@@ -25,11 +29,13 @@ type ProjectsSectionProps = {
 const Header = ({ caption, title, desc }: HeaderProps) => {
   return (
     <div className="wrapper">
-      <h2 className="mb-2 block font-black lg:mb-4 text-blue-500">{caption}</h2>
+      <h2 className="mb-2 block font-black lg:mb-4 text-blue-500">
+        {caption}
+      </h2>
       <h1 className="mb-4 text-3xl font-black text-slate-300 lg:text-4xl">
         {title}
       </h1>
-      <p className="max-w-lg text-slate-400">{desc}</p>
+      <p className="text-slate-400">{desc}</p>
     </div>
   );
 };
@@ -37,8 +43,8 @@ const Header = ({ caption, title, desc }: HeaderProps) => {
 const ProjectCards = ({ projects }: ProjectCardsProps) => {
   const setColour = (status: string) => {
     const bg =
-      statusMap.find((item) => item.name === status)?.bgColour ??
-      "bg-secondary";
+      statusMap.find((item) => item.name === status)
+        ?.bgColour ?? "bg-secondary";
 
     return `${bg} hover:${bg}`;
   };
@@ -67,7 +73,10 @@ const ProjectCards = ({ projects }: ProjectCardsProps) => {
   );
 };
 
-const ProjectBadges = ({ badges, text }: ProjectBadgesProps) => {
+const ProjectBadges = ({
+  badges,
+  text,
+}: ProjectBadgesProps) => {
   return (
     <div className="wrapper flex gap-4 mt-6 flex-wrap">
       {badges.map((badge) => (
@@ -79,16 +88,26 @@ const ProjectBadges = ({ badges, text }: ProjectBadgesProps) => {
           {badge}
         </Badge>
       ))}
-      {text && <BorderMagicBadge delay={0}>{text}</BorderMagicBadge>}
+      {text && (
+        <BorderMagicBadge delay={0}>
+          {text}
+        </BorderMagicBadge>
+      )}
     </div>
   );
 };
 
-const ProjectsSection = ({ sectionDetails }: ProjectsSectionProps) => {
+const ProjectsSection = ({
+  sectionDetails,
+}: ProjectsSectionProps) => {
   return (
     <div id="projects" className="flex flex-col">
       {sectionDetails.map((section) => (
-        <section key={section.tag} id={section.tag} className="mb-28">
+        <section
+          key={section.tag}
+          id={section.tag}
+          className="mb-28"
+        >
           <Header {...section.header} />
           {section.badges && (
             <ProjectBadges
@@ -96,7 +115,9 @@ const ProjectsSection = ({ sectionDetails }: ProjectsSectionProps) => {
               text="Projects Coming Soon"
             />
           )}
-          {section.projects && <ProjectCards projects={section.projects} />}
+          {section.projects && (
+            <ProjectCards projects={section.projects} />
+          )}
         </section>
       ))}
     </div>

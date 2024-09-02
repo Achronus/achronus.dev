@@ -15,7 +15,11 @@ export const Interests: ProjectSection = {
     title: "At A Glance.",
     desc: "Topics I'm interested in and currently exploring.",
   },
-  badges: ["Computer Vision", "Small Language Models (SLMs)", "With APIs"],
+  badges: [
+    "Computer Vision",
+    "Small Language Models (SLMs)",
+    "With APIs",
+  ],
 };
 
 export const DevTools: ProjectSection = {
@@ -36,4 +40,14 @@ export const FullStackProjects: ProjectSection = {
     desc: "Complete, cohesive applications with a refined touch.",
   },
   projects: [CareCoordinator, DnDSpellExplorer],
+};
+
+export const UniProjects: ProjectSection = {
+  tag: "uni",
+  header: {
+    caption: "Research and Exploration",
+    title: "University Projects.",
+    desc: "Specialised projects designed to develop a thorough understanding.",
+  },
+  projects: [],
 };

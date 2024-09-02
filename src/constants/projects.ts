@@ -10,6 +10,8 @@ import CloverIcon from "@/assets/clover.png";
 import FlowCodeIcon from "@/assets/flowcode.png";
 import TriggoIcon from "@/assets/triggo.png";
 import Logo from "@/assets/logo.ico";
+import LincolnUni from "@/assets/uol.png";
+import BathUni from "@/assets/uob.png";
 
 // Dev Tools
 export const Zentra: ProjectItem = {
@@ -134,4 +136,19 @@ export const Clover: ProjectItem = {
   logo: CloverIcon.src,
   links: [],
   status: "Coming Soon",
+};
+
+// Uni Projects
+export const Test: ProjectItem = {
+  name: "Clover",
+  desc: "An income and expenses tracker tool for managing and monitoring your daily, monthly and yearly spend.",
+  logo: LincolnUni.src,
+  links: [
+    {
+      name: "GitHub",
+      svg: GitHub,
+      url: "https://github.com/Achronus/care-coordinator",
+    },
+  ],
+  status: "Live",
 };
