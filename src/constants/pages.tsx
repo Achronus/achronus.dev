@@ -157,7 +157,7 @@ export const PolyRegressionProject: ProjectPageDetails = {
     },
   ],
   status: "Complete",
-  // pageName: "polynomial-regression",
+  pageName: "polynomial-regression",
   page: <PolynomialRegression />,
 };
 
