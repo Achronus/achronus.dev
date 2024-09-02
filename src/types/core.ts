@@ -3,7 +3,8 @@ export type StatusOptions =
   | "Alpha"
   | "In Development"
   | "Updating"
-  | "Coming Soon";
+  | "Coming Soon"
+  | "Complete";
 
 export type StatusMap = {
   name: StatusOptions;
@@ -47,6 +48,7 @@ export type ProjectItem = {
   logo: string;
   links: IconType[];
   status: StatusOptions;
+  pageName?: string;
 };
 
 export type ProjectSection = {

@@ -1,3 +1,5 @@
+import { ProjectItem } from "./core";
+
 export type AboutDetailsType = {
   intro: string;
   firstName: string;
@@ -17,4 +19,14 @@ export type FooterAboutDetailsType = {
 export type BasicHeroDetails = {
   title: string;
   desc: string;
+};
+
+export type ProjectBadge = {
+  icon: React.ReactNode;
+  text: string;
+};
+
+export type ProjectPageDetails = ProjectItem & {
+  badges?: ProjectBadge[];
+  page?: React.ReactNode;
 };

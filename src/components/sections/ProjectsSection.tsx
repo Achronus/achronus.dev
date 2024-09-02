@@ -29,7 +29,7 @@ const Header = ({ caption, title, desc }: HeaderProps) => {
       <h1 className="mb-4 text-3xl font-black text-slate-300 lg:text-4xl">
         {title}
       </h1>
-      <p className="max-w-lg text-slate-400">{desc}</p>
+      <p className="text-slate-400">{desc}</p>
     </div>
   );
 };
@@ -61,6 +61,7 @@ const ProjectCards = ({ projects }: ProjectCardsProps) => {
           headerIcons={project.links}
           styles={{ badge: setColour(project.status) }}
           status={project.status}
+          readMoreLink={project.pageName && `/projects/${project.pageName}`}
         />
       ))}
     </div>

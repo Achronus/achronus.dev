@@ -15,8 +15,10 @@ import {
 import { cn } from "@/lib/utils";
 import { IconCardStyles } from "@/types/card";
 import { IconType } from "@/types/core";
+import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { Badge } from "./ui/badge";
+import { Button } from "./ui/button";
 
 type IconCardProps = {
   title: string;
@@ -25,6 +27,7 @@ type IconCardProps = {
   styles?: IconCardStyles;
   headerIcons?: IconType[];
   status?: string;
+  readMoreLink?: string;
 };
 
 const IconCard = ({
@@ -34,6 +37,7 @@ const IconCard = ({
   styles,
   headerIcons,
   status,
+  readMoreLink,
 }: IconCardProps) => {
   return (
     <Card
@@ -117,6 +121,16 @@ const IconCard = ({
         >
           {desc}
         </CardDescription>
+        {readMoreLink && (
+          <Link href={readMoreLink}>
+            <Button
+              variant="link"
+              className="flex justify-center items-end px-0 text-slate-300 hover:no-underline hover:text-blue-500 transition-colors mt-2"
+            >
+              Read More <ChevronRight className="ml-1 h-4 w-4" />
+            </Button>
+          </Link>
+        )}
       </CardContent>
     </Card>
   );

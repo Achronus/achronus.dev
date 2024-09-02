@@ -4,7 +4,15 @@ import {
   CreateApiApp,
   DnDSpellExplorer,
   Zentra,
-} from "./projects";
+} from "@/constants/projects";
+import {
+  KMeansClusteringProject,
+  LinearRegressionProject,
+  MiningRoversProject,
+  PlantClassifierProject,
+  PolyRegressionProject,
+  RlAtariGamesProject,
+} from "@/constants/pages";
 
 import { ProjectSection } from "@/types/core";
 
@@ -36,4 +44,21 @@ export const FullStackProjects: ProjectSection = {
     desc: "Complete, cohesive applications with a refined touch.",
   },
   projects: [CareCoordinator, DnDSpellExplorer],
+};
+
+export const UniProjects: ProjectSection = {
+  tag: "uni",
+  header: {
+    caption: "Research and Exploration",
+    title: "University Projects.",
+    desc: "Specialised projects designed to develop a thorough understanding.",
+  },
+  projects: [
+    RlAtariGamesProject,
+    MiningRoversProject,
+    PlantClassifierProject,
+    PolyRegressionProject,
+    LinearRegressionProject,
+    KMeansClusteringProject,
+  ],
 };
