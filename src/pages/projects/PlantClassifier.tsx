@@ -1,14 +1,13 @@
 import Figure from "@/components/Figure";
+import StaticTable from "@/components/StaticTable";
 import Link from "next/link";
 
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
+type ClassItem = {
+  name: string;
+  count: number;
+};
+
+const columns = ["Name", "Count"];
 
 const classes1: ClassItem[] = [
   { name: "Alfalfa", count: 470 },
@@ -54,40 +53,10 @@ const classes3: ClassItem[] = [
   { name: "Red clover", count: 449 },
 ];
 
-type ClassItem = {
-  name: string;
-  count: number;
-};
-
-type CountTableProps = {
-  values: ClassItem[];
-};
-
-const ClassCountTable = ({ values }: CountTableProps) => {
-  return (
-    <Table className="my-4">
-      <TableHeader>
-        <TableRow>
-          <TableHead>Name</TableHead>
-          <TableHead>Count</TableHead>
-        </TableRow>
-      </TableHeader>
-      <TableBody>
-        {values.map((v) => (
-          <TableRow key={v.name}>
-            <TableCell>{v.name}</TableCell>
-            <TableCell>{v.count}</TableCell>
-          </TableRow>
-        ))}
-      </TableBody>
-    </Table>
-  );
-};
-
 const PlantClassifier = () => {
   return (
     <>
-      <p className="paragraph mb-6">
+      <p className="paragraph mb-6 my-4">
         This project focuses on a Wild Edible Plant Classifier that compares the
         performance of three state-of-the-art CNN architectures: MobileNet v2,
         GoogLeNet, and ResNet-34. The artefact created is part of my BSc
@@ -103,7 +72,7 @@ const PlantClassifier = () => {
         caption="Figure 1. The 35 wild edible plant classes used in the project"
       />
 
-      <p className="paragraph">
+      <p className="paragraph my-4">
         The 35 classes of wild edible plants are listed in table 1, accompanied
         by the number of images (per class) within the dataset. The dataset
         created is composed of Flickr images, obtained through their API using
@@ -121,16 +90,16 @@ const PlantClassifier = () => {
       </p>
 
       <div className="hidden md:flex justify-between items-start gap-10">
-        <ClassCountTable values={classes1} />
-        <ClassCountTable values={classes2} />
-        <ClassCountTable values={classes3} />
+        <StaticTable columns={columns} values={classes1} />
+        <StaticTable columns={columns} values={classes2} />
+        <StaticTable columns={columns} values={classes3} />
       </div>
       <p className="hidden md:block text-center text-sm text-gray-500 mt-2 mb-4">
         A detailed list of the Wild Edible Plant classes with the number of
         images per class within the dataset.
       </p>
 
-      <p className="paragraph">
+      <p className="paragraph my-4">
         The project is divided into three Jupyter Notebooks. The first one
         contains a sample of the plant classes to visualise them, stored within
         a zip file found inside the dataset folder, and covers steps 4 to 6 in
@@ -147,7 +116,7 @@ const PlantClassifier = () => {
         caption="Figure 2. Machine Learning Pipeline diagram"
       />
 
-      <p className="paragraph">
+      <p className="paragraph my-4">
         The dissertation report (in pdf format) is on the{" "}
         <Link
           href="https://github.com/Achronus/wep-classifier/blob/main/wepc-dissertation-report.pdf"
@@ -158,7 +127,7 @@ const PlantClassifier = () => {
         . A copy of its abstract is highlighted below.
       </p>
 
-      <p className="paragraph italic">
+      <p className="paragraph italic my-4">
         Maintaining a steady flow of food is becoming increasingly difficult.
         With the global population predicted to reach 9.6 billion by 2050, new
         food sources are required. The research conducted in this paper shows
@@ -166,7 +135,7 @@ const PlantClassifier = () => {
         quality of harvests produced when using disease identification and plant
         recognition techniques.
       </p>
-      <p className="paragraph italic">
+      <p className="paragraph italic my-4">
         However, they have not yet been used to identify natural vegetation as a
         potential food source. This study aims to understand the role DL plays
         in agricultural food production, expand DLs use within horticulture, and
@@ -179,7 +148,7 @@ const PlantClassifier = () => {
         information found within this report includes the components of CNNs,
         accompanied by the design and development of the artefact itself.
       </p>
-      <p className="paragraph italic">
+      <p className="paragraph italic my-4">
         The three architectures, GoogLe-Net, MobileNet v2, and ResNet-34, were
         built using the open-source deep learning framework PyTorch, where 36
         variants of these models were created and tested using 12 different

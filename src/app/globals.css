@@ -67,7 +67,7 @@
   }
 
   .paragraph {
-    @apply text-slate-400 text-lg my-4;
+    @apply text-slate-400 text-lg;
   }
 
   .text-link {

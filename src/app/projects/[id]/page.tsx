@@ -25,8 +25,6 @@ const SingleProject = () => {
     }
   }, [projectName, projectDetails]);
 
-  console.log(projectDetails);
-
   return projectDetails ? (
     <PageLayout
       details={{ title: projectDetails.name, desc: projectDetails.desc }}
