@@ -3,14 +3,16 @@ import {
   CareCoordinator,
   CreateApiApp,
   DnDSpellExplorer,
-  KMeansClustering,
-  LinearRegression,
-  MiningRovers,
-  PlantClassifier,
-  PolyRegression,
-  RLAtariGames,
   Zentra,
 } from "@/constants/projects";
+import {
+  KMeansClusteringProject,
+  LinearRegressionProject,
+  MiningRoversProject,
+  PlantClassifierProject,
+  PolyRegressionProject,
+  RlAtariGamesProject,
+} from "@/constants/pages";
 
 import { ProjectSection } from "@/types/core";
 
@@ -52,11 +54,11 @@ export const UniProjects: ProjectSection = {
     desc: "Specialised projects designed to develop a thorough understanding.",
   },
   projects: [
-    RLAtariGames,
-    MiningRovers,
-    PlantClassifier,
-    PolyRegression,
-    LinearRegression,
-    KMeansClustering,
+    RlAtariGamesProject,
+    MiningRoversProject,
+    PlantClassifierProject,
+    PolyRegressionProject,
+    LinearRegressionProject,
+    KMeansClusteringProject,
   ],
 };

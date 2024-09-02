@@ -10,8 +10,6 @@ import CloverIcon from "@/assets/clover.png";
 import FlowCodeIcon from "@/assets/flowcode.png";
 import TriggoIcon from "@/assets/triggo.png";
 import Logo from "@/assets/logo.ico";
-import LincolnUni from "@/assets/uol.png";
-import BathUni from "@/assets/uob.png";
 
 // Dev Tools
 export const Zentra: ProjectItem = {
@@ -136,95 +134,4 @@ export const Clover: ProjectItem = {
   logo: CloverIcon.src,
   links: [],
   status: "Coming Soon",
-};
-
-// Uni Projects
-export const RLAtariGames: ProjectItem = {
-  name: "RL Atari Games",
-  desc: "Exploring the effects of Intrinsic Motivation methods on Reinforcement Learning algorithms using Atari games.",
-  logo: BathUni.src,
-  links: [
-    {
-      name: "GitHub",
-      svg: GitHub,
-      url: "https://github.com/Achronus/rl_atari_games",
-    },
-  ],
-  status: "Complete",
-  pageName: "rl-atari-games",
-};
-
-export const MiningRovers: ProjectItem = {
-  name: "Planetary Mining Rovers",
-  desc: "Using logic programming to solve a multi-agent system problem focusing on planetary mining with agent collaboration.",
-  logo: BathUni.src,
-  links: [
-    {
-      name: "GitHub",
-      svg: GitHub,
-      url: "https://github.com/Achronus/planetary-mining-rovers",
-    },
-  ],
-  status: "Complete",
-  pageName: "planetary-mining-rovers",
-};
-
-export const PlantClassifier: ProjectItem = {
-  name: "Wild Edible Plants Classifier",
-  desc: "Classifying 35 classes of wild edible plants with Convolutional Neural Network architectures and PyTorch.",
-  logo: LincolnUni.src,
-  links: [
-    {
-      name: "GitHub",
-      svg: GitHub,
-      url: "https://github.com/Achronus/wep-classifier",
-    },
-  ],
-  status: "Complete",
-  pageName: "wep-classifier",
-};
-
-export const PolyRegression: ProjectItem = {
-  name: "Polynomial Regression",
-  desc: "Building a Polynomial Regression from scratch to identify the relationship between non-linear variables.",
-  logo: LincolnUni.src,
-  links: [
-    {
-      name: "GitHub",
-      svg: GitHub,
-      url: "https://github.com/Achronus/Portfolio/tree/master/ml/polynomial_regression",
-    },
-  ],
-  status: "Complete",
-  pageName: "polynomial-regression",
-};
-
-export const LinearRegression: ProjectItem = {
-  name: "Regression Analysis",
-  desc: "Exploring the relationship between 4 variables in a city-cycle fuel consumption dataset using MATLAB.",
-  logo: LincolnUni.src,
-  links: [
-    {
-      name: "GitHub",
-      svg: GitHub,
-      url: "https://github.com/Achronus/Portfolio/tree/master/ml/regression_analysis",
-    },
-  ],
-  status: "Complete",
-  pageName: "regression-analysis",
-};
-
-export const KMeansClustering: ProjectItem = {
-  name: "K-Means Clustering",
-  desc: "Finding patterns in a dog breeds dataset using clustering techniques. Built from scratch without the help of Python libraries.",
-  logo: LincolnUni.src,
-  links: [
-    {
-      name: "GitHub",
-      svg: GitHub,
-      url: "https://github.com/Achronus/Portfolio/tree/master/ml/k_means_clustering",
-    },
-  ],
-  status: "Complete",
-  pageName: "k-means-clustering",
 };
