@@ -1,6 +1,6 @@
 import { ProjectItem } from "@/types/core";
 import { GitHub } from "@/constants/icons/social";
-import { Globe } from "@/constants/icons/misc";
+import { Globe, Notebook } from "@/constants/icons/misc";
 
 import ZentraIcon from "@/assets/zentra.png";
 import CareIcon from "@/assets/care.png";
@@ -57,6 +57,26 @@ export const BuildNextjsApp: ProjectItem = {
     },
   ],
   status: "Live",
+};
+
+// Data Exploration Projects
+export const RetailCustomerAnalysis: ProjectItem = {
+  name: "Retail Customer Analysis",
+  desc: "Identifying customer buying patterns in a large dataset using K-Means Clustering.",
+  logo: Logo.src,
+  links: [
+    {
+      name: "Notebook",
+      svg: Notebook,
+      url: "https://www.kaggle.com/code/ryanpartridge01/retail-customer-analysis-notebook",
+    },
+    {
+      name: "GitHub",
+      svg: GitHub,
+      url: "https://github.com/Achronus/data-exploration/tree/main/retail-customer-analysis",
+    },
+  ],
+  status: "Complete",
 };
 
 // Full-Stack Projects

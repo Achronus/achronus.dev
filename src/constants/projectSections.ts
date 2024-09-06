@@ -3,6 +3,7 @@ import {
   CareCoordinator,
   CreateApiApp,
   DnDSpellExplorer,
+  RetailCustomerAnalysis,
   Zentra,
 } from "@/constants/projects";
 import {
@@ -34,6 +35,16 @@ export const DevTools: ProjectSection = {
     desc: "Empowering development with intuitive tools.",
   },
   projects: [Zentra, CreateApiApp, BuildNextjsApp],
+};
+
+export const DataExplorationProjects: ProjectSection = {
+  tag: "data-explore",
+  header: {
+    caption: "Discover Patterns",
+    title: "Clean, Analyse, Visualise, Act.",
+    desc: "Data-driven projects focused on deep exploration and actionable insights.",
+  },
+  projects: [RetailCustomerAnalysis],
 };
 
 export const FullStackProjects: ProjectSection = {
