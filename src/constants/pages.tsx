@@ -34,7 +34,7 @@ export const FloodPredictionProject: ProjectPageDetails = {
   logo: Logo.src,
   links: [],
   status: "Planning",
-  pageName: "flood-prediction-prevention",
+  // pageName: "flood-prediction-prevention",
   page: <FloodPredictionPrevention />,
   badges: [],
 };
