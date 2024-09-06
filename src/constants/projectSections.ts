@@ -51,7 +51,7 @@ export const DataExplorationProjects: ProjectSection = {
     title: "Clean, Analyse, Visualise, Act.",
     desc: "Data-driven projects focused on deep exploration and actionable insights.",
   },
-  projects: [RetailCustomerAnalysis],
+  projects: [FloodPredictionProject, RetailCustomerAnalysis],
 };
 
 export const FullStackProjects: ProjectSection = {
