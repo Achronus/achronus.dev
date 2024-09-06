@@ -1,6 +1,7 @@
 export type StatusOptions =
   | "Live"
   | "Alpha"
+  | "Planning"
   | "In Development"
   | "Updating"
   | "Coming Soon"

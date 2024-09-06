@@ -3,9 +3,11 @@ import {
   CareCoordinator,
   CreateApiApp,
   DnDSpellExplorer,
+  RetailCustomerAnalysis,
   Zentra,
 } from "@/constants/projects";
 import {
+  FloodPredictionProject,
   KMeansClusteringProject,
   LinearRegressionProject,
   MiningRoversProject,
@@ -23,7 +25,13 @@ export const Interests: ProjectSection = {
     title: "At A Glance.",
     desc: "Topics I'm interested in and currently exploring.",
   },
-  badges: ["Computer Vision", "Small Language Models (SLMs)", "With APIs"],
+  badges: [
+    "Data for Good",
+    "End-to-End Builds",
+    "Machine Learning",
+    "Small Models for IoT Devices",
+    "Insights to APIs",
+  ],
 };
 
 export const DevTools: ProjectSection = {
@@ -34,6 +42,16 @@ export const DevTools: ProjectSection = {
     desc: "Empowering development with intuitive tools.",
   },
   projects: [Zentra, CreateApiApp, BuildNextjsApp],
+};
+
+export const DataExplorationProjects: ProjectSection = {
+  tag: "data-explore",
+  header: {
+    caption: "Discover Patterns",
+    title: "Clean, Analyse, Visualise, Act.",
+    desc: "Data-driven projects focused on deep exploration and actionable insights.",
+  },
+  projects: [FloodPredictionProject, RetailCustomerAnalysis],
 };
 
 export const FullStackProjects: ProjectSection = {

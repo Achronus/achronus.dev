@@ -10,6 +10,10 @@ export const statusMap: StatusMap[] = [
     bgColour: "bg-amber-900",
   },
   {
+    name: "Planning",
+    bgColour: "bg-teal-900",
+  },
+  {
     name: "In Development",
     bgColour: "bg-green-900",
   },

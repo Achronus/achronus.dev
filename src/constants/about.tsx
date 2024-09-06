@@ -31,7 +31,7 @@ export const FeaturedCards: IconCardType[] = [
   {
     icon: <PanelsTopLeft size={24} strokeWidth={1.5} />,
     title: "Intuitive Interfaces",
-    desc: "Turning JSON data into clear, interactive interfaces.",
+    desc: "Turning data insights into clear, interactive interfaces.",
     styles: {
       iconContainer: "bg-sky-900",
     },
