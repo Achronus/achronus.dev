@@ -1,7 +1,8 @@
-import { GitKraken, Postman, VSCode } from "./icons/tools";
+import { GitKraken, Jupyter, Postman, VSCode } from "./icons/tools";
 import {
   FastAPI,
   NextJs,
+  Pandas,
   Python,
   React,
   TailwindCSS,
@@ -46,6 +47,7 @@ export const ContactIcons: IconType[] = [...SocialIcons];
 
 export const TechStackIcons: SvgItem[] = [
   Python,
+  Pandas,
   FastAPI,
   React,
   TailwindCSS,
@@ -53,4 +55,4 @@ export const TechStackIcons: SvgItem[] = [
   TypeScript,
 ];
 
-export const TechToolIcons: SvgItem[] = [VSCode, GitKraken, Postman];
+export const TechToolIcons: SvgItem[] = [VSCode, Jupyter, GitKraken, Postman];
