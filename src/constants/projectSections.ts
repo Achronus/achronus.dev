@@ -7,6 +7,7 @@ import {
   Zentra,
 } from "@/constants/projects";
 import {
+  FloodPredictionProject,
   KMeansClusteringProject,
   LinearRegressionProject,
   MiningRoversProject,
@@ -24,7 +25,13 @@ export const Interests: ProjectSection = {
     title: "At A Glance.",
     desc: "Topics I'm interested in and currently exploring.",
   },
-  badges: ["Computer Vision", "Small Language Models (SLMs)", "With APIs"],
+  badges: [
+    "Data for Good",
+    "End-to-End Builds",
+    "Machine Learning",
+    "Small Models for IoT Devices",
+    "Insights to APIs",
+  ],
 };
 
 export const DevTools: ProjectSection = {
