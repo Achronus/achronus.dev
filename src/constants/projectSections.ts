@@ -7,7 +7,7 @@ import {
   Zentra,
 } from "@/constants/projects";
 import {
-  FloodPredictionProject,
+  FloodDmgPredProject,
   KMeansClusteringProject,
   LinearRegressionProject,
   MiningRoversProject,
@@ -51,7 +51,7 @@ export const DataExplorationProjects: ProjectSection = {
     title: "Clean, Analyse, Visualise, Act.",
     desc: "Data-driven projects focused on deep exploration and actionable insights.",
   },
-  projects: [FloodPredictionProject, RetailCustomerAnalysis],
+  projects: [FloodDmgPredProject, RetailCustomerAnalysis],
 };
 
 export const FullStackProjects: ProjectSection = {
