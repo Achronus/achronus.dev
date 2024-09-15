@@ -26,10 +26,10 @@ export const Interests: ProjectSection = {
     desc: "Topics I'm interested in and currently exploring.",
   },
   badges: [
-    "Data for Good",
-    "End-to-End Builds",
+    "Data Understanding",
+    "Clean, Clear, Quality Code",
     "Machine Learning",
-    "Small Models for IoT Devices",
+    "Small Language Models (SLMs)",
     "Insights to APIs",
   ],
 };
