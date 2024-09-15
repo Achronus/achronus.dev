@@ -1,8 +1,10 @@
-import { BasicHeroDetails, ProjectPageDetails } from "@/types/details";
+import {
+  BasicHeroDetails,
+  ProjectPageDetails,
+} from "@/types/details";
 import { GitHub } from "./icons/social";
 
 import {
-  FloodPredictionPrevention,
   KMeansClustering,
   MiningRovers,
   PlantClassifier,
@@ -25,18 +27,6 @@ export const AboutHeroDetails: BasicHeroDetails = {
 export const FocusHeroDetails: BasicHeroDetails = {
   title: "My Focus",
   desc: "What I'm actively working on today.",
-};
-
-// Data Exploration Projects
-export const FloodPredictionProject: ProjectPageDetails = {
-  name: "Flood Prediction and Prevention",
-  desc: "Using statistical models and Machine Learning techniques to predict floods and damage mitigation strategies.",
-  logo: Logo.src,
-  links: [],
-  status: "Planning",
-  // pageName: "flood-prediction-prevention",
-  page: <FloodPredictionPrevention />,
-  badges: [],
 };
 
 // Uni Projects
@@ -244,10 +234,6 @@ export const KMeansClusteringProject: ProjectPageDetails = {
 };
 
 export const ProjectsMapping = [
-  {
-    name: "flood-prediction-prevention",
-    details: FloodPredictionProject,
-  },
   {
     name: "rl-atari-games",
     details: RlAtariGamesProject,

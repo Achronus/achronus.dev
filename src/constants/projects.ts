@@ -11,17 +11,17 @@ import FlowCodeIcon from "@/assets/flowcode.png";
 import TriggoIcon from "@/assets/triggo.png";
 import Logo from "@/assets/logo.ico";
 
-// Dev Tools
+// Active Projects
 export const Zentra: ProjectItem = {
   name: "Zentra",
   desc: "An open-source Python SDK for building FastAPI and Next.js apps faster.",
   logo: ZentraIcon.src,
   links: [
-    // {
-    //   name: "Website",
-    //   svg: Globe,
-    //   url: "https://zentra.achronus.dev/",
-    // },
+    {
+      name: "Website",
+      svg: Globe,
+      url: "https://zentra.achronus.dev/",
+    },
     {
       name: "GitHub",
       svg: GitHub,
@@ -31,32 +31,20 @@ export const Zentra: ProjectItem = {
   status: "Alpha",
 };
 
-export const CreateApiApp: ProjectItem = {
-  name: "Create Api App",
-  desc: "A CLI tool for creating FastAPI and Next.js projects.",
+export const VisionCraft: ProjectItem = {
+  name: "VisionCraft",
+  desc: "Your one stop shop for all your AI image and video editing needs.",
   logo: Logo.src,
-  links: [
-    {
-      name: "GitHub",
-      svg: GitHub,
-      url: "https://github.com/Achronus/create-api-app",
-    },
-  ],
-  status: "Live",
+  links: [],
+  status: "Planning",
 };
 
-export const BuildNextjsApp: ProjectItem = {
-  name: "Build NextJS App",
-  desc: "A CLI tool for creating fresh Nextjs applications using a Docker container.",
+export const ZenAnalysis: ProjectItem = {
+  name: "ZenAnalysis",
+  desc: "Your personal Data Analyst assistant. Using natural language to unlock insights from your data.",
   logo: Logo.src,
-  links: [
-    {
-      name: "GitHub",
-      svg: GitHub,
-      url: "https://github.com/Achronus/build-nextjs-app",
-    },
-  ],
-  status: "Live",
+  links: [],
+  status: "Coming Soon",
 };
 
 // Data Exploration Projects

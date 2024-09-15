@@ -19,7 +19,7 @@ export const statusMap: StatusMap[] = [
   },
   {
     name: "Coming Soon",
-    bgColour: "bg-pink-900",
+    bgColour: "bg-lime-900",
   },
   {
     name: "Updating",

@@ -1,13 +1,12 @@
 import {
-  BuildNextjsApp,
   CareCoordinator,
-  CreateApiApp,
   DnDSpellExplorer,
   RetailCustomerAnalysis,
+  VisionCraft,
+  ZenAnalysis,
   Zentra,
 } from "@/constants/projects";
 import {
-  FloodPredictionProject,
   KMeansClusteringProject,
   LinearRegressionProject,
   MiningRoversProject,
@@ -26,22 +25,22 @@ export const Interests: ProjectSection = {
     desc: "Topics I'm interested in and currently exploring.",
   },
   badges: [
-    "Data for Good",
-    "End-to-End Builds",
+    "Data Understanding",
+    "Clean, Clear, Quality Code",
     "Machine Learning",
-    "Small Models for IoT Devices",
+    "Small Language Models (SLMs)",
     "Insights to APIs",
   ],
 };
 
-export const DevTools: ProjectSection = {
-  tag: "dev-tools",
+export const ActiveProjects: ProjectSection = {
+  tag: "active",
   header: {
-    caption: "Build Faster",
-    title: "Simple, Consistent, Development Tools.",
-    desc: "Empowering development with intuitive tools.",
+    caption: "Crafting Tomorrow's Tools",
+    title: "Programming the Future, One Line at a Time.",
+    desc: "Supercharging workflows with AI-powered productivity boosters.",
   },
-  projects: [Zentra, CreateApiApp, BuildNextjsApp],
+  projects: [Zentra, VisionCraft, ZenAnalysis],
 };
 
 export const DataExplorationProjects: ProjectSection = {
@@ -51,7 +50,7 @@ export const DataExplorationProjects: ProjectSection = {
     title: "Clean, Analyse, Visualise, Act.",
     desc: "Data-driven projects focused on deep exploration and actionable insights.",
   },
-  projects: [FloodPredictionProject, RetailCustomerAnalysis],
+  projects: [RetailCustomerAnalysis],
 };
 
 export const FullStackProjects: ProjectSection = {
