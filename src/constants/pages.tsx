@@ -5,7 +5,6 @@ import {
 import { GitHub } from "./icons/social";
 
 import {
-  FloodDamagePrediction,
   KMeansClustering,
   MiningRovers,
   PlantClassifier,
@@ -28,18 +27,6 @@ export const AboutHeroDetails: BasicHeroDetails = {
 export const FocusHeroDetails: BasicHeroDetails = {
   title: "My Focus",
   desc: "What I'm actively working on today.",
-};
-
-// Data Exploration Projects
-export const FloodDmgPredProject: ProjectPageDetails = {
-  name: "Flood Damage Prediction",
-  desc: "Using statistical models and Machine Learning techniques to predict flood damage.",
-  logo: Logo.src,
-  links: [],
-  status: "Planning",
-  // pageName: "flood-damage-prediction",
-  // page: <FloodDamagePrediction />,
-  badges: [],
 };
 
 // Uni Projects
