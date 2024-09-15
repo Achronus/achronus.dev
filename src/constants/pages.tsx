@@ -37,8 +37,8 @@ export const FloodDmgPredProject: ProjectPageDetails = {
   logo: Logo.src,
   links: [],
   status: "Planning",
-  pageName: "flood-damage-prediction",
-  page: <FloodDamagePrediction />,
+  // pageName: "flood-damage-prediction",
+  // page: <FloodDamagePrediction />,
   badges: [],
 };
 
@@ -247,10 +247,6 @@ export const KMeansClusteringProject: ProjectPageDetails = {
 };
 
 export const ProjectsMapping = [
-  {
-    name: "flood-damage-prediction",
-    details: FloodDmgPredProject,
-  },
   {
     name: "rl-atari-games",
     details: RlAtariGamesProject,

@@ -11,7 +11,7 @@ import FlowCodeIcon from "@/assets/flowcode.png";
 import TriggoIcon from "@/assets/triggo.png";
 import Logo from "@/assets/logo.ico";
 
-// Dev Tools
+// Active Projects
 export const Zentra: ProjectItem = {
   name: "Zentra",
   desc: "An open-source Python SDK for building FastAPI and Next.js apps faster.",
@@ -29,6 +29,22 @@ export const Zentra: ProjectItem = {
     },
   ],
   status: "Alpha",
+};
+
+export const VisionCraft: ProjectItem = {
+  name: "VisionCraft",
+  desc: "Your one stop shop for all your AI image and video editing needs.",
+  logo: Logo.src,
+  links: [],
+  status: "Planning",
+};
+
+export const ZenAnalysis: ProjectItem = {
+  name: "ZenAnalysis",
+  desc: "Your personal Data Analyst assistant. Using natural language to unlock insights from your data.",
+  logo: Logo.src,
+  links: [],
+  status: "Coming Soon",
 };
 
 // Data Exploration Projects

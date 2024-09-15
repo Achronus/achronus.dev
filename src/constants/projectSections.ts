@@ -2,6 +2,8 @@ import {
   CareCoordinator,
   DnDSpellExplorer,
   RetailCustomerAnalysis,
+  VisionCraft,
+  ZenAnalysis,
   Zentra,
 } from "@/constants/projects";
 import {
@@ -39,7 +41,7 @@ export const ActiveProjects: ProjectSection = {
     title: "Programming the Future, One Line at a Time.",
     desc: "Supercharging workflows with AI-powered productivity boosters.",
   },
-  projects: [Zentra],
+  projects: [Zentra, VisionCraft, ZenAnalysis],
 };
 
 export const DataExplorationProjects: ProjectSection = {
@@ -49,7 +51,10 @@ export const DataExplorationProjects: ProjectSection = {
     title: "Clean, Analyse, Visualise, Act.",
     desc: "Data-driven projects focused on deep exploration and actionable insights.",
   },
-  projects: [FloodDmgPredProject, RetailCustomerAnalysis],
+  projects: [
+    // FloodDmgPredProject,
+    RetailCustomerAnalysis,
+  ],
 };
 
 export const FullStackProjects: ProjectSection = {
