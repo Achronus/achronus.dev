@@ -1,7 +1,5 @@
 import {
-  BuildNextjsApp,
   CareCoordinator,
-  CreateApiApp,
   DnDSpellExplorer,
   RetailCustomerAnalysis,
   Zentra,
@@ -34,14 +32,14 @@ export const Interests: ProjectSection = {
   ],
 };
 
-export const DevTools: ProjectSection = {
-  tag: "dev-tools",
+export const ActiveProjects: ProjectSection = {
+  tag: "active",
   header: {
-    caption: "Build Faster",
-    title: "Simple, Consistent, Development Tools.",
-    desc: "Empowering development with intuitive tools.",
+    caption: "Crafting Tomorrow's Tools",
+    title: "Programming the Future, One Line at a Time.",
+    desc: "Supercharging workflows with AI-powered productivity boosters.",
   },
-  projects: [Zentra, CreateApiApp, BuildNextjsApp],
+  projects: [Zentra],
 };
 
 export const DataExplorationProjects: ProjectSection = {
