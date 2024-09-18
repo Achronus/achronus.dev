@@ -4,7 +4,6 @@ import IconCard from "@/components/IconCard";
 import { BorderMagicBadge } from "@/components/ShimmerBadge";
 import { Badge } from "@/components/ui/badge";
 
-import { statusMap } from "@/constants/status";
 import {
   ProjectHeader,
   ProjectItem,
