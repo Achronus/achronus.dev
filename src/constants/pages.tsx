@@ -12,7 +12,6 @@ import {
   RegressionAnalysis,
 } from "@/components/projects";
 
-import Logo from "@/assets/logo.ico";
 import BathUni from "@/assets/uob.png";
 import LincolnUni from "@/assets/uol.png";
 

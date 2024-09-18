@@ -40,7 +40,7 @@ export type IconType = {
 export type ProjectHeader = {
   caption: string;
   title: string;
-  desc: string;
+  desc?: string;
 };
 
 export type ProjectItem = {
