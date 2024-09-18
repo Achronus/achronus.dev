@@ -4,16 +4,18 @@ import PageLayout from "@/components/layouts/PageLayout";
 import { ProjectsMapping } from "@/constants/pages";
 
 import { cn } from "@/lib/utils";
-import { ProjectPageDetails } from "@/types/details";
+import { ProjectItem } from "@/types/core";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const SingleProject = () => {
   const pathname = usePathname();
 
-  const [projectName, setProjectName] = useState(pathname!.split("/").at(-1));
+  const [projectName, setProjectName] = useState(
+    pathname!.split("/").at(-1)
+  );
   const [projectDetails, setProjectDetails] =
-    useState<ProjectPageDetails | null>(null);
+    useState<ProjectItem | null>(null);
 
   useEffect(() => {
     const details = ProjectsMapping.find(
@@ -27,10 +29,13 @@ const SingleProject = () => {
 
   return projectDetails ? (
     <PageLayout
-      details={{ title: projectDetails.name, desc: projectDetails.desc }}
+      details={{
+        title: projectDetails.name,
+        desc: projectDetails.desc,
+      }}
       created={{
         logo: projectDetails.logo,
-        badges: projectDetails.badges,
+        badges: projectDetails.pageBadges,
         links: projectDetails.links,
       }}
     >

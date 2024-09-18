@@ -41,14 +41,6 @@ const Header = ({ caption, title, desc }: HeaderProps) => {
 };
 
 const ProjectCards = ({ projects }: ProjectCardsProps) => {
-  const setColour = (status: string) => {
-    const bg =
-      statusMap.find((item) => item.name === status)
-        ?.bgColour ?? "bg-secondary";
-
-    return `${bg} hover:${bg}`;
-  };
-
   return (
     <div className="wrapper flex gap-4 mt-8 flex-wrap">
       {projects.map((project) => (
@@ -65,12 +57,8 @@ const ProjectCards = ({ projects }: ProjectCardsProps) => {
             />
           }
           headerIcons={project.links}
-          styles={{ badge: setColour(project.status) }}
-          status={project.status}
-          readMoreLink={
-            project.pageName &&
-            `/projects/${project.pageName}`
-          }
+          badges={project.badges}
+          readMoreLink={project.readMoreLink}
         />
       ))}
     </div>

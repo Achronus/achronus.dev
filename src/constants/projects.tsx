@@ -38,7 +38,7 @@ export const Zentra: ProjectItem = {
       url: "https://github.com/Achronus/Zentra",
     },
   ],
-  badges: ["Alpha", "FastAPI", "Python SDK"],
+  badges: ["Development Tool", "FastAPI", "Python"],
   readMoreLink: "https://zentra.achronus.dev/",
 };
 
@@ -81,7 +81,7 @@ export const CareCoordinator: ProjectItem = {
       url: "https://github.com/Achronus/care-coordinator",
     },
   ],
-  badges: ["Full-Stack", "Next.js", "FastAPI"],
+  badges: ["Full-Stack", "FastAPI", "Next.js"],
   readMoreLink:
     "https://github.com/Achronus/care-coordinator",
 };
@@ -102,7 +102,7 @@ export const DnDSpellExplorer: ProjectItem = {
       url: "https://github.com/Achronus/dnd-explorer",
     },
   ],
-  badges: ["Full-Stack", "Next.js", "FastAPI"],
+  badges: ["Full-Stack", "FastAPI", "Next.js"],
   readMoreLink: "https://github.com/Achronus/dnd-explorer",
 };
 
@@ -118,11 +118,7 @@ export const RlAtariGamesProject: ProjectItem = {
       url: "https://github.com/Achronus/rl_atari_games",
     },
   ],
-  badges: [
-    "Reinforcement Learning",
-    "PyTorch",
-    "Machine Learning",
-  ],
+  badges: ["Research", "Machine Learning", "PyTorch"],
   readMoreLink:
     "https://github.com/Achronus/rl_atari_games",
 };
@@ -138,11 +134,7 @@ export const MiningRoversProject: ProjectItem = {
       url: "https://github.com/Achronus/planetary-mining-rovers",
     },
   ],
-  badges: [
-    "Logic Programming",
-    "Multi-Agent Systems",
-    "Java",
-  ],
+  badges: ["Simulation", "Multi-Agent Systems", "Java"],
   pageBadges: [
     {
       icon: (
