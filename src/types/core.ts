@@ -43,13 +43,20 @@ export type ProjectHeader = {
   desc?: string;
 };
 
+export type ProjectBadge = {
+  icon: React.ReactNode;
+  text: string;
+};
+
 export type ProjectItem = {
   name: string;
   desc: string;
   logo: string;
   links: IconType[];
-  status: StatusOptions;
-  pageName?: string;
+  badges: string[];
+  readMoreLink: string;
+  pageBadges?: ProjectBadge[];
+  page?: React.ReactNode;
 };
 
 export type ProjectSection = {
