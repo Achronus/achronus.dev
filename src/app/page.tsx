@@ -13,11 +13,8 @@ import {
   TechToolIcons,
 } from "@/constants/menu";
 import {
-  DataExplorationProjects,
-  ActiveProjects,
-  FullStackProjects,
   Interests,
-  UniProjects,
+  PortfolioProjects,
 } from "@/constants/projectSections";
 
 export default function Home() {
@@ -32,13 +29,7 @@ export default function Home() {
       <IconCardSection cards={FeaturedCards} />
       <main className="bg-card border-y border-y-border flex flex-col items-center justify-center mt-20 lg:mt-40 pt-20">
         <ProjectsSection
-          sectionDetails={[
-            Interests,
-            ActiveProjects,
-            DataExplorationProjects,
-            FullStackProjects,
-            UniProjects,
-          ]}
+          sectionDetails={[Interests, PortfolioProjects]}
         />
       </main>
     </>

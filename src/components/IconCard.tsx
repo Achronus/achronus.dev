@@ -26,7 +26,7 @@ type IconCardProps = {
   icon: React.ReactElement;
   styles?: IconCardStyles;
   headerIcons?: IconType[];
-  status?: string;
+  badges?: string[];
   readMoreLink?: string;
 };
 
@@ -36,9 +36,17 @@ const IconCard = ({
   icon,
   styles,
   headerIcons,
-  status,
+  badges,
   readMoreLink,
 }: IconCardProps) => {
+  const setReadMoreLink = (link: string) => {
+    if (link.startsWith("http")) {
+      return link;
+    }
+
+    return `/projects/${link}`;
+  };
+
   return (
     <Card
       className={cn(
@@ -71,7 +79,10 @@ const IconCard = ({
           )}
         >
           <section
-            className={cn("flex gap-2 items-center", styles?.headerWrapper)}
+            className={cn(
+              "flex gap-2 items-center",
+              styles?.headerWrapper
+            )}
           >
             <div
               className={cn(
@@ -81,7 +92,12 @@ const IconCard = ({
             >
               {icon}
             </div>
-            <h3 className={cn("ml-1 font-medium", styles?.titleContainer)}>
+            <h3
+              className={cn(
+                "ml-1 font-medium",
+                styles?.titleContainer
+              )}
+            >
               {title}
             </h3>
           </section>
@@ -92,7 +108,10 @@ const IconCard = ({
                   <Tooltip key={icon.name}>
                     <TooltipTrigger asChild>
                       <Link href={icon.url}>
-                        <Icon svg={icon.svg} styles="rounded-full" />
+                        <Icon
+                          svg={icon.svg}
+                          styles="rounded-full"
+                        />
                       </Link>
                     </TooltipTrigger>
                     <TooltipContent>
@@ -111,23 +130,45 @@ const IconCard = ({
           styles?.cardContent
         )}
       >
-        {status && (
-          <Badge className={cn("ml-auto text-slate-300", styles?.badge)}>
-            {status}
-          </Badge>
+        {badges && (
+          <div className="flex gap-1.5 ml-auto flex-wrap my-2">
+            {badges.map((badge, index) => (
+              <Badge
+                key={badge}
+                className={cn(
+                  "text-slate-300 hover:bg-opacity-90",
+                  {
+                    "bg-amber-900 hover:bg-amber-900":
+                      index % 3 === 0,
+                    "bg-green-900 hover:bg-green-900":
+                      index % 3 === 1,
+                    "bg-red-900 hover:bg-red-900":
+                      index % 3 === 2,
+                  },
+                  styles?.badge
+                )}
+              >
+                {badge}
+              </Badge>
+            ))}
+          </div>
         )}
         <CardDescription
-          className={cn("text-sm text-slate-400", styles?.cardDescription)}
+          className={cn(
+            "text-sm text-slate-400",
+            styles?.cardDescription
+          )}
         >
           {desc}
         </CardDescription>
         {readMoreLink && (
-          <Link href={readMoreLink}>
+          <Link href={setReadMoreLink(readMoreLink)}>
             <Button
               variant="link"
               className="flex justify-center items-end px-0 text-slate-300 hover:no-underline hover:text-blue-500 transition-colors mt-2"
             >
-              Read More <ChevronRight className="ml-1 h-4 w-4" />
+              Read More{" "}
+              <ChevronRight className="ml-1 h-4 w-4" />
             </Button>
           </Link>
         )}
