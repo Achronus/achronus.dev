@@ -21,9 +21,9 @@ export const Interests: ProjectSection = {
     desc: "Topics I'm interested in and currently exploring.",
   },
   badges: [
-    "Language Models (LMs)",
-    "LMs to Deployment",
-    "Insights to APIs",
+    "Reinforcement Learning (RL)",
+    "Real-time data",
+    "Building small powerful models",
   ],
 };
 

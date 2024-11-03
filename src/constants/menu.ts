@@ -1,12 +1,16 @@
-import { GitKraken, Jupyter, Postman, VSCode } from "./icons/tools";
+import {
+  GitKraken,
+  Jupyter,
+  Postman,
+  VSCode,
+} from "./icons/tools";
 import {
   FastAPI,
-  NextJs,
+  Gymnasium,
+  NumPy,
   Pandas,
   Python,
-  React,
-  TailwindCSS,
-  TypeScript,
+  PyTorch,
 } from "./icons/stack";
 import { GitHub, LinkedIn } from "./icons/social";
 
@@ -48,11 +52,15 @@ export const ContactIcons: IconType[] = [...SocialIcons];
 export const TechStackIcons: SvgItem[] = [
   Python,
   Pandas,
+  NumPy,
+  PyTorch,
   FastAPI,
-  React,
-  TailwindCSS,
-  NextJs,
-  TypeScript,
+  Gymnasium,
 ];
 
-export const TechToolIcons: SvgItem[] = [VSCode, Jupyter, GitKraken, Postman];
+export const TechToolIcons: SvgItem[] = [
+  VSCode,
+  Jupyter,
+  GitKraken,
+  Postman,
+];
