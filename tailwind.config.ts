@@ -28,7 +28,10 @@ const config = {
         icon: {
           python: "#FFDC52",
           pandas: "#452FBD",
+          numpy: "#4DABCF",
+          pytorch: "#EE4C2C",
           fastapi: "#009486",
+          gymnasium: "#505559",
           react: "#61DAFB",
           typescript: "#3178C6",
           tailwindcss: "#06B6D4",
@@ -81,10 +84,14 @@ const config = {
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
+          to: {
+            height: "var(--radix-accordion-content-height)",
+          },
         },
         "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
+          from: {
+            height: "var(--radix-accordion-content-height)",
+          },
           to: { height: "0" },
         },
         shimmer: {
@@ -103,7 +110,12 @@ const config = {
       },
     },
   },
-  safelist: [{ pattern: /icon-[a-z]+$/, variants: ["text", "hover"] }],
+  safelist: [
+    {
+      pattern: /icon-[a-z]+$/,
+      variants: ["text", "hover"],
+    },
+  ],
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;
 

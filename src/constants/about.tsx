@@ -1,5 +1,8 @@
 import { IconCardType } from "@/types/card";
-import { AboutDetailsType, FooterAboutDetailsType } from "@/types/details";
+import {
+  AboutDetailsType,
+  FooterAboutDetailsType,
+} from "@/types/details";
 import { Heart, Link, PanelsTopLeft } from "lucide-react";
 
 export const AboutDetails: AboutDetailsType = {
@@ -7,14 +10,14 @@ export const AboutDetails: AboutDetailsType = {
   firstName: "Ryan",
   lastName: "Partridge",
   title: "Software Engineer",
-  desc: "passionate about API development and creating tools to interpret data.",
+  desc: "passionate about building tools that benefit humanity.",
   image: "/me-vector.svg",
 };
 
 export const FeaturedCards: IconCardType[] = [
   {
-    title: "API Craftsman",
-    desc: "Keeping API's clean, efficient, scalable, and maintainable.",
+    title: "OOP Craftsman",
+    desc: "Keeping code clean, efficient, scalable, and maintainable.",
     icon: <Link size={24} strokeWidth={1.5} />,
     styles: {
       iconContainer: "bg-amber-900",
@@ -23,7 +26,9 @@ export const FeaturedCards: IconCardType[] = [
   {
     title: "Detail Oriented",
     desc: "Awareness to ease of access, accessibility, and a seamless UX.",
-    icon: <Heart size={24} strokeWidth={1.5} fill="white" />,
+    icon: (
+      <Heart size={24} strokeWidth={1.5} fill="white" />
+    ),
     styles: {
       iconContainer: "bg-pink-900",
     },
