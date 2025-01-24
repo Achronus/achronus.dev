@@ -1,0 +1,22 @@
+---
+type Props = {
+  title: string;
+  underlinedWord: string;
+};
+
+const { title, underlinedWord } = Astro.props as Props;
+---
+
+<h2
+  class="display-1 tw-font-bold tw-text-black-theme tw-capitalize tw-font-dm-sans"
+>
+  {title}
+  <div
+    class:list={[
+      "tw-inline-block tw-relative tw-z-10",
+      "after:tw-w-full after:tw-bg-torquoise after:tw-h-3 after:tw-absolute after:tw-bottom-4 after:tw-left-0 after:tw--z-10",
+    ]}
+  >
+    {underlinedWord}
+  </div>
+</h2>

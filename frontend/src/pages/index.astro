@@ -1,0 +1,21 @@
+---
+import { Hero } from "@/components/hero";
+import { Navbar } from "@/components/Navbar";
+
+import Layout from "@/layouts/Homepage.astro";
+
+import { NavbarLinks, HeroCTAs, SocialIcons } from "@/data/homepage";
+
+// const req = await fetch("");
+// const data = await req.json();
+---
+
+<Layout title="Ryan Partridge - Portfolio">
+  <Navbar links={NavbarLinks} />
+  <Hero
+    title="Programming the"
+    underlinedWord="Future"
+    ctas={HeroCTAs}
+    socials={SocialIcons}
+  />
+</Layout>

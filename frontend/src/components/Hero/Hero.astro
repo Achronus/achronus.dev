@@ -1,0 +1,43 @@
+---
+import type { CTA, SocialIcon } from "@/types/common";
+
+import { CTAs, Heading } from "@/components/hero";
+import SocialButton from "@/components/SocialButton.astro";
+import Image from "astro/components/Image.astro";
+
+import Banner from "@/assets/imgs/banner.png";
+
+type HeroHome = {
+  title: string;
+  underlinedWord: string;
+  ctas: CTA[];
+  socials: SocialIcon[];
+};
+
+const { title, underlinedWord, ctas, socials } = Astro.props as HeroHome;
+---
+
+<section id="hero" class="tw-py-10">
+  <div class="container">
+    <div class="row">
+      <div
+        class="col-auto col-md-6 title align-self-center text-center text-md-start"
+      >
+        <Heading title={title} underlinedWord={underlinedWord} />
+        <CTAs items={ctas} />
+
+        <div class="row">
+          <div
+            class="col-md-auto social-icons mt-5 text-center text-md-start tw-flex tw-gap-6 tw-justify-center"
+          >
+            {socials.map((social) => <SocialButton {...social} />)}
+          </div><!-- .social-icons-->
+        </div><!-- .row -->
+      </div><!-- .col -->
+
+      <div class="col-auto col-md-6 graphic">
+        <Image class="img-fluid" src={Banner} alt="banner" />
+      </div><!-- .col -->
+    </div><!-- .row -->
+  </div><!-- .container -->
+</section><!-- #intro-home -->

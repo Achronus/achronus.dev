@@ -1,0 +1,25 @@
+---
+import type { CTA } from "@/types/common";
+
+const { items } = Astro.props as { items: CTA[] };
+---
+
+<div class="row ctas">
+  {
+    items.map(({ text, href, styles, iconStyle }) => (
+      <div class="col-md-auto">
+        <a
+          href={href}
+          class:list={[
+            "btn btn-primary tw-my-5 tw-mb-0 tw-py-2.5 tw-px-5 tw-text-lg tw-font-medium tw-font-dm-sans",
+            "hover:tw-text-white hover:tw-bg-black-theme hover:tw-border-black-theme",
+            `${styles}`,
+          ]}
+        >
+          {iconStyle && <i class={iconStyle} />}
+          <span class="name">{text}</span>
+        </a>
+      </div>
+    ))
+  }
+</div>
