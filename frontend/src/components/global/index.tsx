@@ -1,4 +1,5 @@
+import Footer from "./Footer.astro";
 import Head from "./Head.astro";
 import Scripts from "./Scripts.astro";
 
-export { Head, Scripts };
+export { Footer, Head, Scripts };

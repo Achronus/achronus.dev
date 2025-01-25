@@ -1,0 +1,38 @@
+---
+import type { SocialIcon } from "@/types/common";
+import SocialButton from "@/components/SocialButton.astro";
+import BackToTop from "@/components/BackToTop.astro";
+
+type Props = {
+  socials: SocialIcon[];
+};
+
+const { socials } = Astro.props as Props;
+---
+
+<footer id="colophon" class="site-footer">
+  <!-- FOOTER
+    ============================================================================== -->
+  <section id="footer" class="tw-bg-blue-dark tw-py-8">
+    <div class="container">
+      <div class="row tw-flex tw-items-center tw-justify-between">
+        <div
+          class:list={[
+            "col-sm-12 col-md-6 footer-text align-self-center text-center text-md-start mb-3 mb-md-0",
+            "tw-font-rubik",
+          ]}
+        >
+          <p class="tw-text-sm tw-m-0 tw-text-white tw-font-light">
+            &copy; {new Date().getFullYear()} All Rights Reserved. Created by me.
+          </p>
+        </div><!-- footer-text -->
+        <div
+          class="col-md-auto social-icons tw-flex tw-gap-6 tw-items-center tw-justify-center sm:tw-justify-end"
+        >
+          {socials.map((social) => <SocialButton {...social} invert />)}
+        </div><!-- social-icons -->
+      </div><!-- row -->
+      <BackToTop />
+    </div><!-- container -->
+  </section><!-- section -->
+</footer><!-- footer -->
