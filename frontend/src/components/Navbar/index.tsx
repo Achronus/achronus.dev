@@ -1,5 +1,4 @@
-import Navbar from "./Navbar.astro";
-import NavLinks from "./NavLinks.astro";
-import ToggleMenu from "./ToggleMenu.astro";
+import Navbar from "./Navbar.tsx";
+import NavLinks from "./NavLinks.tsx";
 
-export { Navbar, NavLinks, ToggleMenu };
+export { Navbar, NavLinks };

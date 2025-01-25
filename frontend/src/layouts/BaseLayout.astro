@@ -31,7 +31,7 @@ const { title, links, socials } = Astro.props as Props;
           backgroundImage: `url(${HeaderBg.src})`,
         }}
       >
-        <Navbar links={links} />
+        <Navbar links={links} client:load />
 
         <div class="container">
           <div class="row">

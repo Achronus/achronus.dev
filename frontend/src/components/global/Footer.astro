@@ -1,7 +1,7 @@
 ---
 import type { SocialIcon } from "@/types/common";
 import SocialButton from "@/components/SocialButton.astro";
-import BackToTop from "@/components/BackToTop.astro";
+import ScrollToTop from "@/components/ScrollToTop";
 
 type Props = {
   socials: SocialIcon[];
@@ -32,7 +32,7 @@ const { socials } = Astro.props as Props;
           {socials.map((social) => <SocialButton {...social} invert />)}
         </div><!-- social-icons -->
       </div><!-- row -->
-      <BackToTop />
+      <ScrollToTop client:load />
     </div><!-- container -->
   </section><!-- section -->
 </footer><!-- footer -->

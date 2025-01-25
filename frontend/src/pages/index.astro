@@ -1,5 +1,5 @@
 ---
-import { Hero } from "@/components/hero";
+import { Hero } from "@/components/Hero";
 import { Navbar } from "@/components/Navbar";
 
 import Layout from "@/layouts/Homepage.astro";
@@ -11,7 +11,7 @@ import { NavbarLinks, HeroCTAs, SocialIcons } from "@/data/homepage";
 ---
 
 <Layout title="Ryan Partridge Portfolio">
-  <Navbar links={NavbarLinks} />
+  <Navbar links={NavbarLinks} client:load />
   <Hero
     title="Programming the"
     underlinedWord="Future"
