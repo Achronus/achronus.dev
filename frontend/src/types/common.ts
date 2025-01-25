@@ -23,3 +23,24 @@ export type SocialIcon = {
   type: string;
   colour: string;
 }
+
+export type ProjectCategory = {
+  slug: string;
+  title: string;
+};
+
+export type ProjectTag = {
+  slug: string;
+  title: string;
+  icon: string;
+}
+
+export type Project = {
+  title: string;
+  desc: string;
+  url: string;
+  img_url: string;
+  github_url: string;
+  category: string;
+  tags: ProjectTag[];
+}
