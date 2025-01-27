@@ -23,24 +23,3 @@ export const HeroCTAs: CTA[] = [
   },
 ]
 
-
-export const SocialIcons: SocialIcon[] = [
-  {
-    name: "linkedin",
-    url: "#",
-    type: "brands",
-    colour: "#0976b4",
-  },
-  {
-    name: "github",
-    url: "#",
-    type: "brands",
-    colour: "#454545",
-  },
-  {
-    name: "medium",
-    url: "#",
-    type: "brands",
-    colour: "#000",
-  }
-]

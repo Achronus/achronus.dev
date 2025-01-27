@@ -1,16 +1,15 @@
 ---
 import Layout from "@/layouts/BaseLayout.astro";
 
-import { SocialIcons } from "@/data/homepage";
 import { ArticleSection } from "@/components/Portfolio";
 import type { Project, SocialIcon } from "@/types/collections";
-import type { Project } from "@/types/common";
+import { formatArticleCollection } from "@/utils";
 
 import { getCollection } from "astro:content";
-import { formatArticleCollection } from "@/utils";
 
 const projectCollection: any[] = await getCollection("projects");
 const articleCollection: any[] = await getCollection("articles");
+const socialCollection: any[] = await getCollection("socials");
 
 const articles = formatArticleCollection(articleCollection);
 const projects: Project[] = projectCollection.map((project) => ({
@@ -20,9 +19,13 @@ const projects: Project[] = projectCollection.map((project) => ({
   url: project.data.url,
   order: project.data.order,
 }));
+const socialIcons: SocialIcon[] = socialCollection.map((icon) => icon.data);
 ---
 
-<Layout title="Project Journal" socials={SocialIcons}>
+<Layout
+  title="Project Journal"
+  socials={socialIcons.sort((a, b) => a.order - b.order)}
+>
   <ArticleSection
     categories={projects.sort((a, b) => a.order - b.order)}
     articles={articles}

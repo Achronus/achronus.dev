@@ -7,8 +7,10 @@ import Layout from "@/layouts/Homepage.astro";
 import { NavbarLinks, HeroCTAs } from "@/data/homepage";
 import type { SocialIcon } from "@/types/collections";
 
-// const req = await fetch("");
-// const data = await req.json();
+import { getCollection } from "astro:content";
+
+const socialCollection: any[] = await getCollection("socials");
+const socialIcons: SocialIcon[] = socialCollection.map((icon) => icon.data);
 ---
 
 <Layout title="Ryan Partridge">
@@ -17,6 +19,6 @@ import type { SocialIcon } from "@/types/collections";
     title="Programming the"
     underlinedWord="Future"
     ctas={HeroCTAs}
-    socials={SocialIcons}
+    socials={socialIcons.sort((a, b) => a.order - b.order)}
   />
 </Layout>
