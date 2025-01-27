@@ -1,6 +1,6 @@
 import React from "react";
 
-import type { Article } from "@/types/common";
+import type { Article } from "@/types/collections";
 
 type Props = {
   articles: Article[];

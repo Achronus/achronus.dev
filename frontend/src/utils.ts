@@ -1,4 +1,4 @@
-import type { Article, ProjectArticles } from "@/types/common";
+import type { Article, ProjectArticles } from "./types/collections";
 
 export const formatArticleCollection = (collection: any[]): ProjectArticles[] => {
   const projectArticlesMap: Record<string, Article[]> = {};

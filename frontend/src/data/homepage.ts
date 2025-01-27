@@ -1,4 +1,4 @@
-import type { CTA, MenuLink, SocialIcon } from "@/types/common"
+import type { CTA, MenuLink } from "@/types/common"
 
 export const NavbarLinks: MenuLink[] = [
   {

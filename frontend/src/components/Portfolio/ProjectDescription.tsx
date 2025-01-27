@@ -1,4 +1,4 @@
-import type { Project } from "@/types/common";
+import type { Project } from "@/types/collections";
 
 type Props = {
   category: Project;

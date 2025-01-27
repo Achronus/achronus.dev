@@ -1,7 +1,7 @@
 import PortraitImg from "@/assets/imgs/me.jpg";
 
 import Logo from "@/components/Logo";
-import type { SocialIcon } from "@/types/common";
+import type { SocialIcon } from "@/types/collections";
 
 type SidebarProps = {
   children: React.ReactNode;

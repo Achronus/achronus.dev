@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
 
-import type { Project, ProjectArticles } from "@/types/common";
+import type { Project, ProjectArticles } from "@/types/collections";
 
 import JournalPages from "./JournalPages";
 import ProjectDescription from "./ProjectDescription";

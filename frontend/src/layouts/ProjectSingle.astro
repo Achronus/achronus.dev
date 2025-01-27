@@ -5,15 +5,14 @@ import PageBg from "@/assets/imgs/page-bg.jpg";
 import { Head, Scripts } from "@/components/global";
 import { Navbar } from "@/components/Navbar";
 
-import type { MenuLink, SocialIcon } from "@/types/common";
+import type { MenuLink } from "@/types/common";
 
 type Props = {
   title: string;
   links: MenuLink[];
-  socials: SocialIcon[];
 };
 
-const { title, links, socials } = Astro.props as Props;
+const { title, links } = Astro.props as Props;
 ---
 
 <!doctype html>

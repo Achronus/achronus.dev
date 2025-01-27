@@ -1,6 +1,6 @@
 import React from "react";
 
-import type { Project } from "@/types/common";
+import type { Project } from "@/types/collections";
 
 type Props = {
   categories: Project[];
