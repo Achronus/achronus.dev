@@ -8,7 +8,8 @@ export default {
         torquoise: {
           DEFAULT: "#40d9f1",
           dark: "#4fcbdf",
-          light: "#f1fcfe", // wiki article bg
+          light: "#CEE9EE",
+          fade: "#f1fcfe",
         },
         blue: {
           DEFAULT: "#1992d8", // span text
@@ -22,7 +23,6 @@ export default {
         grey: {
           DEFAULT: "#6b6b6b", // light text
           light: "#dee2e6",
-          tag: "#f1fcfe",
         },
       },
       fontFamily: {

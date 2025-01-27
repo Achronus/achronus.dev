@@ -1,18 +1,17 @@
 ---
-import HeaderBg from "@/assets/imgs/header-bg.jpg";
 import PageBg from "@/assets/imgs/page-bg.jpg";
 
-import { Head, Scripts, Footer } from "@/components/global";
-import { Navbar } from "@/components/Navbar";
-import type { MenuLink, SocialIcon } from "@/types/common";
+import { Content as AboutContent } from "@/content/about.md";
+import { Head, Scripts } from "@/components/global";
+import Sidebar from "@/components/Sidebar";
+import type { SocialIcon } from "@/types/common";
 
 type Props = {
   title: string;
-  links: MenuLink[];
   socials: SocialIcon[];
 };
 
-const { title, links, socials } = Astro.props as Props;
+const { title, socials } = Astro.props as Props;
 ---
 
 <!doctype html>
@@ -24,28 +23,16 @@ const { title, links, socials } = Astro.props as Props;
       backgroundImage: `url(${PageBg.src})`,
     }}
   >
-    <main class="tw-w-full">
-      <section
-        class="page-header tw-py-12"
-        style={{
-          backgroundImage: `url(${HeaderBg.src})`,
-        }}
-      >
-        <Navbar links={links} client:load />
-
-        <div class="container">
-          <div class="row">
-            <h1
-              class="tw-font-rubik tw-text-5xl tw-text-black-theme tw-font-medium tw-pt-10 tw-pb-6"
-            >
-              {title}
-            </h1>
-          </div>
-        </div>
-      </section>
-      <slot />
-      <Footer socials={socials} />
-    </main>
+    <div class="tw-container tw-m-auto">
+      <div class="tw-flex tw-flex-row tw-flex-wrap tw-py-4">
+        <Sidebar socials={socials} client:load>
+          <AboutContent />
+        </Sidebar>
+        <main class="tw-w-full tw-px-2 tw-pt-1 lg:tw-w-3/4">
+          <slot />
+        </main>
+      </div>
+    </div>
     <Scripts />
   </body>
 </html>
@@ -55,12 +42,5 @@ const { title, links, socials } = Astro.props as Props;
     background-position: center, center;
     background-repeat: repeat;
     background-size: cover;
-  }
-
-  .page-header {
-    background-position: bottom, center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 0;
   }
 </style>

@@ -1,3 +1,5 @@
-import Portfolio from "./Portfolio.tsx";
+import ArticleSection from "./ArticleSection.tsx";
+import SingleHeader from "./single/Header.tsx";
+import SinglePageContent from "./single/PageContent.tsx";
 
-export { Portfolio };
+export { ArticleSection, SingleHeader, SinglePageContent };

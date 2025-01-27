@@ -1,29 +1,19 @@
+import Logo from "@/components/Logo";
 import { NavLinks } from "@/components/Navbar";
-import { useActiveNav } from "@/hooks/useActiveNav";
-import React from "react";
-
 import type { MenuLink } from "@/types/common";
 
 type Props = {
-  id?: string;
   links: MenuLink[];
 };
 
-const Navbar: React.FC<Props> = ({ id = "site-navigation", links }) => {
-  useActiveNav("mainNavBar");
-
+const Navbar = ({ links }: Props) => {
   return (
     <header
-      id={id}
+      id="site-navigation"
       className="main-navigation navbar navbar-light navbar-expand-lg"
     >
       <div className="container">
-        <a
-          className="logo tw-text-4xl tw-font-bold tw-font-dm-sans tw-transition-all"
-          href="/"
-        >
-          Ryan.<span className="tw-text-blue-dark">me</span>
-        </a>
+        <Logo />
 
         <button
           className="navbar-toggler"

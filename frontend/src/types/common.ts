@@ -24,23 +24,23 @@ export type SocialIcon = {
   colour: string;
 }
 
-export type ProjectCategory = {
+export type Project = {
   slug: string;
   title: string;
+  url: string;
+  order: number;
+  description: string;
 };
 
-export type ProjectTag = {
-  slug: string;
+export type Article = {
   title: string;
-  icon: string;
+  slug: string;
+  content: string;
+  date: Date;
+  order: number;
 }
 
-export type Project = {
-  title: string;
-  desc: string;
-  url: string;
-  img_url: string;
-  github_url: string;
-  category: string;
-  tags: ProjectTag[];
+export type ProjectArticles = {
+  project: string;
+  articles: Article[];
 }

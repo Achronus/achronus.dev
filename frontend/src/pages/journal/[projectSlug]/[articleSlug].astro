@@ -1,0 +1,39 @@
+---
+import Layout from "@/layouts/ProjectSingle.astro";
+import { SingleHeader } from "@/components/Portfolio";
+
+import { NavbarLinks, SocialIcons } from "@/data/homepage";
+import type { Article } from "@/types/common";
+import { formatArticleCollection } from "@/utils";
+
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const articleCollection: any[] = await getCollection("articles");
+  const articles = formatArticleCollection(articleCollection);
+
+  return articles.flatMap((project) =>
+    project.articles.map((article) => ({
+      params: {
+        projectSlug: project.project,
+        articleSlug: article.slug,
+      },
+      props: { article },
+    }))
+  );
+}
+
+type PageProps = {
+  article: Article;
+};
+
+const { article } = Astro.props as PageProps;
+
+if (!article) {
+  return new Response(null, { status: 404 });
+}
+---
+
+<Layout title={article.title} links={NavbarLinks} socials={SocialIcons}>
+  <SingleHeader details={article} client:load />
+</Layout>

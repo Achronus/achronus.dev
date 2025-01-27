@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 html {
-  font-family: "DM Sans", sans-serif;
+  @apply tw-font-dm-sans;
 }
 
 * {
@@ -26,6 +26,18 @@ html {
 
 .project-item:hover .cta svg {
   @apply tw-text-black-theme tw-transition-all;
+}
+
+.sidebar p {
+  @apply tw-my-2.5 tw-font-rubik tw-font-light lg:tw-text-[15px] xl:tw-text-base;
+}
+
+p.excerpt {
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @-webkit-keyframes hideItem {

@@ -1,0 +1,31 @@
+---
+import Layout from "@/layouts/BaseLayout.astro";
+
+import { SocialIcons } from "@/data/homepage";
+import { ArticleSection } from "@/components/Portfolio";
+
+import type { Project } from "@/types/common";
+
+import { getCollection } from "astro:content";
+import { formatArticleCollection } from "@/utils";
+
+const projectCollection: any[] = await getCollection("projects");
+const articleCollection: any[] = await getCollection("articles");
+
+const articles = formatArticleCollection(articleCollection);
+const projects: Project[] = projectCollection.map((project) => ({
+  slug: project.data.slug,
+  title: project.data.title,
+  description: project.body,
+  url: project.data.url,
+  order: project.data.order,
+}));
+---
+
+<Layout title="Project Journal" socials={SocialIcons}>
+  <ArticleSection
+    categories={projects.sort((a, b) => a.order - b.order)}
+    articles={articles}
+    client:load
+  />
+</Layout>
