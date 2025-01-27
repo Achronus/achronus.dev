@@ -1,6 +1,5 @@
 ---
-import type { CTA } from "@/types/common";
-import type { SocialIcon } from "@/types/collections";
+import type { SocialIcon } from "@/types/SocialIcon";
 
 import { CTAs, Heading } from "@/components/Hero";
 import SocialButton from "@/components/SocialButton.astro";
@@ -10,12 +9,10 @@ import Banner from "@/assets/imgs/banner.png";
 
 type HeroHome = {
   title: string;
-  underlinedWord: string;
-  ctas: CTA[];
   socials: SocialIcon[];
 };
 
-const { title, underlinedWord, ctas, socials } = Astro.props as HeroHome;
+const { title, socials } = Astro.props as HeroHome;
 ---
 
 <section id="hero" class="tw-py-10">
@@ -24,8 +21,8 @@ const { title, underlinedWord, ctas, socials } = Astro.props as HeroHome;
       <div
         class="col-auto col-md-6 title align-self-center text-center text-md-start"
       >
-        <Heading title={title} underlinedWord={underlinedWord} />
-        <CTAs items={ctas} />
+        <Heading title={title} />
+        <CTAs />
 
         <div class="row">
           <div

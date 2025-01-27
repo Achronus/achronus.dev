@@ -9,7 +9,7 @@ const NavLinks: React.FC<Props> = ({ links }) => {
   return (
     <nav id="mainNavBar" className="navbar-collapse collapse mt-4">
       <ul className="navbar-nav ms-auto navbar-nav-scroll text-center tw-flex tw-gap-6">
-        {links.map(({ text, href, desc }, index) => (
+        {links.map(({ text, url: href, desc }, index) => (
           <li className="nav-item" key={index}>
             <a
               className={[

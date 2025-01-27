@@ -1,12 +1,14 @@
 ---
 import type { CTA } from "@/types/common";
+import { getCollection } from "astro:content";
 
-const { items } = Astro.props as { items: CTA[] };
+const ctaCollection: any[] = await getCollection("heroCTAs");
+const items: CTA[] = ctaCollection.map((cta) => cta.data);
 ---
 
 <div class="row ctas">
   {
-    items.map(({ text, href, styles, iconStyle }) => (
+    items.map(({ text, url: href, styles, icon }) => (
       <div class="col-md-auto">
         <a
           href={href}
@@ -16,7 +18,7 @@ const { items } = Astro.props as { items: CTA[] };
             `${styles}`,
           ]}
         >
-          {iconStyle && <i class={iconStyle} />}
+          {icon && <i class={icon} />}
           <span class="name">{text}</span>
         </a>
       </div>

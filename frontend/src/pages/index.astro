@@ -3,22 +3,22 @@ import { Hero } from "@/components/Hero";
 import { Navbar } from "@/components/Navbar";
 
 import Layout from "@/layouts/Homepage.astro";
-
-import { NavbarLinks, HeroCTAs } from "@/data/homepage";
 import type { SocialIcon } from "@/types/collections";
+import type { MenuLink } from "@/types/common";
 
 import { getCollection } from "astro:content";
 
 const socialCollection: any[] = await getCollection("socials");
+const navLinksCollection: any[] = await getCollection("navLinks");
+
 const socialIcons: SocialIcon[] = socialCollection.map((icon) => icon.data);
+const navbarLinks: MenuLink[] = navLinksCollection.map((link) => link.data);
 ---
 
 <Layout title="Ryan Partridge">
-  <Navbar links={NavbarLinks} client:load />
+  <Navbar links={navbarLinks} client:load />
   <Hero
-    title="Programming the"
-    underlinedWord="Future"
-    ctas={HeroCTAs}
+    title="Programming the Future"
     socials={socialIcons.sort((a, b) => a.order - b.order)}
   />
 </Layout>

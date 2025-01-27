@@ -1,18 +1,14 @@
-export type Link = {
-  href: string;
-  styles: string;
-}
-
 export type MenuLink = {
   text: string;
-  href: string;
+  url: string;
   desc?: string;
+  order: number;
 };
 
 
 export type CTA = {
   text: string;
-  href: string;
+  url: string;
   styles: string;
-  iconStyle?: string;
+  icon?: string;
 }
