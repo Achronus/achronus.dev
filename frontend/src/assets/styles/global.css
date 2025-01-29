@@ -40,6 +40,10 @@ p.excerpt {
   text-overflow: ellipsis;
 }
 
+#articles article:hover .cta svg {
+  @apply tw-text-black-theme;
+}
+
 @-webkit-keyframes hideItem {
   0% {
     -webkit-transform: scale(1) rotate(0);

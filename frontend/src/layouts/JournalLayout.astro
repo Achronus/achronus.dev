@@ -6,12 +6,16 @@ import { Head, Scripts } from "@/components/global";
 import Sidebar from "@/components/Sidebar";
 import type { SocialIcon } from "@/types/collections";
 
+import { getCollection } from "astro:content";
+
 type Props = {
   title: string;
-  socials: SocialIcon[];
 };
 
-const { title, socials } = Astro.props as Props;
+const socialCollection: any[] = await getCollection("socials");
+const socials: SocialIcon[] = socialCollection.map((icon) => icon.data);
+
+const { title } = Astro.props as Props;
 ---
 
 <!doctype html>
@@ -25,7 +29,10 @@ const { title, socials } = Astro.props as Props;
   >
     <div class="tw-container tw-m-auto">
       <div class="tw-flex tw-flex-row tw-flex-wrap tw-py-4">
-        <Sidebar socials={socials} client:load>
+        <Sidebar
+          socials={socials.sort((a, b) => a.order - b.order)}
+          client:load
+        >
           <AboutContent />
         </Sidebar>
         <main class="tw-w-full tw-px-2 tw-pt-1 lg:tw-w-3/4">

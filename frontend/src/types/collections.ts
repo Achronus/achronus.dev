@@ -11,6 +11,8 @@ export type Project = {
   title: string;
   url: string;
   order: number;
+  timeTaken?: number;
+  tools?: string[];
   description: string;
 };
 

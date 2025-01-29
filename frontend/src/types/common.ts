@@ -12,3 +12,9 @@ export type CTA = {
   styles: string;
   icon?: string;
 }
+
+export type SvgItem = {
+  name?: string;
+  viewBox: string;
+  path: string;
+};

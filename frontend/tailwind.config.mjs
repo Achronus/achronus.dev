@@ -24,6 +24,16 @@ export default {
           DEFAULT: "#6b6b6b", // light text
           light: "#dee2e6",
         },
+        icon: {
+          python: "#DDBA30",
+          pytorch: "#EE4C2C",
+          fastapi: "#009486",
+          gymnasium: "#505559",
+          react: "#61DAFB",
+          typescript: "#3178C6",
+          tailwindcss: "#06B6D4",
+          typer: "#000",
+        },
       },
       fontFamily: {
         "dm-sans": ["DM Sans", "sans-serif"],
@@ -32,5 +42,11 @@ export default {
       },
     },
   },
+  safelist: [
+    {
+      pattern: /icon-[a-z]+$/,
+      variants: ["text", "hover"],
+    },
+  ],
   plugins: [],
 };

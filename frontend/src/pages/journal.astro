@@ -1,34 +1,34 @@
 ---
-import Layout from "@/layouts/BaseLayout.astro";
+import Layout from "@/layouts/JournalLayout.astro";
 
-import { ArticleSection } from "@/components/Portfolio";
-import type { Project, SocialIcon } from "@/types/collections";
+import { ArticleSection } from "@/components/Journal";
+import type { Project } from "@/types/collections";
 import { formatArticleCollection } from "@/utils";
 
 import { getCollection } from "astro:content";
+import type { SvgItem } from "@/types/common";
 
 const projectCollection: any[] = await getCollection("projects");
 const articleCollection: any[] = await getCollection("articles");
-const socialCollection: any[] = await getCollection("socials");
+const toolsCollection: any[] = await getCollection("tools");
 
 const articles = formatArticleCollection(articleCollection);
 const projects: Project[] = projectCollection.map((project) => ({
-  slug: project.data.slug,
-  title: project.data.title,
+  ...project.data,
   description: project.body,
-  url: project.data.url,
-  order: project.data.order,
 }));
-const socialIcons: SocialIcon[] = socialCollection.map((icon) => icon.data);
+
+const tools: SvgItem[] = toolsCollection.map((icon) => ({
+  ...icon.data,
+  path: icon.body,
+}));
 ---
 
-<Layout
-  title="Project Journal"
-  socials={socialIcons.sort((a, b) => a.order - b.order)}
->
+<Layout title="Project Journal">
   <ArticleSection
     categories={projects.sort((a, b) => a.order - b.order)}
     articles={articles}
+    tools={tools}
     client:load
   />
 </Layout>
