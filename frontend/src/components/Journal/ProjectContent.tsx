@@ -21,7 +21,7 @@ type Props = {
   tools: SvgItem[];
 };
 
-const ArticleSection: React.FC<Props> = ({ categories, articles, tools }) => {
+const ProjectContent: React.FC<Props> = ({ categories, articles, tools }) => {
   const [currentProject, setCurrentProject] = useState(categories[0].slug);
   const [categoryDetails, setCategoryDetails] = useState<Project | undefined>(
     undefined
@@ -89,4 +89,4 @@ const ArticleSection: React.FC<Props> = ({ categories, articles, tools }) => {
   );
 };
 
-export default ArticleSection;
+export default ProjectContent;

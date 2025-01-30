@@ -1,7 +1,7 @@
 ---
 import Layout from "@/layouts/JournalLayout.astro";
 
-import { ArticleSection } from "@/components/Journal";
+import { ProjectContent } from "@/components/Journal";
 import type { Project } from "@/types/collections";
 import { formatArticleCollection } from "@/utils";
 
@@ -25,7 +25,7 @@ const tools: SvgItem[] = toolsCollection.map((icon) => ({
 ---
 
 <Layout title="Project Journal">
-  <ArticleSection
+  <ProjectContent
     categories={projects.sort((a, b) => a.order - b.order)}
     articles={articles}
     tools={tools}
