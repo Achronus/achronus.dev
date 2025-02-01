@@ -1,25 +1,17 @@
 "use client";
 
-import { motion } from "framer-motion";
+import type { SvgItem } from "@/types/common";
 
 import Svg from "@/components/Svg";
-import { genericAnimation } from "@/constants/motion";
-import { cn } from "@/lib/utils";
-import { SvgItem } from "@/types/core";
+import { cn } from "@/utils";
 import { useState } from "react";
 
 type TechStackProps = {
-  leftStack: SvgItem[];
-  rightStack: SvgItem[];
+  stack: SvgItem[];
 };
 
 type IconStackProps = {
   icons: SvgItem[];
-};
-
-const tooltipVariants = {
-  hidden: { opacity: 0, scale: 0.9 },
-  visible: { opacity: 1, scale: 1 },
 };
 
 const IconStack = ({ icons }: IconStackProps) => {
@@ -28,11 +20,11 @@ const IconStack = ({ icons }: IconStackProps) => {
   );
 
   return (
-    <section className="flex gap-3">
+    <section className="tw-flex tw-gap-3">
       {icons.map((icon) => (
-        <div key={icon.name} className="relative inline-block">
+        <div key={icon.name} className="tw-relative tw-inline-block">
           <div
-            className="cursor-help"
+            className="tw-cursor-help"
             onMouseEnter={() => setVisibleTooltip(icon.name)}
             onMouseLeave={() => setVisibleTooltip(undefined)}
           >
@@ -40,22 +32,15 @@ const IconStack = ({ icons }: IconStackProps) => {
               path={icon.path}
               viewBox={icon.viewBox}
               className={cn(
-                "text-slate-500 w-6 h-6 transition-colors",
-                `hover:text-icon-${icon.name?.toLowerCase()}`
+                "tw-text-slate-500 tw-w-6 tw-h-6 tw-transition-colors",
+                `hover:tw-text-icon-${icon.name?.toLowerCase()}`
               )}
             />
           </div>
           {visibleTooltip === icon.name && (
-            <motion.div
-              variants={tooltipVariants}
-              initial="hidden"
-              animate="visible"
-              exit="hidden"
-              transition={{ duration: 0.3 }}
-              className="absolute bottom-full mb-2 p-2 bg-slate-900 border text-white text-sm rounded"
-            >
+            <div className="tw-absolute tw-bottom-full tw-mb-2 tw-p-2 tw-bg-slate-900 tw-border tw-text-white tw-text-sm tw-rounded">
               <p>{icon.name}</p>
-            </motion.div>
+            </div>
           )}
         </div>
       ))}
@@ -63,21 +48,11 @@ const IconStack = ({ icons }: IconStackProps) => {
   );
 };
 
-const TechStack = ({ leftStack, rightStack }: TechStackProps) => {
+const TechStack = ({ stack }: TechStackProps) => {
   return (
-    <motion.section
-      className="flex flex-col mt-6"
-      initial={genericAnimation.hide}
-      animate={genericAnimation.show}
-      transition={{ delay: 0.4 }}
-    >
-      <p className="text-slate-500 text-sm">Current tech stack/tools:</p>
-      <div className="flex gap-3 items-center mt-3">
-        <IconStack icons={leftStack} />
-        <div className="h-3 w-[1px] bg-slate-500" />
-        <IconStack icons={rightStack} />
-      </div>
-    </motion.section>
+    <div className="tw-flex tw-gap-3 tw-items-center tw-px-2 tw-mt-2">
+      <IconStack icons={stack} />
+    </div>
   );
 };
 

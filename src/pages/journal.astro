@@ -1,0 +1,34 @@
+---
+import Layout from "@/layouts/JournalLayout.astro";
+
+import { ProjectContent } from "@/components/Journal";
+import type { Project } from "@/types/collections";
+import { formatArticleCollection } from "@/utils";
+
+import { getCollection } from "astro:content";
+import type { SvgItem } from "@/types/common";
+
+const projectCollection: any[] = await getCollection("projects");
+const articleCollection: any[] = await getCollection("articles");
+const toolsCollection: any[] = await getCollection("tools");
+
+const articles = formatArticleCollection(articleCollection);
+const projects: Project[] = projectCollection.map((project) => ({
+  ...project.data,
+  description: project.body,
+}));
+
+const tools: SvgItem[] = toolsCollection.map((icon) => ({
+  ...icon.data,
+  path: icon.body,
+}));
+---
+
+<Layout title="Project Journal">
+  <ProjectContent
+    categories={projects.sort((a, b) => a.order - b.order)}
+    articles={articles}
+    tools={tools}
+    client:load
+  />
+</Layout>

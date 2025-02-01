@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Nunito&family=Rubik:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&DM+Mono:ital,wght@0,300;0,400;1,300;1,400&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply tw-font-dm-sans;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.project-item {
+  display: none;
+  -webkit-animation: hideItem 700ms ease both;
+  animation: hideItem 700ms ease both;
+}
+
+.project-item.show {
+  display: block;
+  -webkit-animation: showItem 700ms ease both;
+  animation: showItem 700ms ease both;
+}
+
+.project-item:hover .cta svg {
+  @apply tw-text-black-theme tw-transition-all;
+}
+
+.sidebar p {
+  @apply tw-my-2.5 tw-font-rubik tw-font-light lg:tw-text-[15px] xl:tw-text-base;
+}
+
+p.excerpt {
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#articles article:hover .cta svg {
+  @apply tw-text-black-theme;
+}
+
+@-webkit-keyframes hideItem {
+  0% {
+    -webkit-transform: scale(1) rotate(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: scale(0) rotate(-12deg);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes hideItem {
+  0% {
+    transform: scale(1) rotate(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    transform: scale(0) rotate(-12deg);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes showItem {
+  0% {
+    -webkit-transform: scale(0) rotate(12deg);
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    -webkit-transform: scale(1) rotate(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes showItem {
+  0% {
+    transform: scale(0) rotate(12deg);
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    transform: scale(1) rotate(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}

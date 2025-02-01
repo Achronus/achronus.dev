@@ -1,0 +1,27 @@
+---
+import type { SocialIcon } from "@/types/collections";
+
+type Props = SocialIcon & {
+  invert?: boolean;
+};
+
+const { name, url, type, colour, invert } = Astro.props as Props;
+---
+
+<a
+  class:list={[
+    `btn btn-primary ${name}-btn`,
+    "tw-rounded-full tw-w-12 tw-h-12 tw-border-0 tw-transition-all hover:!tw-bg-black-theme",
+    invert ? "hover:!tw-text-white" : "",
+  ]}
+  href={url}
+  role="button"
+  style={{
+    backgroundColor: invert ? "#fff" : colour,
+    color: invert ? colour : "#fff",
+  }}
+>
+  <i
+    class:list={[`fa-${type} fa-${name}`, "tw-text-[28px] tw-w-full tw-h-full"]}
+  ></i>
+</a>

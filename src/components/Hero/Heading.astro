@@ -1,0 +1,24 @@
+---
+type Props = {
+  title: string;
+};
+
+const { title } = Astro.props as Props;
+
+const titleCore = title.split(" ").slice(0, -1).join(" ");
+const lastWord = title.split(" ").at(-1);
+---
+
+<h2
+  class="display-1 tw-font-bold tw-text-black-theme tw-capitalize tw-font-dm-sans"
+>
+  {titleCore}
+  <div
+    class:list={[
+      "tw-inline-block tw-relative tw-z-10",
+      "after:tw-w-full after:tw-bg-torquoise after:tw-h-3 after:tw-absolute md:after:tw-bottom-4 after:tw-left-0 after:tw--z-10 after:tw-bottom-1",
+    ]}
+  >
+    {lastWord}
+  </div>
+</h2>

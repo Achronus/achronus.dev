@@ -1,0 +1,63 @@
+---
+import Layout from "@/layouts/JournalLayout.astro";
+
+import type { Article } from "@/types/collections";
+import { DateToString, formatArticleCollection } from "@/utils";
+
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const articleCollection: any[] = await getCollection("articles");
+  const articles = formatArticleCollection(articleCollection);
+
+  return articles.flatMap((project) =>
+    project.articles.map((article) => ({
+      params: {
+        projectSlug: project.project,
+        articleSlug: article.slug,
+      },
+      props: { article },
+    }))
+  );
+}
+
+type PageProps = {
+  article: Article;
+};
+
+const { article } = Astro.props as PageProps;
+
+if (!article) {
+  return new Response(null, { status: 404 });
+}
+---
+
+<Layout title={article.title}>
+  <div id="article-single" class="tw-m-2">
+    <div class="tw-flex tw-gap-2 tw-font-dm-mono tw-my-4">
+      <a href="/journal" class="tw-text-blue-dark hover:tw-text-black-theme"
+        >Journal</a
+      >
+      <span class="tw-text-gray-500">/</span>
+      <span class="tw-text-slate-600">{article.title}</span>
+    </div>
+    <section class="tw-my-4">
+      <div class="date">
+        <small class="tw-mt-1 tw-text-sm tw-text-slate-500">
+          {DateToString(article.date)}
+        </small>
+      </div>
+      <div class="title">
+        <h2
+          class="tw-text-black-theme tw-font-dm-mono tw-font-semibold tw-mt-6 tw-pb-2 tw-mb-4 tw-text-2xl tw-mx-2 tw-border-b"
+        >
+          {article.title}
+        </h2>
+      </div>
+      <div
+        class="content tw-prose !tw-max-w-full tw-prose-slate tw-font-rubik tw-font-light tw-text-black-theme"
+        set:html={article.htmlContent}
+      />
+    </section>
+  </div>
+</Layout>

@@ -1,0 +1,27 @@
+---
+import type { CTA } from "@/types/common";
+import { getCollection } from "astro:content";
+
+const ctaCollection: any[] = await getCollection("heroCTAs");
+const items: CTA[] = ctaCollection.map((cta) => cta.data);
+---
+
+<div class="row ctas">
+  {
+    items.map(({ text, url: href, styles, icon }) => (
+      <div class="col-md-auto">
+        <a
+          href={href}
+          class:list={[
+            "btn btn-primary tw-my-5 tw-mb-0 tw-py-2.5 tw-px-5 tw-text-lg tw-font-medium tw-font-dm-sans",
+            "hover:tw-text-white hover:tw-bg-black-theme hover:tw-border-black-theme",
+            `${styles}`,
+          ]}
+        >
+          {icon && <i class={icon} />}
+          <span class="name">{text}</span>
+        </a>
+      </div>
+    ))
+  }
+</div>
