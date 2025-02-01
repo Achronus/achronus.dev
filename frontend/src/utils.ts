@@ -15,16 +15,17 @@ export const formatArticleCollection = (collection: any[]): ProjectArticles[] =>
 
   for (const article of collection) {
     const { title, slug, date, order } = article.data;
+    const projectName = article.id.split('/')[0];
 
     const articleData: Article = {
       title,
-      slug,
+      slug: slug,
       date: formatDate(date),
       order,
-      content: article.body,
+      excerpt: article.body.substring(0, 300),
+      htmlContent: article.rendered.html,
     };
 
-    const projectName = article.id.split('/')[0];
 
     if (!projectArticlesMap[projectName]) {
       projectArticlesMap[projectName] = [];
@@ -44,3 +45,11 @@ export const formatDate = (date: string): Date => {
   const [day, month, year] = date.split('/');
   return new Date(parseInt(year), parseInt(month) - 1, parseInt(day));
 }
+
+export const DateToString = (date: Date) => {
+  return new Date(date).toLocaleDateString("en-GB", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
+};

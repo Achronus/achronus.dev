@@ -1,6 +1,7 @@
 import React from "react";
 
 import type { Article } from "@/types/collections";
+import { DateToString } from "@/utils";
 
 type Props = {
   articles: Article[];
@@ -8,14 +9,6 @@ type Props = {
 };
 
 const JournalPages: React.FC<Props> = ({ articles, project }) => {
-  const formatDate = (date: Date) => {
-    return new Date(date).toLocaleDateString("en-GB", {
-      day: "numeric",
-      month: "long",
-      year: "numeric",
-    });
-  };
-
   return (
     <>
       <div>
@@ -34,10 +27,10 @@ const JournalPages: React.FC<Props> = ({ articles, project }) => {
                 {article.title}
               </h3>
               <small className="tw-mt-1 tw-text-sm tw-text-slate-500">
-                {formatDate(article.date)}
+                {DateToString(article.date)}
               </small>
-              <p className="excerpt tw-mt-1 tw-text-sm tw-text-slate-800">
-                {article.content}
+              <p className="excerpt tw-my-1 tw-text-sm tw-text-slate-800">
+                {article.excerpt}
               </p>
               <div className="row">
                 <div className="cta col-12 text-end tw-mt-2">

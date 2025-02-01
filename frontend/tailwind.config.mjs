@@ -48,5 +48,5 @@ export default {
       variants: ["text", "hover"],
     },
   ],
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
