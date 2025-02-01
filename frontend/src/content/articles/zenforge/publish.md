@@ -1,6 +1,6 @@
 ---
 title: '#4 Publishing the Tool'
-slug: publish
+slug: publishing-the-tool
 date: 16/01/2025
 order: 5
 ---

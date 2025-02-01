@@ -1,6 +1,6 @@
 ---
 title: '#2 Planning the CLI'
-slug: planning
+slug: planning-the-cli
 date: 15/01/2025
 order: 3
 ---
@@ -14,7 +14,10 @@ app = typer.Typer(rich_markup_mode="rich", pretty_exceptions_enable=True)
 
 @app.command()
 def create(
-    project_name: Annotated[str, typer.Argument(..., help="The name of the project.")],
+    project_name: Annotated[
+        str, 
+        typer.Argument(..., help="The name of the project.")
+    ],
 ) -> None:
     pass
 

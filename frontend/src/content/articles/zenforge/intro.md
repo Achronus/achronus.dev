@@ -1,6 +1,6 @@
 ---
 title: Building Zenforge
-slug: intro
+slug: building-zenforge
 date: 15/01/2025
 order: 1
 ---

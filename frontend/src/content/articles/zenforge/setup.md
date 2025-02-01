@@ -1,6 +1,6 @@
 ---
 title: '#1 Setting Up the Project'
-slug: setup
+slug: setting-up-the-project
 date: 15/01/2025
 order: 2
 ---

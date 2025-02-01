@@ -30,6 +30,7 @@ export default {
           fastapi: "#009486",
           gymnasium: "#505559",
           react: "#61DAFB",
+          nextjs: "#000",
           typescript: "#3178C6",
           tailwindcss: "#06B6D4",
           typer: "#000",

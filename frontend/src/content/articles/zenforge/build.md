@@ -1,6 +1,6 @@
 ---
 title: '#3 Building the Tool'
-slug: build
+slug: building-the-tool
 date: 16/01/2025
 order: 4
 ---
