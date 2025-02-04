@@ -12,7 +12,12 @@ I'll update this article again in a couple of days after I've done some homework
 
 ---
 
+It's been 3 days since I started this journal entry and I've learned quite a bit but still have more to go! I now have a better grasp on LNNs and know that they are based on a custom RNN cell called Liquid-Time Constants (LTCs). They allow networks to learn the dynamics of a system and can be drastically scaled.
 
+What's interesting is, LTCs add more expressiveness to RNN models but the NCP is the small sparsely connected neuron architecture. That's the next piece of the puzzle I need to explore.
+I'm putting all of the stuff I've learned into a Medium article as we speak, so keep an eye out for that! Once that's done, I can start planning Velora out properly.
+
+We'll discuss that in the next entry. See you there! 👋
 
 ## References
 
