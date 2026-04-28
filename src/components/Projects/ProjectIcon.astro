@@ -1,12 +1,16 @@
 ---
+import { Icon } from "astro-icon/components";
+
 type Accent = "torquoise" | "blue" | "green" | "amber" | "coral";
 
 type Props = {
   accent: Accent;
-  slug: string;
+  name: string;
+  logo?: string;
+  icon?: string;
 };
 
-const { accent, slug } = Astro.props as Props;
+const { accent, name, logo, icon } = Astro.props as Props;
 
 const accentMap: Record<Accent, string> = {
   torquoise: "#1992d8",
@@ -19,63 +23,25 @@ const accentMap: Record<Accent, string> = {
 const colour = accentMap[accent];
 ---
 
-<div
-  class="tw-w-9 tw-h-9 tw-rounded-lg tw-flex tw-items-center tw-justify-center tw-flex-shrink-0"
-  style={{
-    backgroundColor: `${colour}1a`,
-    color: colour,
-  }}
->
-  {
-    slug === "velora" && (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="tw-w-[18px] tw-h-[18px]"
-      >
-        <path d="M12 2L2 7l10 5 10-5-10-5z" />
-        <path d="M2 17l10 5 10-5" />
-        <path d="M2 12l10 5 10-5" />
-      </svg>
-    )
-  }
-  {
-    slug === "envrax" && (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="tw-w-[18px] tw-h-[18px]"
-      >
-        <rect x="2" y="3" width="20" height="14" rx="2" />
-        <line x1="8" y1="21" x2="16" y2="21" />
-        <line x1="12" y1="17" x2="12" y2="21" />
-      </svg>
-    )
-  }
-  {
-    slug === "playrax" && (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="tw-w-[18px] tw-h-[18px]"
-      >
-        <circle cx="12" cy="12" r="4" />
-        <path
-          d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
-        />
-      </svg>
-    )
-  }
-</div>
+{
+  logo ? (
+    <div class="tw-w-9 tw-h-9 tw-rounded-lg tw-flex tw-items-center tw-justify-center tw-flex-shrink-0 tw-overflow-hidden">
+      <img
+        src={logo}
+        alt={`${name} logo`}
+        class="tw-w-full tw-h-full tw-object-contain"
+        loading="lazy"
+      />
+    </div>
+  ) : (
+    <div
+      class="tw-w-9 tw-h-9 tw-rounded-lg tw-flex tw-items-center tw-justify-center tw-flex-shrink-0"
+      style={{
+        backgroundColor: `${colour}1a`,
+        color: colour,
+      }}
+    >
+      {icon && <Icon name={`lucide:${icon}`} class="tw-w-[18px] tw-h-[18px]" />}
+    </div>
+  )
+}

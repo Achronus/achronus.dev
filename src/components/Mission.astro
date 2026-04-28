@@ -1,5 +1,6 @@
 ---
 import { getCollection, getEntry, render } from "astro:content";
+import { Icon } from "astro-icon/components";
 
 import SectionHeader from "@/components/SectionHeader.astro";
 import WaveBg from "@/components/WaveBg.astro";
@@ -52,57 +53,7 @@ const principles = principlesCollection
               style={`color: ${p.accent};`}
               aria-hidden="true"
             >
-              {p.icon === "eye" && (
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z" />
-                  <circle cx="12" cy="12" r="3" />
-                </svg>
-              )}
-              {p.icon === "compass" && (
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <circle cx="12" cy="12" r="10" />
-                  <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
-                </svg>
-              )}
-              {p.icon === "brackets" && (
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <polyline points="16 18 22 12 16 6" />
-                  <polyline points="8 6 2 12 8 18" />
-                </svg>
-              )}
-              {p.icon === "droplet" && (
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M12 2.5l6.5 9a6.5 6.5 0 1 1-13 0L12 2.5z" />
-                </svg>
-              )}
+              <Icon name={`lucide:${p.icon}`} />
             </div>
             <div
               class="tw-font-dm-mono tw-text-xs tw-tracking-[0.15em] tw-uppercase tw-mb-4 tw-relative tw-z-10"

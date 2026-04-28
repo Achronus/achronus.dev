@@ -12,6 +12,8 @@ type Props = {
   version?: string;
   status: Status;
   accent: Accent;
+  logo?: string;
+  icon?: string;
   tech: string[];
   links: {
     github?: string;
@@ -21,8 +23,18 @@ type Props = {
   body: string;
 };
 
-const { name, slug, tagline, version, status, accent, tech, links, body } =
-  Astro.props as Props;
+const {
+  name,
+  tagline,
+  version,
+  status,
+  accent,
+  logo,
+  icon,
+  tech,
+  links,
+  body,
+} = Astro.props as Props;
 
 const versionLine = version ?? tagline;
 ---
@@ -32,7 +44,7 @@ const versionLine = version ?? tagline;
 >
   <div class="tw-flex tw-items-start tw-justify-between tw-mb-4 tw-gap-4">
     <div class="tw-flex tw-items-center tw-gap-3">
-      <ProjectIcon accent={accent} slug={slug} />
+      <ProjectIcon accent={accent} name={name} logo={logo} icon={icon} />
       <div>
         <div
           class="tw-text-2xl tw-font-semibold tw-tracking-tight tw-text-black-theme tw-leading-tight"
