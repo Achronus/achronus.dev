@@ -1,0 +1,149 @@
+---
+import { getCollection, getEntry, render } from "astro:content";
+
+import SectionHeader from "@/components/SectionHeader.astro";
+import WaveBg from "@/components/WaveBg.astro";
+
+const sectionEntry = await getEntry("sections", "mission");
+if (!sectionEntry) throw new Error("src/content/sections/mission.md is missing");
+const { Content: SectionIntro } = await render(sectionEntry);
+const section = sectionEntry.data;
+
+const principlesCollection = await getCollection("principles");
+const principles = principlesCollection
+  .map((p) => ({ ...p.data, body: p.body.trim() }))
+  .sort((a, b) => a.order - b.order);
+---
+
+<section
+  id="mission"
+  class="tw-py-28 tw-relative tw-bg-white tw-overflow-hidden"
+>
+  <WaveBg position="top-right" opacity={0.3} />
+  <div class="tw-max-w-[960px] tw-mx-auto tw-px-8 tw-relative tw-z-10">
+    <SectionHeader label={section.label} />
+
+    <h2
+      class="tw-text-4xl md:tw-text-5xl tw-font-bold tw-tracking-tight tw-mb-5 tw-text-black-theme tw-font-dm-sans"
+      data-reveal
+      data-reveal-delay="1"
+    >
+      {section.title}
+    </h2>
+    <div
+      class="tw-text-base tw-text-grey tw-leading-relaxed tw-mb-12 tw-font-rubik tw-font-light [&_strong]:tw-text-black-theme [&_strong]:tw-font-medium"
+      data-reveal
+      data-reveal-delay="2"
+    >
+      <SectionIntro />
+    </div>
+
+    <div
+      class="tw-grid md:tw-grid-cols-3 tw-gap-5"
+      data-reveal
+      data-reveal-delay="3"
+    >
+      {
+        principles.map((p) => (
+          <div class="principle-card tw-relative tw-bg-white tw-p-8 tw-pt-10 tw-rounded-xl tw-border tw-border-grey-light tw-overflow-hidden">
+            <div class="principle-stripe" style={`background: ${p.accent};`} />
+            <div
+              class="principle-watermark"
+              style={`color: ${p.accent};`}
+              aria-hidden="true"
+            >
+              {p.icon === "eye" && (
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
+              )}
+              {p.icon === "compass" && (
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
+                </svg>
+              )}
+              {p.icon === "brackets" && (
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="16 18 22 12 16 6" />
+                  <polyline points="8 6 2 12 8 18" />
+                </svg>
+              )}
+              {p.icon === "droplet" && (
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M12 2.5l6.5 9a6.5 6.5 0 1 1-13 0L12 2.5z" />
+                </svg>
+              )}
+            </div>
+            <div
+              class="tw-font-dm-mono tw-text-xs tw-tracking-[0.15em] tw-uppercase tw-mb-4 tw-relative tw-z-10"
+              style={`color: ${p.accent};`}
+            >
+              Requirement {p.number}
+            </div>
+            <h3 class="tw-text-lg tw-font-semibold tw-mb-3 tw-text-black-theme tw-font-dm-sans tw-relative tw-z-10">
+              {p.title}
+            </h3>
+            <p class="tw-text-sm tw-text-grey tw-leading-relaxed tw-font-rubik tw-font-light tw-relative tw-z-10">
+              {p.body}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .principle-stripe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    z-index: 2;
+  }
+  .principle-watermark {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    opacity: 0.12;
+    z-index: 0;
+    pointer-events: none;
+  }
+  .principle-watermark svg {
+    width: 100%;
+    height: 100%;
+  }
+</style>

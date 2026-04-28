@@ -1,0 +1,18 @@
+---
+import Logo from "@/components/Logo";
+
+const year = new Date().getFullYear();
+---
+
+<footer class="tw-py-12 tw-border-t tw-border-grey-light tw-bg-white">
+  <div
+    class="tw-max-w-[960px] tw-mx-auto tw-px-8 tw-flex tw-justify-between tw-items-center tw-gap-4 tw-flex-wrap"
+  >
+    <div class="tw-scale-[0.7] tw-origin-left">
+      <Logo client:load />
+    </div>
+    <span class="tw-text-sm tw-text-grey tw-font-rubik tw-font-light">
+      © {year} Ryan Partridge
+    </span>
+  </div>
+</footer>

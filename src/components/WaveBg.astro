@@ -1,0 +1,54 @@
+---
+type Props = {
+  position?: "top-right" | "bottom-left" | "top-left" | "bottom-right";
+  opacity?: number;
+  flip?: boolean;
+};
+
+const { position = "top-right", opacity = 0.55, flip = false } = Astro.props as Props;
+
+const positionClass = {
+  "top-right": "tw-top-0 tw-right-0",
+  "bottom-left": "tw-bottom-0 tw-left-0",
+  "top-left": "tw-top-0 tw-left-0",
+  "bottom-right": "tw-bottom-0 tw-right-0",
+}[position];
+---
+
+<div
+  class={`tw-absolute tw-pointer-events-none tw-z-0 tw-w-[60%] tw-max-w-[680px] tw-h-auto ${positionClass}`}
+  style={`opacity: ${opacity}; transform: ${flip ? "scaleX(-1)" : "none"};`}
+  aria-hidden="true"
+>
+  <svg
+    viewBox="0 0 800 320"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    class="tw-w-full tw-h-auto"
+  >
+    <path
+      d="M-20 80 C 120 20, 260 200, 420 140 S 700 60, 820 180"
+      stroke="#40d9f1"
+      stroke-width="1"
+      stroke-linecap="round"
+    ></path>
+    <path
+      d="M-20 130 C 120 70, 260 250, 420 190 S 700 110, 820 230"
+      stroke="#40d9f1"
+      stroke-width="1"
+      stroke-linecap="round"
+    ></path>
+    <path
+      d="M-20 180 C 120 120, 260 300, 420 240 S 700 160, 820 280"
+      stroke="#40d9f1"
+      stroke-width="1"
+      stroke-linecap="round"
+    ></path>
+    <path
+      d="M-20 230 C 120 170, 260 350, 420 290 S 700 210, 820 330"
+      stroke="#40d9f1"
+      stroke-width="1"
+      stroke-linecap="round"
+    ></path>
+  </svg>
+</div>

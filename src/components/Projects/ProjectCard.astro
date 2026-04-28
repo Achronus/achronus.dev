@@ -1,0 +1,174 @@
+---
+import StatusBadge from "@/components/Projects/StatusBadge.astro";
+import ProjectIcon from "@/components/Projects/ProjectIcon.astro";
+
+type Status = "Live" | "Updating" | "In Development" | "Coming Soon";
+type Accent = "torquoise" | "blue" | "green" | "amber" | "coral";
+
+type Props = {
+  name: string;
+  slug: string;
+  tagline?: string;
+  version?: string;
+  status: Status;
+  accent: Accent;
+  tech: string[];
+  links: {
+    github?: string;
+    docs?: string;
+    pypi?: string;
+  };
+  body: string;
+};
+
+const { name, slug, tagline, version, status, accent, tech, links, body } =
+  Astro.props as Props;
+
+const versionLine = version ?? tagline;
+---
+
+<article
+  class="project-card tw-bg-white tw-px-9 tw-py-8 tw-rounded-xl tw-border tw-border-grey-light tw-transition-all tw-duration-300 tw-relative tw-font-dm-sans tw-overflow-hidden"
+>
+  <div class="tw-flex tw-items-start tw-justify-between tw-mb-4 tw-gap-4">
+    <div class="tw-flex tw-items-center tw-gap-3">
+      <ProjectIcon accent={accent} slug={slug} />
+      <div>
+        <div
+          class="tw-text-2xl tw-font-semibold tw-tracking-tight tw-text-black-theme tw-leading-tight"
+        >
+          {name}
+        </div>
+        {
+          versionLine && (
+            <div class="tw-font-dm-mono tw-text-xs tw-text-grey tw-tracking-wide tw-mt-0.5">
+              {versionLine}
+            </div>
+          )
+        }
+      </div>
+    </div>
+    <StatusBadge status={status} />
+  </div>
+
+  <p class="tw-text-base tw-text-grey tw-leading-relaxed tw-mb-6 tw-font-rubik tw-font-light">
+    {body}
+  </p>
+
+  <div class="tw-flex tw-flex-wrap tw-gap-1.5">
+    {
+      tech.map((t) => (
+        <span class="tw-font-dm-mono tw-text-xs tw-tracking-wide tw-text-grey tw-px-2.5 tw-py-1 tw-border tw-border-grey-light tw-rounded tw-transition-colors group-hover:tw-border-blue-dark">
+          {t}
+        </span>
+      ))
+    }
+  </div>
+
+  {
+    (links.github || links.docs || links.pypi) && (
+      <div class="project-card-links tw-flex tw-gap-4 tw-mt-5">
+        {links.github && (
+          <a
+            href={links.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="tw-inline-flex tw-items-center tw-gap-1.5 tw-font-dm-mono tw-text-xs tw-tracking-wide tw-text-blue-dark hover:tw-underline"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="tw-w-3.5 tw-h-3.5"
+            >
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+            </svg>
+            GitHub
+          </a>
+        )}
+        {links.docs && (
+          <a
+            href={links.docs}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="tw-inline-flex tw-items-center tw-gap-1.5 tw-font-dm-mono tw-text-xs tw-tracking-wide tw-text-blue-dark hover:tw-underline"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="tw-w-3.5 tw-h-3.5"
+            >
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+              <polyline points="15 3 21 3 21 9" />
+              <line x1="10" y1="14" x2="21" y2="3" />
+            </svg>
+            Docs
+          </a>
+        )}
+        {links.pypi && (
+          <a
+            href={links.pypi}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="tw-inline-flex tw-items-center tw-gap-1.5 tw-font-dm-mono tw-text-xs tw-tracking-wide tw-text-blue-dark hover:tw-underline"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="tw-w-3.5 tw-h-3.5"
+            >
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+            </svg>
+            PyPI
+          </a>
+        )}
+      </div>
+    )
+  }
+</article>
+
+<style>
+  .project-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg, #40d9f1 0%, #1992d8 100%);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.4s ease;
+  }
+  .project-card:hover::before {
+    transform: scaleY(1);
+  }
+  .project-card:hover {
+    box-shadow: 0 8px 28px -10px rgba(25, 146, 216, 0.35),
+      0 2px 6px -2px rgba(64, 217, 241, 0.2);
+    z-index: 1;
+  }
+
+  .project-card-links {
+    opacity: 0;
+    transform: translateX(-6px);
+    transition: opacity 0.3s, transform 0.3s;
+  }
+  .project-card:hover .project-card-links {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  @media (max-width: 768px) {
+    .project-card-links {
+      opacity: 1;
+      transform: none;
+    }
+  }
+</style>

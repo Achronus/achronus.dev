@@ -11,14 +11,13 @@ const lastWord = title.split(" ").at(-1);
 
 <h2
   class="display-1 tw-font-bold tw-text-black-theme tw-capitalize tw-font-dm-sans"
+  data-reveal
+  data-reveal-delay="1"
 >
   {titleCore}
-  <div
-    class:list={[
-      "tw-inline-block tw-relative tw-z-10",
-      "after:tw-w-full after:tw-bg-torquoise after:tw-h-3 after:tw-absolute md:after:tw-bottom-4 after:tw-left-0 after:tw--z-10 after:tw-bottom-1",
-    ]}
+  <span
+    class="tw-inline-block tw-relative tw-z-10 after:tw-w-full after:tw-bg-torquoise after:tw-h-3 after:tw-absolute md:after:tw-bottom-4 after:tw-left-0 after:tw--z-10 after:tw-bottom-1"
   >
     {lastWord}
-  </div>
+  </span>
 </h2>

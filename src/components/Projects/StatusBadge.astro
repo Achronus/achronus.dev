@@ -1,0 +1,32 @@
+---
+type Status = "Live" | "Updating" | "In Development" | "Coming Soon";
+
+type Props = {
+  status: Status;
+};
+
+const { status } = Astro.props as Props;
+
+const colourMap: Record<Status, { hex: string; label: string }> = {
+  Live: { hex: "#009486", label: "Live" },
+  Updating: { hex: "#EE4C2C", label: "Updating" },
+  "In Development": { hex: "#DDBA30", label: "In Development" },
+  "Coming Soon": { hex: "#1992d8", label: "Coming Soon" },
+};
+
+const { hex, label } = colourMap[status];
+---
+
+<span
+  class="tw-inline-flex tw-items-center tw-gap-1.5 tw-font-dm-mono tw-text-[0.65rem] tw-tracking-[0.08em] tw-uppercase tw-px-2.5 tw-py-1 tw-rounded-full tw-whitespace-nowrap tw-flex-shrink-0"
+  style={{
+    color: hex,
+    backgroundColor: `${hex}1f`,
+  }}
+>
+  <span
+    class="tw-w-[5px] tw-h-[5px] tw-rounded-full"
+    style={{ backgroundColor: hex }}
+  ></span>
+  {label}
+</span>
