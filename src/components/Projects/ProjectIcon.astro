@@ -1,7 +1,7 @@
 ---
 import { Icon } from "astro-icon/components";
 
-type Accent = "torquoise" | "blue" | "green" | "amber" | "coral";
+import { accentColours, type Accent } from "@/utils";
 
 type Props = {
   accent: Accent;
@@ -11,16 +11,7 @@ type Props = {
 };
 
 const { accent, name, logo, icon } = Astro.props as Props;
-
-const accentMap: Record<Accent, string> = {
-  torquoise: "#1992d8",
-  blue: "#107ebd",
-  green: "#009486",
-  amber: "#DDBA30",
-  coral: "#EE4C2C",
-};
-
-const colour = accentMap[accent];
+const colour = accentColours[accent];
 ---
 
 {
