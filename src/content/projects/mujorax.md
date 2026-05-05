@@ -1,13 +1,14 @@
 ---
-name: Playrax
-slug: playrax
+name: Mujorax
+slug: mujorax
 tagline: JAX-native MuJoCo environments
 version: 0.1.0
 status: In Development
 accent: blue
-icon: rocket
+logo: https://raw.githubusercontent.com/Achronus/mujorax/main/docs/assets/imgs/favicon.png
 tech: [Python, JAX, Reinforcement Learning, Environments, MuJoCo]
-links: {}
+links:
+  github: https://github.com/Achronus/mujorax
 order: 3
 ---
 
