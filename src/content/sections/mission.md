@@ -1,7 +1,7 @@
 ---
 label: Mission
-title: Tools that matter
+title: What I'm building
 order: 1
 ---
 
-The three principles that guide every project.
+Four properties, one intelligent system. Every project builds towards it.
