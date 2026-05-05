@@ -56,12 +56,15 @@ const hero = defineCollection({
 });
 
 // Per-section header copy (label + title). Body of each section file is the
-// intro description paragraph (markdown supported).
+// intro description paragraph (markdown supported). The displayed label is
+// composed at render time as `${order zero-padded} — ${label}`, so frontmatter
+// stores just the label name (e.g. "Mission") and an `order` number.
 const sections = defineCollection({
   type: "content",
   schema: z.object({
     label: z.string(),
     title: z.string(),
+    order: z.number(),
   }),
 });
 

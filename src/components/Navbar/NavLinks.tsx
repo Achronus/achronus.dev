@@ -43,8 +43,8 @@ const links: Link[] = [
     ),
   },
   {
-    text: "Connect",
-    href: "#connect",
+    text: "Explore",
+    href: "#explore",
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -55,8 +55,8 @@ const links: Link[] = [
         strokeLinecap="round"
         strokeLinejoin="round"
       >
-        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+        <circle cx="12" cy="12" r="10" />
+        <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
       </svg>
     ),
   },
