@@ -1,41 +1,65 @@
 ---
-import type { SocialIcon } from "@/types/collections";
-
-import { CTAs, Heading } from "@/components/Hero";
-import SocialButton from "@/components/SocialButton.astro";
 import { Image } from "astro:assets";
+import { getEntry, render } from "astro:content";
 
+import Heading from "@/components/Hero/Heading.astro";
+import CTAs from "@/components/Hero/CTAs.astro";
 import Banner from "@/assets/imgs/banner.png";
+import HomeBg from "@/assets/imgs/home-bg.jpg";
 
-type HeroHome = {
-  title: string;
-  socials: SocialIcon[];
-};
-
-const { title, socials } = Astro.props as HeroHome;
+const heroEntry = await getEntry("hero", "hero");
+if (!heroEntry) throw new Error("src/content/hero/hero.md is missing");
+const { Content: HeroStatement } = await render(heroEntry);
+const hero = heroEntry.data;
 ---
 
-<section id="hero" class="tw-py-10">
-  <div class="container">
-    <div class="row">
+<section
+  id="hero"
+  class="hero-section tw-min-h-screen tw-flex tw-flex-col tw-justify-center tw-pt-24 tw-pb-16 tw-relative tw-overflow-hidden"
+  style={`background-image: url(${HomeBg.src});`}
+>
+  <div class="tw-max-w-[1280px] tw-mx-auto tw-px-8 lg:tw-px-16 tw-w-full tw-relative">
+    <div class="tw-grid md:tw-grid-cols-2 tw-gap-12 lg:tw-gap-20 tw-items-center">
+      <div class="tw-text-center md:tw-text-left">
+        <div
+          class="tw-font-dm-mono tw-text-[0.75rem] tw-tracking-[0.15em] tw-uppercase tw-text-blue-dark tw-font-medium tw-mb-6"
+          data-reveal
+        >
+          {hero.labelName} — {hero.labelRole}
+        </div>
+
+        <Heading title={hero.title} />
+
+        <div
+          class="hero-statement tw-text-lg tw-leading-relaxed tw-text-grey tw-mt-6 tw-mb-10 tw-font-rubik tw-font-light [&_strong]:tw-text-black-theme [&_strong]:tw-font-medium"
+          data-reveal
+          data-reveal-delay="2"
+        >
+          <HeroStatement />
+        </div>
+
+        <CTAs text={hero.ctaText} href={hero.ctaHref} />
+      </div>
+
       <div
-        class="col-auto col-md-6 title align-self-center text-center text-md-start"
+        class="tw-flex tw-justify-center md:tw-justify-end"
+        data-reveal
+        data-reveal-delay="3"
       >
-        <Heading title={title} />
-        <CTAs />
+        <Image
+          src={Banner}
+          alt="Achronus banner"
+          class="tw-max-w-full tw-h-auto"
+        />
+      </div>
+    </div>
+  </div>
+</section>
 
-        <div class="row">
-          <div
-            class="col-md-auto social-icons mt-5 text-center text-md-start tw-flex tw-gap-6 tw-justify-center"
-          >
-            {socials.map((social) => <SocialButton {...social} />)}
-          </div><!-- .social-icons-->
-        </div><!-- .row -->
-      </div><!-- .col -->
-
-      <div class="col-auto col-md-6 graphic">
-        <Image class="img-fluid" src={Banner} alt="banner" />
-      </div><!-- .col -->
-    </div><!-- .row -->
-  </div><!-- .container -->
-</section><!-- #intro-home -->
+<style>
+  .hero-section {
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+</style>

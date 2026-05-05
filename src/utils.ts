@@ -53,3 +53,15 @@ export const DateToString = (date: Date) => {
     year: "numeric",
   });
 };
+
+export type Accent = "torquoise" | "blue" | "green" | "amber" | "coral";
+
+// Hex colours for each project accent. Used by ProjectIcon (icon-fallback
+// background) and ProjectCard (left-edge hover stripe gradient).
+export const accentColours: Record<Accent, string> = {
+  torquoise: "#1992d8",
+  blue: "#107ebd",
+  green: "#009486",
+  amber: "#DDBA30",
+  coral: "#EE4C2C",
+};

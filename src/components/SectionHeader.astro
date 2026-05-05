@@ -1,0 +1,18 @@
+---
+type Props = {
+  order: number;
+  label: string;
+};
+
+const { order, label } = Astro.props as Props;
+const display = `${String(order).padStart(2, "0")} — ${label}`;
+---
+
+<div class="tw-flex tw-items-baseline tw-gap-4 tw-mb-14" data-reveal>
+  <span
+    class="tw-font-dm-mono tw-text-xs tw-tracking-[0.15em] tw-text-blue-dark tw-uppercase"
+  >
+    {display}
+  </span>
+  <div class="tw-flex-1 tw-h-px tw-bg-grey-light"></div>
+</div>

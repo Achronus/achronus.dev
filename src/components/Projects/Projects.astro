@@ -1,0 +1,54 @@
+---
+import { getCollection, getEntry, render } from "astro:content";
+
+import SectionHeader from "@/components/SectionHeader.astro";
+import ProjectCard from "@/components/Projects/ProjectCard.astro";
+import BubbleBg from "@/components/BubbleBg.astro";
+
+const sectionEntry = await getEntry("sections", "projects");
+if (!sectionEntry) throw new Error("src/content/sections/projects.md is missing");
+const { Content: SectionIntro } = await render(sectionEntry);
+const section = sectionEntry.data;
+
+const collection = await getCollection("projects");
+const projects = collection
+  .map((entry) => ({
+    ...entry.data,
+    slug: entry.slug,
+    body: entry.body.trim(),
+  }))
+  .sort((a, b) => a.order - b.order);
+---
+
+<section
+  id="projects"
+  class="tw-py-28 tw-relative tw-bg-torquoise-fade tw-overflow-hidden"
+>
+  <BubbleBg />
+  <div class="tw-max-w-[960px] tw-mx-auto tw-px-8 tw-relative tw-z-10">
+    <SectionHeader order={section.order} label={section.label} />
+
+    <h2
+      class="tw-text-4xl md:tw-text-5xl tw-font-bold tw-tracking-tight tw-mb-5 tw-text-black-theme tw-font-dm-sans"
+      data-reveal
+      data-reveal-delay="1"
+    >
+      {section.title}
+    </h2>
+    <div
+      class="tw-text-base tw-text-grey tw-leading-relaxed tw-mb-12 tw-font-rubik tw-font-light [&_strong]:tw-text-black-theme [&_strong]:tw-font-medium"
+      data-reveal
+      data-reveal-delay="2"
+    >
+      <SectionIntro />
+    </div>
+
+    <div
+      class="tw-grid tw-gap-5"
+      data-reveal
+      data-reveal-delay="3"
+    >
+      {projects.map((p) => <ProjectCard {...p} />)}
+    </div>
+  </div>
+</section>

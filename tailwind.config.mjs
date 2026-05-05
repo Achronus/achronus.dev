@@ -12,28 +12,17 @@ export default {
           fade: "#f1fcfe",
         },
         blue: {
-          DEFAULT: "#1992d8", // span text
-          dark: "#107ebd", // primary bg
-          light: "#2386bf", // nav hover
+          DEFAULT: "#1992d8",
+          dark: "#107ebd",
+          light: "#2386bf",
         },
         black: {
           DEFAULT: "#000",
-          theme: "#242424", // main text
+          theme: "#242424",
         },
         grey: {
-          DEFAULT: "#6b6b6b", // light text
-          light: "#dee2e6",
-        },
-        icon: {
-          python: "#DDBA30",
-          pytorch: "#EE4C2C",
-          fastapi: "#009486",
-          gymnasium: "#505559",
-          react: "#61DAFB",
-          nextjs: "#000",
-          typescript: "#3178C6",
-          tailwindcss: "#06B6D4",
-          typer: "#000",
+          DEFAULT: "#6b6b6b",
+          light: "#bcc4cd",
         },
       },
       fontFamily: {
@@ -43,11 +32,5 @@ export default {
       },
     },
   },
-  safelist: [
-    {
-      pattern: /icon-[a-z]+$/,
-      variants: ["text", "hover"],
-    },
-  ],
   plugins: [require("@tailwindcss/typography")],
 };

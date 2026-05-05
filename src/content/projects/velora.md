@@ -1,8 +1,17 @@
 ---
+name: Velora
 slug: velora
-title: Velora
-url: https://github.com/Achronus/velora
+tagline: Liquid RL research framework
+version: 0.3.0
+status: Updating
+accent: torquoise
+logo: https://raw.githubusercontent.com/Achronus/velora/main/docs/favicon.png
+tech: [Python, JAX, Reinforcement Learning, AI Framework, Research]
+links:
+  github: https://github.com/Achronus/velora
+  docs: https://velora.achronus.dev
+  pypi: https://pypi.org/project/velora
 order: 1
-tools: [Python, PyTorch, Gymnasium]
 ---
-is a framework for Liquid Reinforcement Learning (Liquid RL). It uses Liquid Neural Networks (LNNs) focusing on control tasks combined with RL techniques. LNNs are powerful Recurrent Neural Networks (RNNs) that learn system dynamics, not just patterns. The framework combines them with Neural Circuit Policies (NCPs) to make powerful, small-scale, sparsely connected, explainable architectures.
+
+A Flax-based Liquid RL research framework for small and powerful AI models. Combines Closed-form Continuous-time (CfC) Liquid Neural Networks with DiscoRL meta-learning and custom techniques to build adaptive AI agents.

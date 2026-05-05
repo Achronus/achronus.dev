@@ -1,0 +1,38 @@
+---
+import { Icon } from "astro-icon/components";
+
+import { accentColours, type Accent } from "@/utils";
+
+type Props = {
+  accent: Accent;
+  name: string;
+  logo?: string;
+  icon?: string;
+};
+
+const { accent, name, logo, icon } = Astro.props as Props;
+const colour = accentColours[accent];
+---
+
+{
+  logo ? (
+    <div class="tw-w-9 tw-h-9 tw-rounded-lg tw-flex tw-items-center tw-justify-center tw-flex-shrink-0 tw-overflow-hidden">
+      <img
+        src={logo}
+        alt={`${name} logo`}
+        class="tw-w-full tw-h-full tw-object-contain"
+        loading="lazy"
+      />
+    </div>
+  ) : (
+    <div
+      class="tw-w-9 tw-h-9 tw-rounded-lg tw-flex tw-items-center tw-justify-center tw-flex-shrink-0"
+      style={{
+        backgroundColor: `${colour}1a`,
+        color: colour,
+      }}
+    >
+      {icon && <Icon name={`lucide:${icon}`} class="tw-w-[18px] tw-h-[18px]" />}
+    </div>
+  )
+}
