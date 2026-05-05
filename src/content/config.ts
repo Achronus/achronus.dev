@@ -71,11 +71,11 @@ const sections = defineCollection({
 // Mission principle cards. Body of each file is the principle description.
 // `icon` is any Lucide icon name (e.g. "eye", "compass", "code", "droplet").
 // Browse available icons at https://lucide.dev/icons or https://icones.js.org
-// (Lucide section). Renders via astro-icon.
+// (Lucide section). Renders via astro-icon. The displayed number on each card
+// is derived from `order` at render time (zero-padded to 2 digits).
 const principles = defineCollection({
   type: "content",
   schema: z.object({
-    number: z.string(),
     title: z.string(),
     accent: z.string(),
     icon: z.string(),

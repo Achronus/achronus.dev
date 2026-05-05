@@ -40,7 +40,7 @@ const principles = principlesCollection
     </div>
 
     <div
-      class="tw-grid md:tw-grid-cols-3 tw-gap-5"
+      class="tw-grid md:tw-grid-cols-2 tw-gap-5"
       data-reveal
       data-reveal-delay="3"
     >
@@ -59,7 +59,7 @@ const principles = principlesCollection
               class="tw-font-dm-mono tw-text-xs tw-tracking-[0.15em] tw-uppercase tw-mb-4 tw-relative tw-z-10"
               style={`color: ${p.accent};`}
             >
-              Requirement {p.number}
+              Requirement {String(p.order).padStart(2, "0")}
             </div>
             <h3 class="tw-text-lg tw-font-semibold tw-mb-3 tw-text-black-theme tw-font-dm-sans tw-relative tw-z-10">
               {p.title}
