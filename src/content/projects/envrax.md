@@ -2,7 +2,6 @@
 name: Envrax
 slug: envrax
 tagline: JAX-native RL environment builder
-version: 0.1.4
 status: Live
 accent: green
 logo: https://raw.githubusercontent.com/Achronus/envrax/main/docs/assets/imgs/favicon.svg

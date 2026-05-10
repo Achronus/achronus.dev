@@ -5,7 +5,6 @@ const projects = defineCollection({
   schema: z.object({
     name: z.string(),
     tagline: z.string().optional(),
-    version: z.string().optional(),
     status: z.enum(["Live", "Updating", "In Development", "Coming Soon"]),
     accent: z.enum(["torquoise", "blue", "green", "amber", "coral"]),
     // Logo: full URL (typically a raw GitHub link to the project's favicon).

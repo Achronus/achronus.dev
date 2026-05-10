@@ -2,7 +2,6 @@
 name: Velora
 slug: velora
 tagline: Liquid RL research framework
-version: 0.3.0
 status: Updating
 accent: torquoise
 logo: https://raw.githubusercontent.com/Achronus/velora/main/docs/favicon.png
