@@ -9,7 +9,6 @@ type Props = {
   name: string;
   slug: string;
   tagline?: string;
-  version?: string;
   status: Status;
   accent: Accent;
   logo?: string;
@@ -23,22 +22,9 @@ type Props = {
   body: string;
 };
 
-const {
-  name,
-  tagline,
-  version,
-  status,
-  accent,
-  logo,
-  icon,
-  tech,
-  links,
-  body,
-} = Astro.props as Props;
+const { name, tagline, status, accent, logo, icon, tech, links, body } =
+  Astro.props as Props;
 
-const versionLine =
-  [version ? `v${version}` : null, tagline].filter(Boolean).join(" — ") ||
-  undefined;
 const accentColour = accentColours[accent];
 ---
 
@@ -56,9 +42,9 @@ const accentColour = accentColours[accent];
           {name}
         </div>
         {
-          versionLine && (
+          tagline && (
             <div class="tw-font-dm-mono tw-text-xs tw-text-grey tw-tracking-wide tw-mt-0.5">
-              {versionLine}
+              {tagline}
             </div>
           )
         }
